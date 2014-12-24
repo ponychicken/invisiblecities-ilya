@@ -271,7 +271,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_Stage}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${Stage}", "click", function(sym, e) {
          
          
          
@@ -387,7 +387,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_bagUp_1_front3}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bagUp_1_front3}", "click", function(sym, e) {
          counter++;
          console.log("counter = " + counter);
          sym.play('disappear');
@@ -588,7 +588,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_bagUp_2_front}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bagUp_2_front}", "click", function(sym, e) {
          counter++;
          console.log("counter = " + counter);
          sym.play('disappear');
@@ -610,7 +610,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_bagUp_3_front}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bagUp_3_front}", "click", function(sym, e) {
          counter++;
          console.log("counter = " + counter);
          sym.play('disappear');
@@ -642,7 +642,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_bagUp_43}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bagUp_43}", "click", function(sym, e) {
          counter++;
          console.log("counter = " + counter);
          sym.play('disappear');
@@ -664,7 +664,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
          //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_bagUp_2_front}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bagUp_2_front}", "click", function(sym, e) {
          counter++;
          console.log("counter = " + counter);
          sym.play('disappear');
@@ -686,7 +686,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
          //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_bagUp_3_front}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bagUp_3_front}", "click", function(sym, e) {
          counter++;
          console.log("counter = " + counter);
          sym.play('disappear');
@@ -708,7 +708,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
          //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_bagUp_1_front3}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bagUp_1_front3}", "click", function(sym, e) {
          counter++;
          console.log("counter = " + counter);
          sym.play('disappear');
@@ -721,4 +721,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       })("gameTeddy");
    //Edge symbol end:'gameTeddy'
 
-})(jQuery, AdobeEdge, "GAME_1");
+})(window.jQuery || AdobeEdge.$, AdobeEdge, "GAME_1");

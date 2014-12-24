@@ -153,7 +153,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_Stage}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${Stage}", "click", function(sym, e) {
          
          if(counter === 1){
          
@@ -243,7 +243,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_bagUp_C_front3}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bagUp_C_front3}", "click", function(sym, e) {
          counter++;
          
          sym.play('disappear');
@@ -280,7 +280,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_bagUp_C_front3}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bagUp_C_front3}", "click", function(sym, e) {
          counter++;
          
          sym.play('disappear');
@@ -325,7 +325,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_GameRun1}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${GameRun1}", "click", function(sym, e) {
          sym.play('run');
 
       });
@@ -369,7 +369,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_bagUp_C_front3Copy}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bagUp_C_front3Copy}", "click", function(sym, e) {
          counter++;
          
          sym.play('disappear');
@@ -447,4 +447,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("bagUp_C_back");
    //Edge symbol end:'bagUp_C_back'
 
-})(jQuery, AdobeEdge, "GAME_2");
+})(window.jQuery || AdobeEdge.$, AdobeEdge, "GAME_2");

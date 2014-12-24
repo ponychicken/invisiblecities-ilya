@@ -23,7 +23,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_dust_button2}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${dust_button2}", "click", function(sym, e) {
          sym.play('out');
 
       });
@@ -44,7 +44,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_text_1}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${text_1}", "click", function(sym, e) {
          text1 = sym.getSymbol('text_1');
          text1.play('opaque');
          
@@ -60,7 +60,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_text_2}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${text_2}", "click", function(sym, e) {
          
          text1 = sym.getSymbol('text_1');
          text1.play('fade_flimmer');
@@ -75,7 +75,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_text_3}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${text_3}", "click", function(sym, e) {
          
          text1 = sym.getSymbol('text_1');
          text1.play('fade');
@@ -95,7 +95,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_text_4}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${text_4}", "click", function(sym, e) {
          
          
          text2 = sym.getSymbol('text_2');
@@ -114,7 +114,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_dust_button2Copy}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${dust_button2Copy}", "click", function(sym, e) {
          sym.play();sym.play('textOut');
          
 
@@ -693,4 +693,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       })("text_5");
    //Edge symbol end:'text_5'
 
-})(jQuery, AdobeEdge, "SCENE_B");
+})(window.jQuery || AdobeEdge.$, AdobeEdge, "SCENE_B");

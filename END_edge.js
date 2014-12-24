@@ -1,1691 +1,4164 @@
-/**
- * Adobe Edge: symbol definitions
- */
-(function($, Edge, compId){
-//images folder
-var im='images/';
+/*jslint */
+/*global AdobeEdge: false, window: false, document: false, console:false, alert: false */
+(function (compId) {
 
-var fonts = {};
-var opts = {};
-var resources = [
-];
-var symbols = {
-"stage": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-            {
-                id: 'paper_opaque',
-                type: 'image',
-                rect: ['0', '0','2048px','1535px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"paper_opaque.png",'0px','0px']
-            },
-            {
-                id: 'houses_bg_1',
-                display: 'block',
-                type: 'image',
-                rect: ['378px', '1071px','1096px','593px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"houses_bg_1.png",'0px','0px']
-            },
-            {
-                id: 'house_2',
-                display: 'block',
-                type: 'image',
-                rect: ['1815px', '1302px','448px','679px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"house_2.png",'0px','0px']
-            },
-            {
-                id: 'house_1',
-                display: 'block',
-                type: 'image',
-                rect: ['-56px', '1282px','372px','699px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"house_1.png",'0px','0px']
-            },
-            {
-                id: 'Title_Intro',
-                type: 'rect',
-                rect: ['0', '141px','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'End_body3',
-                display: 'block',
-                type: 'image',
-                rect: ['1341px', '652px','432px','728px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"END/End_body.png",'0px','0px']
-            },
-            {
-                id: 'H_End',
-                display: 'block',
-                type: 'rect',
-                rect: ['1213px', '384px','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['0.775','0.775']]
-            },
-            {
-                id: 'H_crack',
-                display: 'none',
-                type: 'rect',
-                rect: ['591px', '362px','auto','auto','auto', 'auto'],
-                clip: ['rect(0px 318px 324.12261962890625px 0px)'],
-                transform: [[],[],[],['0.775','0.775']]
-            },
-            {
-                id: 'text_1',
-                display: 'block',
-                type: 'rect',
-                rect: ['69px', '133px','auto','auto','auto', 'auto'],
-                transform: [[],['-3']]
-            },
-            {
-                id: 'text_2',
-                display: 'block',
-                type: 'rect',
-                rect: ['124px', '264px','auto','auto','auto', 'auto'],
-                transform: [[],['-2']]
-            },
-            {
-                id: 'text_3',
-                display: 'block',
-                type: 'rect',
-                rect: ['89px', '760px','auto','auto','auto', 'auto'],
-                transform: [[],['3']]
-            },
-            {
-                id: 'text_4',
-                display: 'block',
-                type: 'rect',
-                rect: ['281px', '1007px','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'text_5',
-                display: 'block',
-                type: 'rect',
-                rect: ['177px', '1149px','auto','auto','auto', 'auto'],
-                transform: [[],['1']]
-            },
-            {
-                id: 'text_6',
-                display: 'block',
-                type: 'rect',
-                rect: ['131px', '1272px','auto','auto','auto', 'auto'],
-                transform: [[],['1']]
-            },
-            {
-                id: 'Rectangle',
-                display: 'block',
-                type: 'rect',
-                rect: ['0px', '-10px','2048px','1545px','auto', 'auto'],
-                fill: ["rgba(0,0,0,1.00)"],
-                stroke: [0,"rgba(0,0,0,1)","none"]
-            },
-            {
-                id: 'Titel_betreut',
-                display: 'none',
-                type: 'image',
-                rect: ['-1473px', '1036px','1079px','778px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"END/Titel_betreut.png",'0px','0px'],
-                filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
-            },
-            {
-                id: 'Titel_Ilya',
-                display: 'none',
-                type: 'image',
-                rect: ['-989px', '-173px','1079px','476px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"END/Titel_Ilya.png",'0px','0px'],
-                filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
-            },
-            {
-                id: 'Titel_Italo',
-                display: 'none',
-                type: 'image',
-                rect: ['587px', '279px','873px','440px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"END/Titel_Italo.png",'0px','0px'],
-                filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
-            },
-            {
-                id: 'Titel_IV',
-                display: 'none',
-                type: 'image',
-                rect: ['653px', '978px','739px','196px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"END/Titel_IV.png",'0px','0px'],
-                filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
-            },
-            {
-                id: 'Titel_linie',
-                display: 'none',
-                type: 'image',
-                rect: ['576px', '833px','894px','41px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"END/Titel_linie.png",'0px','0px'],
-                filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
-            },
-            {
-                id: 'SFX_rumble',
-                display: 'none',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['466', '294','320px','45px','auto', 'auto'],
-                source: ['media/SFX_rumble.mp3']
-            }],
-            symbolInstances: [
-            {
-                id: 'H_crack',
-                symbolName: 'H_crack',
-                autoPlay: {
-
+    "use strict";
+    var im='images/',
+        aud='media/',
+        vid='media/',
+        js='js/',
+        fonts = {
+        },
+        opts = {
+            'gAudioPreloadPreference': 'auto',
+            'gVideoPreloadPreference': 'auto'
+        },
+        resources = [
+        ],
+        scripts = [
+            js+"jquery-2.0.3.min.js"
+        ],
+        symbols = {
+            "stage": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'paper_opaque',
+                            type: 'image',
+                            rect: ['0', '0', '2048px', '1535px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"paper_opaque.png",'0px','0px']
+                        },
+                        {
+                            id: 'houses_bg_1',
+                            display: 'block',
+                            type: 'image',
+                            rect: ['378', '1071', '1096px', '593px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"houses_bg_1.png",'0px','0px']
+                        },
+                        {
+                            id: 'house_2',
+                            display: 'block',
+                            type: 'image',
+                            rect: ['1815', '1302', '448px', '679px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"house_2.png",'0px','0px']
+                        },
+                        {
+                            id: 'house_1',
+                            display: 'block',
+                            type: 'image',
+                            rect: ['-56', '1282', '372px', '699px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"house_1.png",'0px','0px']
+                        },
+                        {
+                            id: 'Title_Intro',
+                            symbolName: 'Title_Intro',
+                            type: 'rect',
+                            rect: ['0', '-335', '2048', '1536', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            opacity: '0.6'
+                        },
+                        {
+                            id: 'End_body3',
+                            display: 'block',
+                            type: 'image',
+                            rect: ['1341', '863', '432', '728', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"END/End_body.png",'0px','0px']
+                        },
+                        {
+                            id: 'H_End',
+                            symbolName: 'H_head',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['1213', '590', '500', '560', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['0.775','0.775']]
+                        },
+                        {
+                            id: 'H_crack',
+                            symbolName: 'H_crack',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['1296', '690', '318', '182', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            clip: 'rect(0px 318px 324.12261962890625px 0px)',
+                            opacity: '0',
+                            transform: [[],[],[],['0.775','0.775']]
+                        },
+                        {
+                            id: 'text_1',
+                            symbolName: 'text_1',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['-40', '132', '1433', '89', 'auto', 'auto'],
+                            transform: [[],['-3'],[],['0.84796','0.84796']]
+                        },
+                        {
+                            id: 'text_2',
+                            symbolName: 'text_2',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['100', '263', '850', '80', 'auto', 'auto'],
+                            transform: [[],['-2'],[],['0.94336','0.94336']]
+                        },
+                        {
+                            id: 'text_3',
+                            symbolName: 'text_3',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['107', '664', '1190', '80', 'auto', 'auto'],
+                            transform: [[],[],[],['1.10416','1.10416']]
+                        },
+                        {
+                            id: 'text_4',
+                            symbolName: 'text_4',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['267', '784', '470', '80', 'auto', 'auto'],
+                            transform: [[],[],[],['0.94336','0.94336']]
+                        },
+                        {
+                            id: 'text_5',
+                            symbolName: 'text_5',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['64', '908', '1040', '80', 'auto', 'auto'],
+                            transform: [[],['1'],[],['0.78173','0.78173']]
+                        },
+                        {
+                            id: 'text_6',
+                            symbolName: 'text_6',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['97', '989', '1200', '80', 'auto', 'auto'],
+                            opacity: '1',
+                            transform: [[],['1'],[],['0.94336','0.94336']]
+                        },
+                        {
+                            id: 'Rectangle',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['0px', '0', '2048px', '1545px', 'auto', 'auto'],
+                            opacity: '1',
+                            fill: ["rgba(0,0,0,1.00)"],
+                            stroke: [0,"rgba(0,0,0,1)","none"]
+                        },
+                        {
+                            id: 'Titel_betreut',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['672', '514', '704', '508', 'auto', 'auto'],
+                            opacity: '0',
+                            fill: ["rgba(0,0,0,0)",im+"END/Titel_betreut.png",'0px','0px'],
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
+                        },
+                        {
+                            id: 'Titel_Ilya',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['694', '627', '659', '290', 'auto', 'auto'],
+                            opacity: '0',
+                            fill: ["rgba(0,0,0,0)",im+"END/Titel_Ilya.png",'0px','0px'],
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
+                        },
+                        {
+                            id: 'Titel_Italo',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['587', '279', '873', '440', 'auto', 'auto'],
+                            opacity: '0',
+                            fill: ["rgba(0,0,0,0)",im+"END/Titel_Italo.png",'0px','0px'],
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
+                        },
+                        {
+                            id: 'Titel_IV',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['653', '978', '739', '196', 'auto', 'auto'],
+                            opacity: '0',
+                            fill: ["rgba(0,0,0,0)",im+"END/Titel_IV.png",'0px','0px'],
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
+                        },
+                        {
+                            id: 'Titel_linie',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['576', '833', '894', '41', 'auto', 'auto'],
+                            opacity: '0',
+                            fill: ["rgba(0,0,0,0)",im+"END/Titel_linie.png",'0px','0px'],
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
+                        },
+                        {
+                            id: 'SFX_rumble',
+                            display: 'none',
+                            volume: '0',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['466', '294', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"SFX_rumble.mp3"],
+                            preload: 'auto'
+                        }
+                    ],
+                    style: {
+                        '${Stage}': {
+                            isStage: true,
+                            rect: ['null', 'null', '2048', '1536', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            fill: ["rgba(255,255,255,1)"]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 40500,
+                    autoPlay: true,
+                    labels: {
+                        "button": 4400,
+                        "egg": 4900,
+                        "crack": 10200
+                    },
+                    data: [
+                        [
+                            "eid239",
+                            "left",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            '267px',
+                            '267px'
+                        ],
+                        [
+                            "eid226",
+                            "scaleX",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_6}",
+                            '0.94336',
+                            '0.94336'
+                        ],
+                        [
+                            "eid189",
+                            "left",
+                            10600,
+                            0,
+                            "easeInOutBounce",
+                            "${H_crack}",
+                            '1296px',
+                            '1296px'
+                        ],
+                        [
+                            "eid305",
+                            "width",
+                            28000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_Ilya}",
+                            '659px',
+                            '659px'
+                        ],
+                        [
+                            "eid315",
+                            "top",
+                            35000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_betreut}",
+                            '514px',
+                            '514px'
+                        ],
+                        [
+                            "eid208",
+                            "scaleY",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_1}",
+                            '0.84796',
+                            '0.84796'
+                        ],
+                        [
+                            "eid262",
+                            "top",
+                            13000,
+                            2976,
+                            "easeInOutQuad",
+                            "${house_1}",
+                            '1282px',
+                            '1711px'
+                        ],
+                        [
+                            "eid279",
+                            "display",
+                            18000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_IV}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid298",
+                            "display",
+                            26500,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_IV}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid242",
+                            "scaleY",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            '1.10416',
+                            '1.10416'
+                        ],
+                        [
+                            "eid261",
+                            "top",
+                            13000,
+                            2976,
+                            "easeInOutQuad",
+                            "${house_2}",
+                            '1302px',
+                            '1731px'
+                        ],
+                        [
+                            "eid237",
+                            "scaleX",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            '0.94336',
+                            '0.94336'
+                        ],
+                        [
+                            "eid190",
+                            "top",
+                            10600,
+                            0,
+                            "easeInOutBounce",
+                            "${H_crack}",
+                            '690px',
+                            '690px'
+                        ],
+                        [
+                            "eid321",
+                            "top",
+                            13000,
+                            2976,
+                            "easeInOutQuad",
+                            "${H_crack}",
+                            '690px',
+                            '1127px'
+                        ],
+                        [
+                            "eid233",
+                            "left",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '64px',
+                            '64px'
+                        ],
+                        [
+                            "eid314",
+                            "left",
+                            35000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_betreut}",
+                            '672px',
+                            '672px'
+                        ],
+                        [
+                            "eid304",
+                            "height",
+                            28000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_Ilya}",
+                            '290px',
+                            '290px'
+                        ],
+                        [
+                            "eid207",
+                            "scaleX",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_1}",
+                            '0.84796',
+                            '0.84796'
+                        ],
+                        [
+                            "eid335",
+                            "volume",
+                            10100,
+                            900,
+                            "easeInOutQuad",
+                            "${SFX_rumble}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid334",
+                            "volume",
+                            27032,
+                            2764,
+                            "easeInOutQuad",
+                            "${SFX_rumble}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid222",
+                            "top",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            '263px',
+                            '263px'
+                        ],
+                        [
+                            "eid264",
+                            "opacity",
+                            13000,
+                            1500,
+                            "easeInOutQuad",
+                            "${text_6}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid231",
+                            "scaleX",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '0.78173',
+                            '0.78173'
+                        ],
+                        [
+                            "eid326",
+                            "top",
+                            10200,
+                            0,
+                            "easeInOutBounce",
+                            "${Title_Intro}",
+                            '-335px',
+                            '-335px'
+                        ],
+                        [
+                            "eid329",
+                            "top",
+                            13000,
+                            2976,
+                            "easeInOutQuad",
+                            "${Title_Intro}",
+                            '-335px',
+                            '0px'
+                        ],
+                        [
+                            "eid278",
+                            "display",
+                            18000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_linie}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid297",
+                            "display",
+                            26500,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_linie}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid219",
+                            "scaleX",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            '0.94336',
+                            '0.94336'
+                        ],
+                        [
+                            "eid225",
+                            "rotateZ",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid289",
+                            "opacity",
+                            21000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_IV}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid295",
+                            "opacity",
+                            25000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_IV}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid307",
+                            "top",
+                            28000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_Ilya}",
+                            '627px',
+                            '627px'
+                        ],
+                        [
+                            "eid266",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
+                            "${text_6}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid252",
+                            "top",
+                            3092,
+                            3733,
+                            "easeInOutQuad",
+                            "${text_3}",
+                            '664px',
+                            '714px'
+                        ],
+                        [
+                            "eid241",
+                            "scaleX",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            '1.10416',
+                            '1.10416'
+                        ],
+                        [
+                            "eid256",
+                            "top",
+                            13000,
+                            2976,
+                            "easeInOutQuad",
+                            "${H_End}",
+                            '590px',
+                            '1029px'
+                        ],
+                        [
+                            "eid271",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
+                            "${text_1}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid238",
+                            "scaleY",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            '0.94336',
+                            '0.94336'
+                        ],
+                        [
+                            "eid253",
+                            "left",
+                            3092,
+                            3733,
+                            "easeInOutQuad",
+                            "${text_3}",
+                            '107px',
+                            '67px'
+                        ],
+                        [
+                            "eid255",
+                            "top",
+                            13000,
+                            2976,
+                            "easeInOutQuad",
+                            "${End_body3}",
+                            '863px',
+                            '1297px'
+                        ],
+                        [
+                            "eid270",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid20",
+                            "display",
+                            4900,
+                            0,
+                            "linear",
+                            "${H_crack}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid274",
+                            "display",
+                            16162,
+                            0,
+                            "easeInOutBounce",
+                            "${H_crack}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid221",
+                            "left",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            '100px',
+                            '100px'
+                        ],
+                        [
+                            "eid312",
+                            "height",
+                            35000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_betreut}",
+                            '508px',
+                            '508px'
+                        ],
+                        [
+                            "eid276",
+                            "display",
+                            16162,
+                            0,
+                            "easeInOutBounce",
+                            "${End_body3}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid281",
+                            "display",
+                            18000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_Ilya}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid324",
+                            "opacity",
+                            4900,
+                            0,
+                            "easeInOutQuad",
+                            "${H_crack}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid323",
+                            "opacity",
+                            10200,
+                            0,
+                            "easeInOutQuad",
+                            "${H_crack}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid290",
+                            "opacity",
+                            20500,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_linie}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid294",
+                            "opacity",
+                            25000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_linie}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid319",
+                            "opacity",
+                            35000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_betreut}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid318",
+                            "opacity",
+                            39000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_betreut}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid209",
+                            "left",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_1}",
+                            '-40px',
+                            '-40px'
+                        ],
+                        [
+                            "eid267",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid272",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
+                            "${house_1}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid275",
+                            "display",
+                            16162,
+                            0,
+                            "easeInOutBounce",
+                            "${H_End}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid325",
+                            "opacity",
+                            10200,
+                            0,
+                            "easeInOutBounce",
+                            "${Title_Intro}",
+                            '0.6',
+                            '0.6'
+                        ],
+                        [
+                            "eid273",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
+                            "${house_2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid280",
+                            "display",
+                            18000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_Italo}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid299",
+                            "display",
+                            26500,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_Italo}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid268",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid220",
+                            "scaleY",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            '0.94336',
+                            '0.94336'
+                        ],
+                        [
+                            "eid1",
+                            "display",
+                            2160,
+                            0,
+                            "linear",
+                            "${Rectangle}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid2",
+                            "display",
+                            10200,
+                            0,
+                            "linear",
+                            "${Rectangle}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid285",
+                            "opacity",
+                            18000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_Italo}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid296",
+                            "opacity",
+                            25000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_Italo}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid3",
+                            "opacity",
+                            0,
+                            2160,
+                            "easeInOutQuad",
+                            "${Rectangle}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid4",
+                            "opacity",
+                            13976,
+                            2000,
+                            "easeInOutQuad",
+                            "${Rectangle}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid269",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid228",
+                            "left",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_6}",
+                            '97px',
+                            '97px'
+                        ],
+                        [
+                            "eid306",
+                            "left",
+                            28000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_Ilya}",
+                            '694px',
+                            '694px'
+                        ],
+                        [
+                            "eid260",
+                            "top",
+                            13000,
+                            2976,
+                            "easeInOutQuad",
+                            "${houses_bg_1}",
+                            '1071px',
+                            '1500px'
+                        ],
+                        [
+                            "eid232",
+                            "scaleY",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '0.78173',
+                            '0.78173'
+                        ],
+                        [
+                            "eid313",
+                            "width",
+                            35000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_betreut}",
+                            '704px',
+                            '704px'
+                        ],
+                        [
+                            "eid308",
+                            "opacity",
+                            28000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_Ilya}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid309",
+                            "opacity",
+                            32000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_Ilya}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid277",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
+                            "${houses_bg_1}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid227",
+                            "scaleY",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_6}",
+                            '0.94336',
+                            '0.94336'
+                        ],
+                        [
+                            "eid247",
+                            "top",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            '784px',
+                            '784px'
+                        ],
+                        [
+                            "eid248",
+                            "top",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '908px',
+                            '908px'
+                        ],
+                        [
+                            "eid210",
+                            "top",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_1}",
+                            '132px',
+                            '132px'
+                        ],
+                        [
+                            "eid246",
+                            "top",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_6}",
+                            '989px',
+                            '989px'
+                        ],
+                        [
+                            "eid282",
+                            "display",
+                            18000,
+                            0,
+                            "easeInOutBounce",
+                            "${Titel_betreut}",
+                            'none',
+                            'block'
+                        ],
+                            [ "eid21", "trigger", 0, function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['stop', '${H_End}', [] ] ],
+                            [ "eid22", "trigger", 2000, function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['stop', '${H_crack}', [] ] ],
+                            [ "eid23", "trigger", 4900, function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['play', '${H_End}', [] ] ],
+                            [ "eid24", "trigger", 10200, function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['play', '${H_crack}', [] ] ],
+                            [ "eid336", "trigger", 10200, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${SFX_rumble}', [] ] ]
+                    ]
                 }
             },
-            {
-                id: 'H_End',
-                symbolName: 'H_head',
-                autoPlay: {
-
+            "text_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0', '0', 1171, 80, 'auto', 'auto'],
+                            id: 'Text_C1',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/END/Text_C1.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 1190, 80]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4733,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 1052,
+                        "fade_still": 2185,
+                        "still_loop": 2452,
+                        "opaque": 3052,
+                        "opaque_loop": 3852,
+                        "fade": 4252
+                    },
+                    data: [
+                        [
+                            "eid69",
+                            "opacity",
+                            0,
+                            1052,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid70",
+                            "opacity",
+                            1052,
+                            129,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid71",
+                            "opacity",
+                            1181,
+                            140,
+                            "easeOutBounce",
+                            "${Text_C1}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid72",
+                            "opacity",
+                            1321,
+                            106,
+                            "easeOutBounce",
+                            "${Text_C1}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid73",
+                            "opacity",
+                            1427,
+                            61,
+                            "easeOutBounce",
+                            "${Text_C1}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid74",
+                            "opacity",
+                            1488,
+                            164,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid75",
+                            "opacity",
+                            1652,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid76",
+                            "opacity",
+                            1719,
+                            66,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid77",
+                            "opacity",
+                            1785,
+                            200,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid78",
+                            "opacity",
+                            1985,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid79",
+                            "opacity",
+                            2185,
+                            96,
+                            "easeInBounce",
+                            "${Text_C1}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid80",
+                            "opacity",
+                            2281,
+                            171,
+                            "easeOutBounce",
+                            "${Text_C1}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid81",
+                            "opacity",
+                            2452,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid82",
+                            "opacity",
+                            2519,
+                            34,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid83",
+                            "opacity",
+                            2553,
+                            70,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid84",
+                            "opacity",
+                            2623,
+                            55,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid85",
+                            "opacity",
+                            2678,
+                            41,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid86",
+                            "opacity",
+                            2719,
+                            38,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid87",
+                            "opacity",
+                            2757,
+                            64,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid88",
+                            "opacity",
+                            3052,
+                            800,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid89",
+                            "opacity",
+                            4052,
+                            0,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid90",
+                            "opacity",
+                            4252,
+                            481,
+                            "easeInOutBounce",
+                            "${Text_C1}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_2',
-                symbolName: 'text_2',
-                autoPlay: {
-
+            "text_5": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0', '0', 991, 80, 'auto', 'auto'],
+                            id: 'Text_C3',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/END/Text_C3.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 1040, 80]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4167,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 467,
+                        "fade_still": 1600,
+                        "still_loop": 1867,
+                        "opaque": 2467,
+                        "opaque_loop": 3267,
+                        "fade": 3667
+                    },
+                    data: [
+                        [
+                            "eid113",
+                            "opacity",
+                            0,
+                            467,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid114",
+                            "opacity",
+                            467,
+                            129,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid115",
+                            "opacity",
+                            596,
+                            140,
+                            "easeOutBounce",
+                            "${Text_C3}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid116",
+                            "opacity",
+                            736,
+                            106,
+                            "easeOutBounce",
+                            "${Text_C3}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid117",
+                            "opacity",
+                            842,
+                            61,
+                            "easeOutBounce",
+                            "${Text_C3}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid118",
+                            "opacity",
+                            903,
+                            164,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid119",
+                            "opacity",
+                            1067,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid120",
+                            "opacity",
+                            1134,
+                            66,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid121",
+                            "opacity",
+                            1200,
+                            200,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid122",
+                            "opacity",
+                            1400,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid123",
+                            "opacity",
+                            1600,
+                            96,
+                            "easeInBounce",
+                            "${Text_C3}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid124",
+                            "opacity",
+                            1696,
+                            171,
+                            "easeOutBounce",
+                            "${Text_C3}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid125",
+                            "opacity",
+                            1867,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid126",
+                            "opacity",
+                            1934,
+                            34,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid127",
+                            "opacity",
+                            1968,
+                            70,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid128",
+                            "opacity",
+                            2038,
+                            55,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid129",
+                            "opacity",
+                            2093,
+                            41,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid130",
+                            "opacity",
+                            2134,
+                            38,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid131",
+                            "opacity",
+                            2172,
+                            64,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid132",
+                            "opacity",
+                            2467,
+                            800,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid133",
+                            "opacity",
+                            3467,
+                            0,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid134",
+                            "opacity",
+                            3667,
+                            500,
+                            "easeInOutBounce",
+                            "${Text_C3}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_1',
-                symbolName: 'text_1',
-                autoPlay: {
-
+            "text_4": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [3, 0, 458, 80, 'auto', 'auto'],
+                            id: 'Text_C2',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/END/Text_C2.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 470, 80]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4167,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 467,
+                        "fade_still": 1600,
+                        "still_loop": 1867,
+                        "opaque": 2467,
+                        "opaque_loop": 3267,
+                        "fade": 3667
+                    },
+                    data: [
+                        [
+                            "eid91",
+                            "opacity",
+                            0,
+                            467,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid92",
+                            "opacity",
+                            467,
+                            129,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid93",
+                            "opacity",
+                            596,
+                            140,
+                            "easeOutBounce",
+                            "${Text_C2}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid94",
+                            "opacity",
+                            736,
+                            106,
+                            "easeOutBounce",
+                            "${Text_C2}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid95",
+                            "opacity",
+                            842,
+                            61,
+                            "easeOutBounce",
+                            "${Text_C2}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid96",
+                            "opacity",
+                            903,
+                            164,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid97",
+                            "opacity",
+                            1067,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid98",
+                            "opacity",
+                            1134,
+                            66,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid99",
+                            "opacity",
+                            1200,
+                            200,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid100",
+                            "opacity",
+                            1400,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid101",
+                            "opacity",
+                            1600,
+                            96,
+                            "easeInBounce",
+                            "${Text_C2}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid102",
+                            "opacity",
+                            1696,
+                            171,
+                            "easeOutBounce",
+                            "${Text_C2}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid103",
+                            "opacity",
+                            1867,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid104",
+                            "opacity",
+                            1934,
+                            34,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid105",
+                            "opacity",
+                            1968,
+                            70,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid106",
+                            "opacity",
+                            2038,
+                            55,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid107",
+                            "opacity",
+                            2093,
+                            41,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid108",
+                            "opacity",
+                            2134,
+                            38,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid109",
+                            "opacity",
+                            2172,
+                            64,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid110",
+                            "opacity",
+                            2467,
+                            800,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid111",
+                            "opacity",
+                            3467,
+                            0,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid112",
+                            "opacity",
+                            3667,
+                            500,
+                            "easeInOutBounce",
+                            "${Text_C2}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_4',
-                symbolName: 'text_4',
-                autoPlay: {
-
+            "text_2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0', '0', 817, 80, 'auto', 'auto'],
+                            id: 'Text_B2',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/END/Text_B2.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 850, 80]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4200,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 482,
+                        "fade_still": 1615,
+                        "still_loop": 1882,
+                        "opaque": 2482,
+                        "opaque_loop": 3282,
+                        "fade": 3682
+                    },
+                    data: [
+                        [
+                            "eid47",
+                            "opacity",
+                            0,
+                            482,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid48",
+                            "opacity",
+                            482,
+                            129,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid49",
+                            "opacity",
+                            611,
+                            140,
+                            "easeOutBounce",
+                            "${Text_B2}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid50",
+                            "opacity",
+                            751,
+                            106,
+                            "easeOutBounce",
+                            "${Text_B2}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid51",
+                            "opacity",
+                            857,
+                            61,
+                            "easeOutBounce",
+                            "${Text_B2}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid52",
+                            "opacity",
+                            918,
+                            164,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid53",
+                            "opacity",
+                            1082,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid54",
+                            "opacity",
+                            1149,
+                            66,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid55",
+                            "opacity",
+                            1215,
+                            200,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid56",
+                            "opacity",
+                            1415,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid57",
+                            "opacity",
+                            1615,
+                            96,
+                            "easeInBounce",
+                            "${Text_B2}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid58",
+                            "opacity",
+                            1711,
+                            171,
+                            "easeOutBounce",
+                            "${Text_B2}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid59",
+                            "opacity",
+                            1882,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid60",
+                            "opacity",
+                            1949,
+                            34,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid61",
+                            "opacity",
+                            1983,
+                            70,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid62",
+                            "opacity",
+                            2053,
+                            55,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid63",
+                            "opacity",
+                            2108,
+                            41,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid64",
+                            "opacity",
+                            2149,
+                            38,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid65",
+                            "opacity",
+                            2187,
+                            64,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid66",
+                            "opacity",
+                            2482,
+                            800,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid67",
+                            "opacity",
+                            3482,
+                            0,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid68",
+                            "opacity",
+                            3682,
+                            518,
+                            "easeInOutBounce",
+                            "${Text_B2}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'Title_Intro',
-                symbolName: 'Title_Intro',
-                autoPlay: {
-
+            "text_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0', '6', 1434, 89, 'auto', 'auto'],
+                            id: 'Text_B1',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/END/Text_B1.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 1433, 89]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4600,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 822,
+                        "fade_still": 1955,
+                        "still_loop": 2222,
+                        "opaque": 2822,
+                        "opaque_loop": 3622,
+                        "fade": 4022
+                    },
+                    data: [
+                        [
+                            "eid25",
+                            "opacity",
+                            0,
+                            822,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid26",
+                            "opacity",
+                            822,
+                            129,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid27",
+                            "opacity",
+                            951,
+                            140,
+                            "easeOutBounce",
+                            "${Text_B1}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid28",
+                            "opacity",
+                            1091,
+                            106,
+                            "easeOutBounce",
+                            "${Text_B1}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid29",
+                            "opacity",
+                            1197,
+                            61,
+                            "easeOutBounce",
+                            "${Text_B1}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid30",
+                            "opacity",
+                            1258,
+                            164,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid31",
+                            "opacity",
+                            1422,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid32",
+                            "opacity",
+                            1489,
+                            66,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid33",
+                            "opacity",
+                            1555,
+                            200,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid34",
+                            "opacity",
+                            1755,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid35",
+                            "opacity",
+                            1955,
+                            96,
+                            "easeInBounce",
+                            "${Text_B1}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid36",
+                            "opacity",
+                            2051,
+                            171,
+                            "easeOutBounce",
+                            "${Text_B1}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid37",
+                            "opacity",
+                            2222,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid38",
+                            "opacity",
+                            2289,
+                            34,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid39",
+                            "opacity",
+                            2323,
+                            70,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid40",
+                            "opacity",
+                            2393,
+                            55,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid41",
+                            "opacity",
+                            2448,
+                            41,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid42",
+                            "opacity",
+                            2489,
+                            38,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid43",
+                            "opacity",
+                            2527,
+                            64,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid44",
+                            "opacity",
+                            2822,
+                            800,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid45",
+                            "opacity",
+                            3822,
+                            0,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid46",
+                            "opacity",
+                            4022,
+                            578,
+                            "easeInOutBounce",
+                            "${Text_B1}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_6',
-                symbolName: 'text_6',
-                autoPlay: {
-
+            "dust_button": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [7, -7, 179, 193, 'auto', 'auto'],
+                            opacity: '0.06',
+                            overflow: 'hidden',
+                            id: 'dust_icon2',
+                            symbolName: 'dust_icon',
+                            type: 'rect',
+                            transform: [[0, 0, 0], ['90', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 193, 179]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 8409,
+                    autoPlay: true,
+                    labels: {
+                        "fade_flimmer": 0,
+                        "fade_still": 1133,
+                        "still_loop": 1400,
+                        "opaque": 2000,
+                        "opaque_loop": 2400,
+                        "fade": 2800
+                    },
+                    data: [
+                        [
+                            "eid1591",
+                            "opacity",
+                            0,
+                            129,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.06',
+                            '0.01'
+                        ],
+                        [
+                            "eid1592",
+                            "opacity",
+                            129,
+                            140,
+                            "easeInBounce",
+                            "${dust_icon2}",
+                            '0.01',
+                            '0.05'
+                        ],
+                        [
+                            "eid1593",
+                            "opacity",
+                            269,
+                            167,
+                            "easeOutBounce",
+                            "${dust_icon2}",
+                            '0.05',
+                            '0.03'
+                        ],
+                        [
+                            "eid1594",
+                            "opacity",
+                            436,
+                            164,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.03',
+                            '0.04'
+                        ],
+                        [
+                            "eid1595",
+                            "opacity",
+                            630,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.04',
+                            '0.04'
+                        ],
+                        [
+                            "eid1596",
+                            "opacity",
+                            733,
+                            200,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.040000',
+                            '0.06'
+                        ],
+                        [
+                            "eid1597",
+                            "opacity",
+                            933,
+                            67,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.060000',
+                            '0.1'
+                        ],
+                        [
+                            "eid1598",
+                            "opacity",
+                            1133,
+                            96,
+                            "easeInBounce",
+                            "${dust_icon2}",
+                            '0.100000',
+                            '0.146612'
+                        ],
+                        [
+                            "eid1599",
+                            "opacity",
+                            1229,
+                            171,
+                            "easeOutBounce",
+                            "${dust_icon2}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid1600",
+                            "opacity",
+                            1400,
+                            67,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid1601",
+                            "opacity",
+                            1467,
+                            34,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid1602",
+                            "opacity",
+                            1501,
+                            70,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid1603",
+                            "opacity",
+                            1571,
+                            55,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid1604",
+                            "opacity",
+                            1626,
+                            41,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid1605",
+                            "opacity",
+                            1667,
+                            38,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid1606",
+                            "opacity",
+                            1705,
+                            64,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid1607",
+                            "opacity",
+                            2000,
+                            400,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid1608",
+                            "opacity",
+                            2600,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid1609",
+                            "opacity",
+                            2800,
+                            467,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.5',
+                            '0'
+                        ],
+                        [
+                            "eid1551",
+                            "left",
+                            8409,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon2}",
+                            '7px',
+                            '7px'
+                        ],
+                        [
+                            "eid1549",
+                            "rotateZ",
+                            0,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon2}",
+                            '90deg',
+                            '90deg'
+                        ],
+                        [
+                            "eid1550",
+                            "top",
+                            8409,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon2}",
+                            '-7px',
+                            '-7px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_3',
-                symbolName: 'text_3',
-                autoPlay: {
-
+            "dust_icon": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'dust_iconCopy',
+                            type: 'image',
+                            rect: [50, 0, '1242px', '193px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/dust_icon3.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 179, 193]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 537,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid1543",
+                            "scaleY",
+                            0,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid1536",
+                            "left",
+                            0,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '50px',
+                            '50px'
+                        ],
+                        [
+                            "eid1537",
+                            "left",
+                            83,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '50px',
+                            '-111px'
+                        ],
+                        [
+                            "eid1538",
+                            "left",
+                            167,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '-111px',
+                            '-283px'
+                        ],
+                        [
+                            "eid1539",
+                            "left",
+                            250,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '-283px',
+                            '-481px'
+                        ],
+                        [
+                            "eid1540",
+                            "left",
+                            333,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '-481px',
+                            '-670px'
+                        ],
+                        [
+                            "eid1541",
+                            "left",
+                            417,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '-670px',
+                            '-876px'
+                        ],
+                        [
+                            "eid1542",
+                            "left",
+                            500,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '-876px',
+                            '-1055px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_5',
-                symbolName: 'text_5',
-                autoPlay: {
-
+            "H_head": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '3500px', '454px', 'auto', 'auto'],
+                            id: 'End_head',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/END/End_head.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 500, 560]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 600,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid6",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${End_head}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid7",
+                            "left",
+                            100,
+                            0,
+                            "linear",
+                            "${End_head}",
+                            '0px',
+                            '-522px'
+                        ],
+                        [
+                            "eid8",
+                            "left",
+                            200,
+                            0,
+                            "linear",
+                            "${End_head}",
+                            '-500px',
+                            '-1000px'
+                        ],
+                        [
+                            "eid9",
+                            "left",
+                            300,
+                            0,
+                            "linear",
+                            "${End_head}",
+                            '-1000px',
+                            '-1500px'
+                        ],
+                        [
+                            "eid10",
+                            "left",
+                            400,
+                            0,
+                            "linear",
+                            "${End_head}",
+                            '-1500px',
+                            '-2000px'
+                        ],
+                        [
+                            "eid11",
+                            "left",
+                            500,
+                            0,
+                            "linear",
+                            "${End_head}",
+                            '-2000px',
+                            '-2500px'
+                        ],
+                        [
+                            "eid12",
+                            "left",
+                            600,
+                            0,
+                            "linear",
+                            "${End_head}",
+                            '-2500px',
+                            '-3002px'
+                        ]
+                    ]
+                }
+            },
+            "H_crack": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '318px', '700px', 'auto', 'auto'],
+                            id: 'End_crack2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/END/End_crack.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 318, 182]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 300,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid13",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${End_crack2}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid17",
+                            "left",
+                            200,
+                            0,
+                            "linear",
+                            "${End_crack2}",
+                            '0px',
+                            '2px'
+                        ],
+                        [
+                            "eid18",
+                            "left",
+                            300,
+                            0,
+                            "linear",
+                            "${End_crack2}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid14",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${End_crack2}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid15",
+                            "top",
+                            100,
+                            0,
+                            "linear",
+                            "${End_crack2}",
+                            '0px',
+                            '-170px'
+                        ],
+                        [
+                            "eid16",
+                            "top",
+                            200,
+                            0,
+                            "linear",
+                            "${End_crack2}",
+                            '-170px',
+                            '-325px'
+                        ],
+                        [
+                            "eid19",
+                            "top",
+                            300,
+                            0,
+                            "linear",
+                            "${End_crack2}",
+                            '-325px',
+                            '-496px'
+                        ]
+                    ]
+                }
+            },
+            "text_6": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [3, -3, 1186, 80, 'auto', 'auto'],
+                            id: 'Text_C4',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/END/Text_C4.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 1200, 80]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4167,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 467,
+                        "fade_still": 1600,
+                        "still_loop": 1867,
+                        "opaque": 2467,
+                        "opaque_loop": 3267,
+                        "fade": 3667
+                    },
+                    data: [
+                        [
+                            "eid157",
+                            "opacity",
+                            0,
+                            467,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid158",
+                            "opacity",
+                            467,
+                            129,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid159",
+                            "opacity",
+                            596,
+                            140,
+                            "easeOutBounce",
+                            "${Text_C4}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid160",
+                            "opacity",
+                            736,
+                            106,
+                            "easeOutBounce",
+                            "${Text_C4}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid161",
+                            "opacity",
+                            842,
+                            61,
+                            "easeOutBounce",
+                            "${Text_C4}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid162",
+                            "opacity",
+                            903,
+                            164,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid163",
+                            "opacity",
+                            1067,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid164",
+                            "opacity",
+                            1134,
+                            66,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid165",
+                            "opacity",
+                            1200,
+                            200,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid166",
+                            "opacity",
+                            1400,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid167",
+                            "opacity",
+                            1600,
+                            96,
+                            "easeInBounce",
+                            "${Text_C4}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid168",
+                            "opacity",
+                            1696,
+                            171,
+                            "easeOutBounce",
+                            "${Text_C4}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid169",
+                            "opacity",
+                            1867,
+                            67,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid170",
+                            "opacity",
+                            1934,
+                            34,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid171",
+                            "opacity",
+                            1968,
+                            70,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid172",
+                            "opacity",
+                            2038,
+                            55,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid173",
+                            "opacity",
+                            2093,
+                            41,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid174",
+                            "opacity",
+                            2134,
+                            38,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid175",
+                            "opacity",
+                            2172,
+                            64,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid176",
+                            "opacity",
+                            2467,
+                            800,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid177",
+                            "opacity",
+                            3467,
+                            0,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid178",
+                            "opacity",
+                            3667,
+                            500,
+                            "easeInOutBounce",
+                            "${Text_C4}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
+                }
+            },
+            "cloud_2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, -1000, '500px', '1200px', 'auto', 'auto'],
+                            id: 'ss_cloud2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_cloud5.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 500, 200]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 600,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid879",
+                            "top",
+                            33,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-1000px',
+                            '-1000px'
+                        ],
+                        [
+                            "eid880",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-1000px',
+                            '0px'
+                        ],
+                        [
+                            "eid17",
+                            "top",
+                            233,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '0px',
+                            '-200px'
+                        ],
+                        [
+                            "eid18",
+                            "top",
+                            333,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-200px',
+                            '-400px'
+                        ],
+                        [
+                            "eid19",
+                            "top",
+                            433,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-400px',
+                            '-600px'
+                        ],
+                        [
+                            "eid20",
+                            "top",
+                            533,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-600px',
+                            '-800px'
+                        ]
+                    ]
+                }
+            },
+            "Title_Intro": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['934px', '1214px', 1104, 302, 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.43478', '0.43478', 1], ['50%', '50%']],
+                            id: 'cloud_clusterCopy4',
+                            symbolName: 'cloud_cluster',
+                            autoOrient: false,
+                            type: 'rect'
+                        },
+                        {
+                            rect: ['-1113px', '900px', 1104, 302, 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['1.18114', '-1.1411', 1], ['50%', '50%']],
+                            id: 'cloud_clusterCopy2',
+                            symbolName: 'cloud_cluster',
+                            autoOrient: false,
+                            type: 'rect'
+                        },
+                        {
+                            rect: [3458, 267, 1104, 302, 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-0.86322', '-0.86322', 1], ['50%', '50%']],
+                            id: 'cloud_cluster',
+                            symbolName: 'cloud_cluster',
+                            autoOrient: 'true',
+                            type: 'rect'
+                        },
+                        {
+                            rect: ['-884px', '186px', 1104, 302, 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.58423', '-0.58423', 1], ['50%', '50%']],
+                            id: 'cloud_clusterCopy3',
+                            symbolName: 'cloud_cluster',
+                            autoOrient: false,
+                            type: 'rect'
+                        },
+                        {
+                            rect: [3276, 267, 1104, 302, 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['1.0317', '1.0317', 1], ['50%', '50%']],
+                            id: 'cloud_clusterCopy',
+                            symbolName: 'cloud_cluster',
+                            autoOrient: false,
+                            type: 'rect'
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 20000,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid1061",
+                            "scaleX",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_clusterCopy3}",
+                            '0.58423',
+                            '0.58423'
+                        ],
+                        [
+                            "eid1821",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_cluster}",
+                            '-0.86322',
+                            '-0.86322'
+                        ],
+                        [
+                            "eid1095",
+                            "location",
+                            0,
+                            13386,
+                            "linear",
+                            "${cloud_clusterCopy4}",
+                            [[1473.74, 1364.65, -2265.5, 0, 0, 0,0],[-262.13, 1364.65, 0, 0, 0, 0,1735.87]]
+                        ],
+                        [
+                            "eid1098",
+                            "location",
+                            13629,
+                            6371,
+                            "linear",
+                            "${cloud_clusterCopy4}",
+                            [[2288, 1364.65, 0, 0, 0, 0,0],[1473.74, 1364.65, 0, 0, 0, 0,814.26]]
+                        ],
+                        [
+                            "eid1112",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy4}",
+                            '0.43478',
+                            '0.43478'
+                        ],
+                        [
+                            "eid1830",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            '1.18114',
+                            '0.95'
+                        ],
+                        [
+                            "eid1062",
+                            "scaleY",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_clusterCopy3}",
+                            '-0.58423',
+                            '-0.58423'
+                        ],
+                        [
+                            "eid1115",
+                            "location",
+                            0,
+                            17537,
+                            "linear",
+                            "${cloud_clusterCopy}",
+                            [[2284.05, 60.25, 0, 0, 0, 0,0],[-645.75, 60.25, 0, 0, 0, 0,2929.8]]
+                        ],
+                        [
+                            "eid1121",
+                            "location",
+                            18000,
+                            2000,
+                            "linear",
+                            "${cloud_clusterCopy}",
+                            [[2775.88, 24.25, 0, 0, 0, 0,0],[2279.13, 24.25, 0, 0, 0, 0,496.75]]
+                        ],
+                        [
+                            "eid1820",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_cluster}",
+                            '-0.86322',
+                            '-0.86322'
+                        ],
+                        [
+                            "eid1077",
+                            "location",
+                            0,
+                            13000,
+                            "linear",
+                            "${cloud_clusterCopy3}",
+                            [[618.1, 336.78, 2349.22, 0, 0, 0,0],[2383.63, 336.78, 0, 0, 0, 0,1765.53]]
+                        ],
+                        [
+                            "eid1080",
+                            "location",
+                            13386,
+                            6614,
+                            "linear",
+                            "${cloud_clusterCopy3}",
+                            [[-331.12, 336.78, 0, 0, 0, 0,0],[618.1, 336.78, 0, 0, 0, 0,949.22]]
+                        ],
+                        [
+                            "eid1831",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            '-1.1411',
+                            '-0.95'
+                        ],
+                        [
+                            "eid1086",
+                            "location",
+                            0,
+                            10000,
+                            "linear",
+                            "${cloud_cluster}",
+                            [[1027.38, 711.75, -2397.37, 0, 0, 0,0],[-570.87, 711.75, 0, 0, 0, 0,1598.25]]
+                        ],
+                        [
+                            "eid1089",
+                            "location",
+                            10335,
+                            9665,
+                            "linear",
+                            "${cloud_cluster}",
+                            [[2599.88, 711.75, 0, 0, 0, 0,0],[1027.38, 711.75, 0, 0, 0, 0,1572.5]]
+                        ],
+                        [
+                            "eid1828",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy}",
+                            '1.0317',
+                            '1.0317'
+                        ],
+                        [
+                            "eid1090",
+                            "location",
+                            0,
+                            16341,
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            [[-352.92, 1051, 2093.13, 0, 0, 0,0],[2765, 1051, 0, 0, 0, 0,3117.92]]
+                        ],
+                        [
+                            "eid1093",
+                            "location",
+                            17000,
+                            3000,
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            [[-678.75, 1051, 0, 0, 0, 0,0],[-352.92, 1051, 0, 0, 0, 0,325.83]]
+                        ],
+                        [
+                            "eid2165",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy}",
+                            '1.0317',
+                            '1.0317'
+                        ]
+                    ]
+                }
+            },
+            "cloud_cluster": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [242, 0, 500, 200, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'cloud_3',
+                            symbolName: 'cloud_3',
+                            type: 'rect'
+                        },
+                        {
+                            rect: [574, 84, 500, 200, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'cloud_22',
+                            symbolName: 'cloud_2',
+                            type: 'rect'
+                        },
+                        {
+                            rect: [30, 38, 500, 200, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'cloud_12',
+                            symbolName: 'cloud_1',
+                            type: 'rect'
+                        },
+                        {
+                            rect: [362, 100, 500, 200, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'cloud_3Copy',
+                            symbolName: 'cloud_3',
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-1', '1', 1], ['50%', '50%']]
+                        },
+                        {
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-1', '1', 1], ['50%', '50%']],
+                            overflow: 'hidden',
+                            id: 'cloud_22Copy',
+                            symbolName: 'cloud_2',
+                            type: 'rect',
+                            rect: [142, 102, 500, 200, 'auto', 'auto']
+                        },
+                        {
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-1', '1', 1], ['50%', '50%']],
+                            overflow: 'hidden',
+                            id: 'cloud_12Copy',
+                            symbolName: 'cloud_1',
+                            type: 'rect',
+                            rect: [470, 16, 500, 200, 'auto', 'auto']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 1104, 302]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "start": 0
+                    },
+                    data: [
+                        [
+                            "eid2179",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '-1',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2183",
+                            "scaleX",
+                            2000,
+                            2022,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '-1.15',
+                            '-0.9'
+                        ],
+                        [
+                            "eid2188",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '-0.9',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2191",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '-1.15',
+                            '-1'
+                        ],
+                        [
+                            "eid2168",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_12Copy}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid876",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3}",
+                            '242px',
+                            '252px'
+                        ],
+                        [
+                            "eid891",
+                            "left",
+                            304,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_3}",
+                            '252px',
+                            '262px'
+                        ],
+                        [
+                            "eid2169",
+                            "scaleY",
+                            22,
+                            0,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2200",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_3}",
+                            '1',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2201",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_3}",
+                            '1.14999',
+                            '0.9'
+                        ],
+                        [
+                            "eid2202",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_3}",
+                            '0.9',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2203",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_3}",
+                            '1.14999',
+                            '1'
+                        ],
+                        [
+                            "eid2167",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2177",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '-1',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2185",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '-1.15',
+                            '-0.9'
+                        ],
+                        [
+                            "eid2187",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '-0.9',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2190",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '-1.15',
+                            '-1'
+                        ],
+                        [
+                            "eid875",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '362px',
+                            '342px'
+                        ],
+                        [
+                            "eid892",
+                            "left",
+                            304,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_3Copy}",
+                            '342px',
+                            '332px'
+                        ],
+                        [
+                            "eid862",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '100px',
+                            '100px'
+                        ],
+                        [
+                            "eid893",
+                            "top",
+                            304,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_3Copy}",
+                            '100px',
+                            '91px'
+                        ],
+                        [
+                            "eid2170",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_12}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2192",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_12}",
+                            '1',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2193",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_12}",
+                            '1.14999',
+                            '0.9'
+                        ],
+                        [
+                            "eid2194",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_12}",
+                            '0.9',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2195",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_12}",
+                            '1.14999',
+                            '1'
+                        ],
+                        [
+                            "eid2171",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_22}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2196",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_22}",
+                            '1',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2197",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_22}",
+                            '1.14999',
+                            '0.9'
+                        ],
+                        [
+                            "eid2198",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_22}",
+                            '0.9',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2199",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_22}",
+                            '1.14999',
+                            '1'
+                        ],
+                        [
+                            "eid2178",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_12Copy}",
+                            '-1',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2184",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_12Copy}",
+                            '-1.15',
+                            '-0.9'
+                        ],
+                        [
+                            "eid2186",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_12Copy}",
+                            '-0.9',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2189",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_12Copy}",
+                            '-1.15',
+                            '-1'
+                        ],
+                        [
+                            "eid865",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid890",
+                            "top",
+                            304,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_3}",
+                            '0px',
+                            '10px'
+                        ],
+                        [
+                            "eid864",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '1',
+                            '1'
+                        ]
+                    ]
+                }
+            },
+            "cloud_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '500px', '1200px', 'auto', 'auto'],
+                            id: 'ss_cloud2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_cloud5.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 500, 200]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 600,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid881",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid882",
+                            "top",
+                            100,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '0px',
+                            '-200px'
+                        ],
+                        [
+                            "eid18",
+                            "top",
+                            200,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-200px',
+                            '-400px'
+                        ],
+                        [
+                            "eid19",
+                            "top",
+                            299,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-400px',
+                            '-600px'
+                        ],
+                        [
+                            "eid20",
+                            "top",
+                            399,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-600px',
+                            '-800px'
+                        ],
+                        [
+                            "eid21",
+                            "top",
+                            499,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-800px',
+                            '-1000px'
+                        ]
+                    ]
+                }
+            },
+            "cloud_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, -800, '500px', '1200px', 'auto', 'auto'],
+                            id: 'ss_cloud2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_cloud5.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 500, 200]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 600,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid376",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-800px',
+                            '-800px'
+                        ],
+                        [
+                            "eid377",
+                            "top",
+                            167,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-800px',
+                            '-1000px'
+                        ],
+                        [
+                            "eid16",
+                            "top",
+                            267,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-1000px',
+                            '0px'
+                        ],
+                        [
+                            "eid17",
+                            "top",
+                            367,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '0px',
+                            '-200px'
+                        ],
+                        [
+                            "eid18",
+                            "top",
+                            467,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-200px',
+                            '-400px'
+                        ],
+                        [
+                            "eid19",
+                            "top",
+                            567,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-400px',
+                            '-600px'
+                        ]
+                    ]
                 }
             }
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_End_body3}": [
-                ["style", "top", '863px'],
-                ["style", "display", 'block'],
-                ["style", "height", '728px'],
-                ["style", "left", '1341px'],
-                ["style", "width", '432px']
-            ],
-            "${_text_1}": [
-                ["style", "top", '132px'],
-                ["transform", "scaleY", '0.84796'],
-                ["transform", "rotateZ", '-3deg'],
-                ["transform", "scaleX", '0.84796'],
-                ["style", "left", '-40px'],
-                ["style", "display", 'block']
-            ],
-            "${_Titel_Italo}": [
-                ["style", "top", '279px'],
-                ["subproperty", "filter.invert", '0'],
-                ["style", "display", 'none'],
-                ["style", "height", '440px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '587px'],
-                ["style", "width", '873px']
-            ],
-            "${_Titel_Ilya}": [
-                ["style", "top", '627px'],
-                ["style", "height", '290px'],
-                ["subproperty", "filter.invert", '0'],
-                ["style", "display", 'none'],
-                ["style", "opacity", '0'],
-                ["style", "left", '694px'],
-                ["style", "width", '659px']
-            ],
-            "${_Rectangle}": [
-                ["color", "background-color", 'rgba(0,0,0,1.00)'],
-                ["style", "opacity", '1'],
-                ["style", "display", 'block'],
-                ["style", "top", '0px']
-            ],
-            "${_text_3}": [
-                ["style", "top", '664px'],
-                ["transform", "scaleY", '1.10416'],
-                ["transform", "rotateZ", '0deg'],
-                ["transform", "scaleX", '1.10416'],
-                ["style", "left", '107px'],
-                ["style", "display", 'block']
-            ],
-            "${_house_1}": [
-                ["style", "top", '1282px'],
-                ["style", "left", '-56px'],
-                ["style", "display", 'block']
-            ],
-            "${_houses_bg_1}": [
-                ["style", "top", '1071px'],
-                ["style", "left", '378px'],
-                ["style", "display", 'block']
-            ],
-            "${_SFX_rumble}": [
-                ["property", "volume", '0']
-            ],
-            "${_house_2}": [
-                ["style", "top", '1302px'],
-                ["style", "left", '1815px'],
-                ["style", "display", 'block']
-            ],
-            "${_H_crack}": [
-                ["style", "top", '690px'],
-                ["transform", "scaleY", '0.775'],
-                ["transform", "scaleX", '0.775'],
-                ["style", "display", 'none'],
-                ["style", "opacity", '0'],
-                ["style", "clip", [0,318,324.12261962890625,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
-                ["style", "left", '1296px']
-            ],
-            "${_text_5}": [
-                ["style", "top", '908px'],
-                ["transform", "scaleY", '0.78173'],
-                ["transform", "rotateZ", '1deg'],
-                ["transform", "scaleX", '0.78173'],
-                ["style", "left", '64px'],
-                ["style", "display", 'block']
-            ],
-            "${_H_End}": [
-                ["style", "top", '590px'],
-                ["transform", "scaleY", '0.775'],
-                ["style", "display", 'block'],
-                ["style", "left", '1213px'],
-                ["transform", "scaleX", '0.775']
-            ],
-            "${_Titel_betreut}": [
-                ["style", "top", '514px'],
-                ["style", "height", '508px'],
-                ["subproperty", "filter.invert", '0'],
-                ["style", "display", 'none'],
-                ["style", "opacity", '0'],
-                ["style", "left", '672px'],
-                ["style", "width", '704px']
-            ],
-            "${_text_6}": [
-                ["style", "top", '989px'],
-                ["transform", "scaleY", '0.94336'],
-                ["transform", "rotateZ", '1deg'],
-                ["transform", "scaleX", '0.94336'],
-                ["style", "opacity", '1'],
-                ["style", "left", '97px'],
-                ["style", "display", 'block']
-            ],
-            "${_Titel_linie}": [
-                ["style", "top", '833px'],
-                ["subproperty", "filter.invert", '0'],
-                ["style", "display", 'none'],
-                ["style", "height", '41px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '576px'],
-                ["style", "width", '894px']
-            ],
-            "${_text_4}": [
-                ["style", "top", '784px'],
-                ["transform", "scaleY", '0.94336'],
-                ["transform", "scaleX", '0.94336'],
-                ["style", "left", '267px'],
-                ["style", "display", 'block']
-            ],
-            "${_Title_Intro}": [
-                ["style", "top", '-335px'],
-                ["style", "opacity", '0.6']
-            ],
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(255,255,255,1)'],
-                ["style", "overflow", 'hidden'],
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ],
-            "${_Titel_IV}": [
-                ["style", "top", '978px'],
-                ["subproperty", "filter.invert", '0'],
-                ["style", "display", 'none'],
-                ["style", "height", '196px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '653px'],
-                ["style", "width", '739px']
-            ],
-            "${_text_2}": [
-                ["style", "top", '263px'],
-                ["transform", "scaleY", '0.94336'],
-                ["transform", "rotateZ", '-2deg'],
-                ["transform", "scaleX", '0.94336'],
-                ["style", "left", '100px'],
-                ["style", "display", 'block']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 40500,
-            autoPlay: true,
-            labels: {
-                "button": 4400,
-                "egg": 4900,
-                "crack": 10200
-            },
-            timeline: [
-                { id: "eid307", tween: [ "style", "${_Titel_Ilya}", "top", '627px', { fromValue: '627px'}], position: 28000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid262", tween: [ "style", "${_house_1}", "top", '1711px', { fromValue: '1282px'}], position: 13000, duration: 2976, easing: "easeInOutQuad" },
-                { id: "eid208", tween: [ "transform", "${_text_1}", "scaleY", '0.84796', { fromValue: '0.84796'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid20", tween: [ "style", "${_H_crack}", "display", 'block', { fromValue: 'none'}], position: 4900, duration: 0 },
-                { id: "eid274", tween: [ "style", "${_H_crack}", "display", 'none', { fromValue: 'block'}], position: 16162, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid247", tween: [ "style", "${_text_4}", "top", '784px', { fromValue: '784px'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid241", tween: [ "transform", "${_text_3}", "scaleX", '1.10416', { fromValue: '1.10416'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid260", tween: [ "style", "${_houses_bg_1}", "top", '1500px', { fromValue: '1071px'}], position: 13000, duration: 2976, easing: "easeInOutQuad" },
-                { id: "eid261", tween: [ "style", "${_house_2}", "top", '1731px', { fromValue: '1302px'}], position: 13000, duration: 2976, easing: "easeInOutQuad" },
-                { id: "eid207", tween: [ "transform", "${_text_1}", "scaleX", '0.84796', { fromValue: '0.84796'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid226", tween: [ "transform", "${_text_6}", "scaleX", '0.94336', { fromValue: '0.94336'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid324", tween: [ "style", "${_H_crack}", "opacity", '0', { fromValue: '0'}], position: 4900, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid323", tween: [ "style", "${_H_crack}", "opacity", '1', { fromValue: '0'}], position: 10200, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid319", tween: [ "style", "${_Titel_betreut}", "opacity", '1', { fromValue: '0'}], position: 35000, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid318", tween: [ "style", "${_Titel_betreut}", "opacity", '0', { fromValue: '1'}], position: 39000, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid227", tween: [ "transform", "${_text_6}", "scaleY", '0.94336', { fromValue: '0.94336'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid225", tween: [ "transform", "${_text_3}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid237", tween: [ "transform", "${_text_4}", "scaleX", '0.94336', { fromValue: '0.94336'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid267", tween: [ "style", "${_text_5}", "display", 'none', { fromValue: 'block'}], position: 15976, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid210", tween: [ "style", "${_text_1}", "top", '132px', { fromValue: '132px'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid252", tween: [ "style", "${_text_3}", "top", '714px', { fromValue: '664px'}], position: 3092, duration: 3733, easing: "easeInOutQuad" },
-                { id: "eid246", tween: [ "style", "${_text_6}", "top", '989px', { fromValue: '989px'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid276", tween: [ "style", "${_End_body3}", "display", 'none', { fromValue: 'block'}], position: 16162, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid281", tween: [ "style", "${_Titel_Ilya}", "display", 'block', { fromValue: 'none'}], position: 18000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid255", tween: [ "style", "${_End_body3}", "top", '1297px', { fromValue: '863px'}], position: 13000, duration: 2976, easing: "easeInOutQuad" },
-                { id: "eid266", tween: [ "style", "${_text_6}", "display", 'none', { fromValue: 'block'}], position: 15976, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid209", tween: [ "style", "${_text_1}", "left", '-40px', { fromValue: '-40px'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid279", tween: [ "style", "${_Titel_IV}", "display", 'block', { fromValue: 'none'}], position: 18000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid298", tween: [ "style", "${_Titel_IV}", "display", 'none', { fromValue: 'block'}], position: 26500, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid256", tween: [ "style", "${_H_End}", "top", '1029px', { fromValue: '590px'}], position: 13000, duration: 2976, easing: "easeInOutQuad" },
-                { id: "eid219", tween: [ "transform", "${_text_2}", "scaleX", '0.94336', { fromValue: '0.94336'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid253", tween: [ "style", "${_text_3}", "left", '67px', { fromValue: '107px'}], position: 3092, duration: 3733, easing: "easeInOutQuad" },
-                { id: "eid282", tween: [ "style", "${_Titel_betreut}", "display", 'block', { fromValue: 'none'}], position: 18000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid231", tween: [ "transform", "${_text_5}", "scaleX", '0.78173', { fromValue: '0.78173'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid326", tween: [ "style", "${_Title_Intro}", "top", '-335px', { fromValue: '-335px'}], position: 10200, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid329", tween: [ "style", "${_Title_Intro}", "top", '0px', { fromValue: '-335px'}], position: 13000, duration: 2976, easing: "easeInOutQuad" },
-                { id: "eid189", tween: [ "style", "${_H_crack}", "left", '1296px', { fromValue: '1296px'}], position: 10600, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid242", tween: [ "transform", "${_text_3}", "scaleY", '1.10416', { fromValue: '1.10416'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid270", tween: [ "style", "${_text_2}", "display", 'none', { fromValue: 'block'}], position: 15976, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid305", tween: [ "style", "${_Titel_Ilya}", "width", '659px', { fromValue: '659px'}], position: 28000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid221", tween: [ "style", "${_text_2}", "left", '100px', { fromValue: '100px'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid272", tween: [ "style", "${_house_1}", "display", 'none', { fromValue: 'block'}], position: 15976, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid248", tween: [ "style", "${_text_5}", "top", '908px', { fromValue: '908px'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid190", tween: [ "style", "${_H_crack}", "top", '690px', { fromValue: '690px'}], position: 10600, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid321", tween: [ "style", "${_H_crack}", "top", '1127px', { fromValue: '690px'}], position: 13000, duration: 2976, easing: "easeInOutQuad" },
-                { id: "eid1", tween: [ "style", "${_Rectangle}", "display", 'none', { fromValue: 'block'}], position: 2160, duration: 0 },
-                { id: "eid2", tween: [ "style", "${_Rectangle}", "display", 'block', { fromValue: 'none'}], position: 10200, duration: 0 },
-                { id: "eid3", tween: [ "style", "${_Rectangle}", "opacity", '0', { fromValue: '1'}], position: 0, duration: 2160, easing: "easeInOutQuad" },
-                { id: "eid4", tween: [ "style", "${_Rectangle}", "opacity", '1', { fromValue: '0'}], position: 13976, duration: 2000, easing: "easeInOutQuad" },
-                { id: "eid232", tween: [ "transform", "${_text_5}", "scaleY", '0.78173', { fromValue: '0.78173'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid290", tween: [ "style", "${_Titel_linie}", "opacity", '1', { fromValue: '0'}], position: 20500, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid294", tween: [ "style", "${_Titel_linie}", "opacity", '0', { fromValue: '1'}], position: 25000, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid222", tween: [ "style", "${_text_2}", "top", '263px', { fromValue: '263px'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid275", tween: [ "style", "${_H_End}", "display", 'none', { fromValue: 'block'}], position: 16162, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid335", tween: [ "property", "${_SFX_rumble}", "volume", '1', { fromValue: '0'}], position: 10100, duration: 900, easing: "easeInOutQuad" },
-                { id: "eid334", tween: [ "property", "${_SFX_rumble}", "volume", '0', { fromValue: '1'}], position: 27032, duration: 2764, easing: "easeInOutQuad" },
-                { id: "eid314", tween: [ "style", "${_Titel_betreut}", "left", '672px', { fromValue: '672px'}], position: 35000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid280", tween: [ "style", "${_Titel_Italo}", "display", 'block', { fromValue: 'none'}], position: 18000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid299", tween: [ "style", "${_Titel_Italo}", "display", 'none', { fromValue: 'block'}], position: 26500, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid289", tween: [ "style", "${_Titel_IV}", "opacity", '1', { fromValue: '0'}], position: 21000, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid295", tween: [ "style", "${_Titel_IV}", "opacity", '0', { fromValue: '1'}], position: 25000, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid325", tween: [ "style", "${_Title_Intro}", "opacity", '0.6', { fromValue: '0.6'}], position: 10200, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid285", tween: [ "style", "${_Titel_Italo}", "opacity", '1', { fromValue: '0'}], position: 18000, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid296", tween: [ "style", "${_Titel_Italo}", "opacity", '0', { fromValue: '1'}], position: 25000, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid271", tween: [ "style", "${_text_1}", "display", 'none', { fromValue: 'block'}], position: 15976, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid277", tween: [ "style", "${_houses_bg_1}", "display", 'none', { fromValue: 'block'}], position: 15976, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid313", tween: [ "style", "${_Titel_betreut}", "width", '704px', { fromValue: '704px'}], position: 35000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid239", tween: [ "style", "${_text_4}", "left", '267px', { fromValue: '267px'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid278", tween: [ "style", "${_Titel_linie}", "display", 'block', { fromValue: 'none'}], position: 18000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid297", tween: [ "style", "${_Titel_linie}", "display", 'none', { fromValue: 'block'}], position: 26500, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid238", tween: [ "transform", "${_text_4}", "scaleY", '0.94336', { fromValue: '0.94336'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid306", tween: [ "style", "${_Titel_Ilya}", "left", '694px', { fromValue: '694px'}], position: 28000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid233", tween: [ "style", "${_text_5}", "left", '64px', { fromValue: '64px'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid228", tween: [ "style", "${_text_6}", "left", '97px', { fromValue: '97px'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid269", tween: [ "style", "${_text_3}", "display", 'none', { fromValue: 'block'}], position: 15976, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid264", tween: [ "style", "${_text_6}", "opacity", '0', { fromValue: '1'}], position: 13000, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid308", tween: [ "style", "${_Titel_Ilya}", "opacity", '1', { fromValue: '0'}], position: 28000, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid309", tween: [ "style", "${_Titel_Ilya}", "opacity", '0', { fromValue: '1'}], position: 32000, duration: 1500, easing: "easeInOutQuad" },
-                { id: "eid304", tween: [ "style", "${_Titel_Ilya}", "height", '290px', { fromValue: '290px'}], position: 28000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid220", tween: [ "transform", "${_text_2}", "scaleY", '0.94336', { fromValue: '0.94336'}], position: 6825, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid268", tween: [ "style", "${_text_4}", "display", 'none', { fromValue: 'block'}], position: 15976, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid315", tween: [ "style", "${_Titel_betreut}", "top", '514px', { fromValue: '514px'}], position: 35000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid312", tween: [ "style", "${_Titel_betreut}", "height", '508px', { fromValue: '508px'}], position: 35000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid273", tween: [ "style", "${_house_2}", "display", 'none', { fromValue: 'block'}], position: 15976, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid21", trigger: [ function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['stop', '${_H_End}', [] ], ""], position: 0 },
-                { id: "eid22", trigger: [ function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['stop', '${_H_crack}', [] ], ""], position: 2000 },
-                { id: "eid23", trigger: [ function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['play', '${_H_End}', [] ], ""], position: 4900 },
-                { id: "eid24", trigger: [ function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['play', '${_H_crack}', [] ], ""], position: 10200 },
-                { id: "eid336", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_SFX_rumble}', [] ], ""], position: 10200 }            ]
-        }
-    }
-},
-"text_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'Text_C1',
-                    type: 'image',
-                    rect: ['0', '0', '1171px', '80px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/END/Text_C1.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Text_C1}": [
-                ["style", "height", '80px'],
-                ["style", "opacity", '0'],
-                ["style", "width", '1171px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '80px'],
-                ["style", "width", '1190px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4733,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 1052,
-                "fade_still": 2185,
-                "still_loop": 2452,
-                "opaque": 3052,
-                "opaque_loop": 3852,
-                "fade": 4252
-            },
-            timeline: [
-                { id: "eid69", tween: [ "style", "${_Text_C1}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 1052, easing: "easeInOutBounce" },
-                { id: "eid70", tween: [ "style", "${_Text_C1}", "opacity", '0.21', { fromValue: '0.18'}], position: 1052, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid71", tween: [ "style", "${_Text_C1}", "opacity", '0.24', { fromValue: '0.21'}], position: 1181, duration: 140, easing: "easeOutBounce" },
-                { id: "eid72", tween: [ "style", "${_Text_C1}", "opacity", '0.19', { fromValue: '0.24'}], position: 1321, duration: 106, easing: "easeOutBounce" },
-                { id: "eid73", tween: [ "style", "${_Text_C1}", "opacity", '0.16', { fromValue: '0.19'}], position: 1427, duration: 61, easing: "easeOutBounce" },
-                { id: "eid74", tween: [ "style", "${_Text_C1}", "opacity", '0.21', { fromValue: '0.16'}], position: 1488, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid75", tween: [ "style", "${_Text_C1}", "opacity", '0.23', { fromValue: '0.21'}], position: 1652, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid76", tween: [ "style", "${_Text_C1}", "opacity", '0.25', { fromValue: '0.23'}], position: 1719, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid77", tween: [ "style", "${_Text_C1}", "opacity", '0.22', { fromValue: '0.25'}], position: 1785, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid78", tween: [ "style", "${_Text_C1}", "opacity", '0.18', { fromValue: '0.22'}], position: 1985, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid79", tween: [ "style", "${_Text_C1}", "opacity", '0.146612', { fromValue: '0.18'}], position: 2185, duration: 96, easing: "easeInBounce" },
-                { id: "eid80", tween: [ "style", "${_Text_C1}", "opacity", '0.5', { fromValue: '0.146612'}], position: 2281, duration: 171, easing: "easeOutBounce" },
-                { id: "eid81", tween: [ "style", "${_Text_C1}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2452, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid82", tween: [ "style", "${_Text_C1}", "opacity", '0.59', { fromValue: '0.550000'}], position: 2519, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid83", tween: [ "style", "${_Text_C1}", "opacity", '0.4', { fromValue: '0.590000'}], position: 2553, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid84", tween: [ "style", "${_Text_C1}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2623, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid85", tween: [ "style", "${_Text_C1}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2678, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid86", tween: [ "style", "${_Text_C1}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2719, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid87", tween: [ "style", "${_Text_C1}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2757, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid88", tween: [ "style", "${_Text_C1}", "opacity", '1', { fromValue: '0.500000'}], position: 3052, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid89", tween: [ "style", "${_Text_C1}", "opacity", '1', { fromValue: '1'}], position: 4052, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid90", tween: [ "style", "${_Text_C1}", "opacity", '0', { fromValue: '0.5'}], position: 4252, duration: 481, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"text_5": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'Text_C3',
-                    type: 'image',
-                    rect: ['0', '0', '991px', '80px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/END/Text_C3.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '80px'],
-                ["style", "width", '1040px']
-            ],
-            "${_Text_C3}": [
-                ["style", "height", '80px'],
-                ["style", "opacity", '0'],
-                ["style", "width", '991px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4167,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 467,
-                "fade_still": 1600,
-                "still_loop": 1867,
-                "opaque": 2467,
-                "opaque_loop": 3267,
-                "fade": 3667
-            },
-            timeline: [
-                { id: "eid113", tween: [ "style", "${_Text_C3}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 467, easing: "easeInOutBounce" },
-                { id: "eid114", tween: [ "style", "${_Text_C3}", "opacity", '0.21', { fromValue: '0.18'}], position: 467, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid115", tween: [ "style", "${_Text_C3}", "opacity", '0.24', { fromValue: '0.21'}], position: 596, duration: 140, easing: "easeOutBounce" },
-                { id: "eid116", tween: [ "style", "${_Text_C3}", "opacity", '0.19', { fromValue: '0.24'}], position: 736, duration: 106, easing: "easeOutBounce" },
-                { id: "eid117", tween: [ "style", "${_Text_C3}", "opacity", '0.16', { fromValue: '0.19'}], position: 842, duration: 61, easing: "easeOutBounce" },
-                { id: "eid118", tween: [ "style", "${_Text_C3}", "opacity", '0.21', { fromValue: '0.16'}], position: 903, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid119", tween: [ "style", "${_Text_C3}", "opacity", '0.23', { fromValue: '0.21'}], position: 1067, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid120", tween: [ "style", "${_Text_C3}", "opacity", '0.25', { fromValue: '0.23'}], position: 1134, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid121", tween: [ "style", "${_Text_C3}", "opacity", '0.22', { fromValue: '0.25'}], position: 1200, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid122", tween: [ "style", "${_Text_C3}", "opacity", '0.18', { fromValue: '0.22'}], position: 1400, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid123", tween: [ "style", "${_Text_C3}", "opacity", '0.146612', { fromValue: '0.18'}], position: 1600, duration: 96, easing: "easeInBounce" },
-                { id: "eid124", tween: [ "style", "${_Text_C3}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1696, duration: 171, easing: "easeOutBounce" },
-                { id: "eid125", tween: [ "style", "${_Text_C3}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1867, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid126", tween: [ "style", "${_Text_C3}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1934, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid127", tween: [ "style", "${_Text_C3}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1968, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid128", tween: [ "style", "${_Text_C3}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2038, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid129", tween: [ "style", "${_Text_C3}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2093, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid130", tween: [ "style", "${_Text_C3}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2134, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid131", tween: [ "style", "${_Text_C3}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2172, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid132", tween: [ "style", "${_Text_C3}", "opacity", '1', { fromValue: '0.500000'}], position: 2467, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid133", tween: [ "style", "${_Text_C3}", "opacity", '1', { fromValue: '1'}], position: 3467, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid134", tween: [ "style", "${_Text_C3}", "opacity", '0', { fromValue: '0.5'}], position: 3667, duration: 500, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"text_4": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'Text_C2',
-                    type: 'image',
-                    rect: ['3px', '0px', '458px', '80px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/END/Text_C2.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Text_C2}": [
-                ["style", "top", '0px'],
-                ["style", "height", '80px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '3px'],
-                ["style", "width", '458px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '80px'],
-                ["style", "width", '470px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4167,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 467,
-                "fade_still": 1600,
-                "still_loop": 1867,
-                "opaque": 2467,
-                "opaque_loop": 3267,
-                "fade": 3667
-            },
-            timeline: [
-                { id: "eid91", tween: [ "style", "${_Text_C2}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 467, easing: "easeInOutBounce" },
-                { id: "eid92", tween: [ "style", "${_Text_C2}", "opacity", '0.21', { fromValue: '0.18'}], position: 467, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid93", tween: [ "style", "${_Text_C2}", "opacity", '0.24', { fromValue: '0.21'}], position: 596, duration: 140, easing: "easeOutBounce" },
-                { id: "eid94", tween: [ "style", "${_Text_C2}", "opacity", '0.19', { fromValue: '0.24'}], position: 736, duration: 106, easing: "easeOutBounce" },
-                { id: "eid95", tween: [ "style", "${_Text_C2}", "opacity", '0.16', { fromValue: '0.19'}], position: 842, duration: 61, easing: "easeOutBounce" },
-                { id: "eid96", tween: [ "style", "${_Text_C2}", "opacity", '0.21', { fromValue: '0.16'}], position: 903, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid97", tween: [ "style", "${_Text_C2}", "opacity", '0.23', { fromValue: '0.21'}], position: 1067, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid98", tween: [ "style", "${_Text_C2}", "opacity", '0.25', { fromValue: '0.23'}], position: 1134, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid99", tween: [ "style", "${_Text_C2}", "opacity", '0.22', { fromValue: '0.25'}], position: 1200, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid100", tween: [ "style", "${_Text_C2}", "opacity", '0.18', { fromValue: '0.22'}], position: 1400, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid101", tween: [ "style", "${_Text_C2}", "opacity", '0.146612', { fromValue: '0.18'}], position: 1600, duration: 96, easing: "easeInBounce" },
-                { id: "eid102", tween: [ "style", "${_Text_C2}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1696, duration: 171, easing: "easeOutBounce" },
-                { id: "eid103", tween: [ "style", "${_Text_C2}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1867, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid104", tween: [ "style", "${_Text_C2}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1934, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid105", tween: [ "style", "${_Text_C2}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1968, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid106", tween: [ "style", "${_Text_C2}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2038, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid107", tween: [ "style", "${_Text_C2}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2093, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid108", tween: [ "style", "${_Text_C2}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2134, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid109", tween: [ "style", "${_Text_C2}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2172, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid110", tween: [ "style", "${_Text_C2}", "opacity", '1', { fromValue: '0.500000'}], position: 2467, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid111", tween: [ "style", "${_Text_C2}", "opacity", '1', { fromValue: '1'}], position: 3467, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid112", tween: [ "style", "${_Text_C2}", "opacity", '0', { fromValue: '0.5'}], position: 3667, duration: 500, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"text_2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'Text_B2',
-                    type: 'image',
-                    rect: ['0', '0', '817px', '80px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/END/Text_B2.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Text_B2}": [
-                ["style", "height", '80px'],
-                ["style", "opacity", '0'],
-                ["style", "width", '817px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '80px'],
-                ["style", "width", '850px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4200,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 482,
-                "fade_still": 1615,
-                "still_loop": 1882,
-                "opaque": 2482,
-                "opaque_loop": 3282,
-                "fade": 3682
-            },
-            timeline: [
-                { id: "eid47", tween: [ "style", "${_Text_B2}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 482, easing: "easeInOutBounce" },
-                { id: "eid48", tween: [ "style", "${_Text_B2}", "opacity", '0.21', { fromValue: '0.18'}], position: 482, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid49", tween: [ "style", "${_Text_B2}", "opacity", '0.24', { fromValue: '0.21'}], position: 611, duration: 140, easing: "easeOutBounce" },
-                { id: "eid50", tween: [ "style", "${_Text_B2}", "opacity", '0.19', { fromValue: '0.24'}], position: 751, duration: 106, easing: "easeOutBounce" },
-                { id: "eid51", tween: [ "style", "${_Text_B2}", "opacity", '0.16', { fromValue: '0.19'}], position: 857, duration: 61, easing: "easeOutBounce" },
-                { id: "eid52", tween: [ "style", "${_Text_B2}", "opacity", '0.21', { fromValue: '0.16'}], position: 918, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid53", tween: [ "style", "${_Text_B2}", "opacity", '0.23', { fromValue: '0.21'}], position: 1082, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid54", tween: [ "style", "${_Text_B2}", "opacity", '0.25', { fromValue: '0.23'}], position: 1149, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid55", tween: [ "style", "${_Text_B2}", "opacity", '0.22', { fromValue: '0.25'}], position: 1215, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid56", tween: [ "style", "${_Text_B2}", "opacity", '0.18', { fromValue: '0.22'}], position: 1415, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid57", tween: [ "style", "${_Text_B2}", "opacity", '0.146612', { fromValue: '0.18'}], position: 1615, duration: 96, easing: "easeInBounce" },
-                { id: "eid58", tween: [ "style", "${_Text_B2}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1711, duration: 171, easing: "easeOutBounce" },
-                { id: "eid59", tween: [ "style", "${_Text_B2}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1882, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid60", tween: [ "style", "${_Text_B2}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1949, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid61", tween: [ "style", "${_Text_B2}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1983, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid62", tween: [ "style", "${_Text_B2}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2053, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid63", tween: [ "style", "${_Text_B2}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2108, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid64", tween: [ "style", "${_Text_B2}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2149, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid65", tween: [ "style", "${_Text_B2}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2187, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid66", tween: [ "style", "${_Text_B2}", "opacity", '1', { fromValue: '0.500000'}], position: 2482, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid67", tween: [ "style", "${_Text_B2}", "opacity", '1', { fromValue: '1'}], position: 3482, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid68", tween: [ "style", "${_Text_B2}", "opacity", '0', { fromValue: '0.5'}], position: 3682, duration: 518, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"text_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'Text_B1',
-                    type: 'image',
-                    rect: ['0', '6', '1434px', '89px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/END/Text_B1.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '89px'],
-                ["style", "width", '1433px']
-            ],
-            "${_Text_B1}": [
-                ["style", "height", '89px'],
-                ["style", "opacity", '0'],
-                ["style", "width", '1434px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4600,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 822,
-                "fade_still": 1955,
-                "still_loop": 2222,
-                "opaque": 2822,
-                "opaque_loop": 3622,
-                "fade": 4022
-            },
-            timeline: [
-                { id: "eid25", tween: [ "style", "${_Text_B1}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 822, easing: "easeInOutBounce" },
-                { id: "eid26", tween: [ "style", "${_Text_B1}", "opacity", '0.21', { fromValue: '0.18'}], position: 822, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid27", tween: [ "style", "${_Text_B1}", "opacity", '0.24', { fromValue: '0.21'}], position: 951, duration: 140, easing: "easeOutBounce" },
-                { id: "eid28", tween: [ "style", "${_Text_B1}", "opacity", '0.19', { fromValue: '0.24'}], position: 1091, duration: 106, easing: "easeOutBounce" },
-                { id: "eid29", tween: [ "style", "${_Text_B1}", "opacity", '0.16', { fromValue: '0.19'}], position: 1197, duration: 61, easing: "easeOutBounce" },
-                { id: "eid30", tween: [ "style", "${_Text_B1}", "opacity", '0.21', { fromValue: '0.16'}], position: 1258, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid31", tween: [ "style", "${_Text_B1}", "opacity", '0.23', { fromValue: '0.21'}], position: 1422, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid32", tween: [ "style", "${_Text_B1}", "opacity", '0.25', { fromValue: '0.23'}], position: 1489, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid33", tween: [ "style", "${_Text_B1}", "opacity", '0.22', { fromValue: '0.25'}], position: 1555, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid34", tween: [ "style", "${_Text_B1}", "opacity", '0.18', { fromValue: '0.22'}], position: 1755, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid35", tween: [ "style", "${_Text_B1}", "opacity", '0.146612', { fromValue: '0.18'}], position: 1955, duration: 96, easing: "easeInBounce" },
-                { id: "eid36", tween: [ "style", "${_Text_B1}", "opacity", '0.5', { fromValue: '0.146612'}], position: 2051, duration: 171, easing: "easeOutBounce" },
-                { id: "eid37", tween: [ "style", "${_Text_B1}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2222, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid38", tween: [ "style", "${_Text_B1}", "opacity", '0.59', { fromValue: '0.550000'}], position: 2289, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid39", tween: [ "style", "${_Text_B1}", "opacity", '0.4', { fromValue: '0.590000'}], position: 2323, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid40", tween: [ "style", "${_Text_B1}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2393, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid41", tween: [ "style", "${_Text_B1}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2448, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid42", tween: [ "style", "${_Text_B1}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2489, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid43", tween: [ "style", "${_Text_B1}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2527, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid44", tween: [ "style", "${_Text_B1}", "opacity", '1', { fromValue: '0.500000'}], position: 2822, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid45", tween: [ "style", "${_Text_B1}", "opacity", '1', { fromValue: '1'}], position: 3822, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid46", tween: [ "style", "${_Text_B1}", "opacity", '0', { fromValue: '0.5'}], position: 4022, duration: 578, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"dust_button": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'dust_icon2',
-                    type: 'rect',
-                    rect: ['-88px', '-391px', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'dust_icon2',
-                symbolName: 'dust_icon',
-                autoPlay: {
+        };
 
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '179px'],
-                ["style", "width", '193px']
-            ],
-            "${_dust_icon2}": [
-                ["style", "top", '-7px'],
-                ["style", "opacity", '0.06'],
-                ["style", "left", '7px'],
-                ["transform", "rotateZ", '90deg']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 8409,
-            autoPlay: true,
-            labels: {
-                "fade_flimmer": 0,
-                "fade_still": 1133,
-                "still_loop": 1400,
-                "opaque": 2000,
-                "opaque_loop": 2400,
-                "fade": 2800
-            },
-            timeline: [
-                { id: "eid1550", tween: [ "style", "${_dust_icon2}", "top", '-7px', { fromValue: '-7px'}], position: 8409, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1591", tween: [ "style", "${_dust_icon2}", "opacity", '0.01', { fromValue: '0.06'}], position: 0, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid1592", tween: [ "style", "${_dust_icon2}", "opacity", '0.05', { fromValue: '0.01'}], position: 129, duration: 140, easing: "easeInBounce" },
-                { id: "eid1593", tween: [ "style", "${_dust_icon2}", "opacity", '0.03', { fromValue: '0.05'}], position: 269, duration: 167, easing: "easeOutBounce" },
-                { id: "eid1594", tween: [ "style", "${_dust_icon2}", "opacity", '0.04', { fromValue: '0.03'}], position: 436, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid1595", tween: [ "style", "${_dust_icon2}", "opacity", '0.04', { fromValue: '0.04'}], position: 630, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1596", tween: [ "style", "${_dust_icon2}", "opacity", '0.06', { fromValue: '0.040000'}], position: 733, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid1597", tween: [ "style", "${_dust_icon2}", "opacity", '0.1', { fromValue: '0.060000'}], position: 933, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid1598", tween: [ "style", "${_dust_icon2}", "opacity", '0.146612', { fromValue: '0.100000'}], position: 1133, duration: 96, easing: "easeInBounce" },
-                { id: "eid1599", tween: [ "style", "${_dust_icon2}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1229, duration: 171, easing: "easeOutBounce" },
-                { id: "eid1600", tween: [ "style", "${_dust_icon2}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1400, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid1601", tween: [ "style", "${_dust_icon2}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1467, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid1602", tween: [ "style", "${_dust_icon2}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1501, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid1603", tween: [ "style", "${_dust_icon2}", "opacity", '0.46', { fromValue: '0.400000'}], position: 1571, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid1604", tween: [ "style", "${_dust_icon2}", "opacity", '0.5', { fromValue: '0.460000'}], position: 1626, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid1605", tween: [ "style", "${_dust_icon2}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1667, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid1606", tween: [ "style", "${_dust_icon2}", "opacity", '0.5', { fromValue: '0.550000'}], position: 1705, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid1607", tween: [ "style", "${_dust_icon2}", "opacity", '1', { fromValue: '0.500000'}], position: 2000, duration: 400, easing: "easeInOutBounce" },
-                { id: "eid1608", tween: [ "style", "${_dust_icon2}", "opacity", '1', { fromValue: '1'}], position: 2600, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1609", tween: [ "style", "${_dust_icon2}", "opacity", '0', { fromValue: '0.5'}], position: 2800, duration: 467, easing: "easeInOutBounce" },
-                { id: "eid1549", tween: [ "transform", "${_dust_icon2}", "rotateZ", '90deg', { fromValue: '90deg'}], position: 0, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1551", tween: [ "style", "${_dust_icon2}", "left", '7px', { fromValue: '7px'}], position: 8409, duration: 0, easing: "easeInOutCubic" }            ]
-        }
-    }
-},
-"dust_icon": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'dust_iconCopy',
-                    type: 'image',
-                    rect: ['50px', '0px', '1242px', '193px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/dust_icon3.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_dust_iconCopy}": [
-                ["style", "top", '0px'],
-                ["style", "left", '50px'],
-                ["transform", "scaleY", '1']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '193px'],
-                ["style", "width", '179px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 537,
-            autoPlay: true,
-            timeline: [
-                { id: "eid1543", tween: [ "transform", "${_dust_iconCopy}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1536", tween: [ "style", "${_dust_iconCopy}", "left", '50px', { fromValue: '50px'}], position: 0, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1537", tween: [ "style", "${_dust_iconCopy}", "left", '-111px', { fromValue: '50px'}], position: 83, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1538", tween: [ "style", "${_dust_iconCopy}", "left", '-283px', { fromValue: '-111px'}], position: 167, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1539", tween: [ "style", "${_dust_iconCopy}", "left", '-481px', { fromValue: '-283px'}], position: 250, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1540", tween: [ "style", "${_dust_iconCopy}", "left", '-670px', { fromValue: '-481px'}], position: 333, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1541", tween: [ "style", "${_dust_iconCopy}", "left", '-876px', { fromValue: '-670px'}], position: 417, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1542", tween: [ "style", "${_dust_iconCopy}", "left", '-1055px', { fromValue: '-876px'}], position: 500, duration: 0, easing: "easeInOutCubic" }            ]
-        }
-    }
-},
-"H_head": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'End_head',
-                    type: 'image',
-                    rect: ['0px', '0px', '3500px', '454px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/END/End_head.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '560px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '500px']
-            ],
-            "${_End_head}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 600,
-            autoPlay: true,
-            timeline: [
-                { id: "eid6", tween: [ "style", "${_End_head}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid7", tween: [ "style", "${_End_head}", "left", '-522px', { fromValue: '0px'}], position: 100, duration: 0 },
-                { id: "eid8", tween: [ "style", "${_End_head}", "left", '-1000px', { fromValue: '-500px'}], position: 200, duration: 0 },
-                { id: "eid9", tween: [ "style", "${_End_head}", "left", '-1500px', { fromValue: '-1000px'}], position: 300, duration: 0 },
-                { id: "eid10", tween: [ "style", "${_End_head}", "left", '-2000px', { fromValue: '-1500px'}], position: 400, duration: 0 },
-                { id: "eid11", tween: [ "style", "${_End_head}", "left", '-2500px', { fromValue: '-2000px'}], position: 500, duration: 0 },
-                { id: "eid12", tween: [ "style", "${_End_head}", "left", '-3002px', { fromValue: '-2500px'}], position: 600, duration: 0 }            ]
-        }
-    }
-},
-"H_crack": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'End_crack2',
-                    type: 'image',
-                    rect: ['0px', '0px', '318px', '700px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/END/End_crack.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_End_crack2}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '182px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '318px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 300,
-            autoPlay: true,
-            timeline: [
-                { id: "eid14", tween: [ "style", "${_End_crack2}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid15", tween: [ "style", "${_End_crack2}", "top", '-170px', { fromValue: '0px'}], position: 100, duration: 0 },
-                { id: "eid16", tween: [ "style", "${_End_crack2}", "top", '-325px', { fromValue: '-170px'}], position: 200, duration: 0 },
-                { id: "eid19", tween: [ "style", "${_End_crack2}", "top", '-496px', { fromValue: '-325px'}], position: 300, duration: 0 },
-                { id: "eid13", tween: [ "style", "${_End_crack2}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid17", tween: [ "style", "${_End_crack2}", "left", '2px', { fromValue: '0px'}], position: 200, duration: 0 },
-                { id: "eid18", tween: [ "style", "${_End_crack2}", "left", '2px', { fromValue: '2px'}], position: 300, duration: 0 }            ]
-        }
-    }
-},
-"text_6": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'Text_C4',
-                    type: 'image',
-                    rect: ['3px', '-3px', '1186px', '80px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/END/Text_C4.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '80px'],
-                ["style", "width", '1200px']
-            ],
-            "${_Text_C4}": [
-                ["style", "top", '-3px'],
-                ["style", "height", '80px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '3px'],
-                ["style", "width", '1186px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4167,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 467,
-                "fade_still": 1600,
-                "still_loop": 1867,
-                "opaque": 2467,
-                "opaque_loop": 3267,
-                "fade": 3667
-            },
-            timeline: [
-                { id: "eid157", tween: [ "style", "${_Text_C4}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 467, easing: "easeInOutBounce" },
-                { id: "eid158", tween: [ "style", "${_Text_C4}", "opacity", '0.21', { fromValue: '0.18'}], position: 467, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid159", tween: [ "style", "${_Text_C4}", "opacity", '0.24', { fromValue: '0.21'}], position: 596, duration: 140, easing: "easeOutBounce" },
-                { id: "eid160", tween: [ "style", "${_Text_C4}", "opacity", '0.19', { fromValue: '0.24'}], position: 736, duration: 106, easing: "easeOutBounce" },
-                { id: "eid161", tween: [ "style", "${_Text_C4}", "opacity", '0.16', { fromValue: '0.19'}], position: 842, duration: 61, easing: "easeOutBounce" },
-                { id: "eid162", tween: [ "style", "${_Text_C4}", "opacity", '0.21', { fromValue: '0.16'}], position: 903, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid163", tween: [ "style", "${_Text_C4}", "opacity", '0.23', { fromValue: '0.21'}], position: 1067, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid164", tween: [ "style", "${_Text_C4}", "opacity", '0.25', { fromValue: '0.23'}], position: 1134, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid165", tween: [ "style", "${_Text_C4}", "opacity", '0.22', { fromValue: '0.25'}], position: 1200, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid166", tween: [ "style", "${_Text_C4}", "opacity", '0.18', { fromValue: '0.22'}], position: 1400, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid167", tween: [ "style", "${_Text_C4}", "opacity", '0.146612', { fromValue: '0.18'}], position: 1600, duration: 96, easing: "easeInBounce" },
-                { id: "eid168", tween: [ "style", "${_Text_C4}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1696, duration: 171, easing: "easeOutBounce" },
-                { id: "eid169", tween: [ "style", "${_Text_C4}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1867, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid170", tween: [ "style", "${_Text_C4}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1934, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid171", tween: [ "style", "${_Text_C4}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1968, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid172", tween: [ "style", "${_Text_C4}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2038, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid173", tween: [ "style", "${_Text_C4}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2093, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid174", tween: [ "style", "${_Text_C4}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2134, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid175", tween: [ "style", "${_Text_C4}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2172, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid176", tween: [ "style", "${_Text_C4}", "opacity", '1', { fromValue: '0.500000'}], position: 2467, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid177", tween: [ "style", "${_Text_C4}", "opacity", '1', { fromValue: '1'}], position: 3467, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid178", tween: [ "style", "${_Text_C4}", "opacity", '0', { fromValue: '0.5'}], position: 3667, duration: 500, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"cloud_2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_cloud2',
-                    type: 'image',
-                    rect: ['0px', '0px', '500px', '1200px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_cloud5.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_cloud2}": [
-                ["style", "left", '0px'],
-                ["style", "top", '-1000px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '200px'],
-                ["style", "width", '500px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 600,
-            autoPlay: true,
-            timeline: [
-                { id: "eid879", tween: [ "style", "${_ss_cloud2}", "top", '-1000px', { fromValue: '-1000px'}], position: 33, duration: 0 },
-                { id: "eid880", tween: [ "style", "${_ss_cloud2}", "top", '0px', { fromValue: '-1000px'}], position: 133, duration: 0 },
-                { id: "eid17", tween: [ "style", "${_ss_cloud2}", "top", '-200px', { fromValue: '0px'}], position: 233, duration: 0 },
-                { id: "eid18", tween: [ "style", "${_ss_cloud2}", "top", '-400px', { fromValue: '-200px'}], position: 333, duration: 0 },
-                { id: "eid19", tween: [ "style", "${_ss_cloud2}", "top", '-600px', { fromValue: '-400px'}], position: 433, duration: 0 },
-                { id: "eid20", tween: [ "style", "${_ss_cloud2}", "top", '-800px', { fromValue: '-600px'}], position: 533, duration: 0 }            ]
-        }
-    }
-},
-"Title_Intro": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'cloud_clusterCopy4',
-                    type: 'rect',
-                    autoOrient: false,
-                    rect: ['934px', '1214px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_clusterCopy2',
-                    type: 'rect',
-                    autoOrient: false,
-                    rect: ['-1113px', '900px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_cluster',
-                    type: 'rect',
-                    autoOrient: 'true',
-                    rect: ['2074px', '561px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_clusterCopy3',
-                    type: 'rect',
-                    autoOrient: false,
-                    rect: ['-884px', '186px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_clusterCopy',
-                    type: 'rect',
-                    autoOrient: false,
-                    rect: ['1732px', '-91px', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'cloud_clusterCopy4',
-                symbolName: 'cloud_cluster',
-                autoPlay: {
+    AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-               }
-            },
-            {
-                id: 'cloud_clusterCopy2',
-                symbolName: 'cloud_cluster',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_clusterCopy',
-                symbolName: 'cloud_cluster',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_cluster',
-                symbolName: 'cloud_cluster',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_clusterCopy3',
-                symbolName: 'cloud_cluster',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_cloud_clusterCopy2}": [
-                ["transform", "scaleX", '1.18114'],
-                ["transform", "scaleY", '-1.1411'],
-                ["motion", "location", '-352.91926759883px 1051px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '2048px']
-            ],
-            "${_cloud_clusterCopy3}": [
-                ["motion", "location", '618.09687666207px 336.78108722306px'],
-                ["transform", "scaleY", '-0.58423'],
-                ["transform", "scaleX", '0.58423']
-            ],
-            "${_cloud_clusterCopy4}": [
-                ["transform", "scaleX", '0.43478'],
-                ["transform", "scaleY", '0.43478'],
-                ["motion", "location", '1473.7442404852px 1364.6518269183px']
-            ],
-            "${_cloud_cluster}": [
-                ["style", "top", '267px'],
-                ["transform", "scaleY", '-0.86322'],
-                ["transform", "scaleX", '-0.86322'],
-                ["style", "left", '3458px'],
-                ["motion", "location", '1027.375px 711.75px']
-            ],
-            "${_cloud_clusterCopy}": [
-                ["style", "top", '267px'],
-                ["transform", "scaleY", '1.0317'],
-                ["transform", "scaleX", '1.0317'],
-                ["style", "left", '3276px'],
-                ["motion", "location", '2284.05px 60.25px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 20000,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid1062", tween: [ "transform", "${_cloud_clusterCopy3}", "scaleY", '-0.58423', { fromValue: '-0.58423'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid1828", tween: [ "transform", "${_cloud_clusterCopy}", "scaleY", '1.0317', { fromValue: '1.0317'}], position: 0, duration: 0 },
-                { id: "eid1090", tween: [ "motion", "${_cloud_clusterCopy2}", [[-352.92, 1051, 2093.13, 0],[2765, 1051, 0, 0]]], position: 0, duration: 16341 },
-                { id: "eid1093", tween: [ "motion", "${_cloud_clusterCopy2}", [[-678.75, 1051, 0, 0],[-352.92, 1051, 0, 0]]], position: 17000, duration: 3000 },
-                { id: "eid1820", tween: [ "transform", "${_cloud_cluster}", "scaleX", '-0.86322', { fromValue: '-0.86322'}], position: 0, duration: 0 },
-                { id: "eid1086", tween: [ "motion", "${_cloud_cluster}", [[1027.38, 711.75, -2397.37, 0],[-570.87, 711.75, 0, 0]]], position: 0, duration: 10000 },
-                { id: "eid1089", tween: [ "motion", "${_cloud_cluster}", [[2599.88, 711.75, 0, 0],[1027.38, 711.75, 0, 0]]], position: 10335, duration: 9665 },
-                { id: "eid1077", tween: [ "motion", "${_cloud_clusterCopy3}", [[618.1, 336.78, 2349.22, 0],[2383.63, 336.78, 0, 0]]], position: 0, duration: 13000 },
-                { id: "eid1080", tween: [ "motion", "${_cloud_clusterCopy3}", [[-331.12, 336.78, 0, 0],[618.1, 336.78, 0, 0]]], position: 13386, duration: 6614 },
-                { id: "eid1112", tween: [ "transform", "${_cloud_clusterCopy4}", "scaleY", '0.43478', { fromValue: '0.43478'}], position: 0, duration: 0 },
-                { id: "eid1831", tween: [ "transform", "${_cloud_clusterCopy2}", "scaleY", '-0.95', { fromValue: '-1.1411'}], position: 0, duration: 0 },
-                { id: "eid1115", tween: [ "motion", "${_cloud_clusterCopy}", [[2284.05, 60.25, 0, 0],[-645.75, 60.25, 0, 0]]], position: 0, duration: 17537 },
-                { id: "eid1121", tween: [ "motion", "${_cloud_clusterCopy}", [[2775.88, 24.25, 0, 0],[2279.13, 24.25, 0, 0]]], position: 18000, duration: 2000 },
-                { id: "eid1830", tween: [ "transform", "${_cloud_clusterCopy2}", "scaleX", '0.95', { fromValue: '1.18114'}], position: 0, duration: 0 },
-                { id: "eid2165", tween: [ "transform", "${_cloud_clusterCopy}", "scaleX", '1.0317', { fromValue: '1.0317'}], position: 0, duration: 0 },
-                { id: "eid1821", tween: [ "transform", "${_cloud_cluster}", "scaleY", '-0.86322', { fromValue: '-0.86322'}], position: 0, duration: 0 },
-                { id: "eid1095", tween: [ "motion", "${_cloud_clusterCopy4}", [[1473.74, 1364.65, -2265.5, 0],[-262.13, 1364.65, 0, 0]]], position: 0, duration: 13386 },
-                { id: "eid1098", tween: [ "motion", "${_cloud_clusterCopy4}", [[2288, 1364.65, 0, 0],[1473.74, 1364.65, 0, 0]]], position: 13629, duration: 6371 },
-                { id: "eid1061", tween: [ "transform", "${_cloud_clusterCopy3}", "scaleX", '0.58423', { fromValue: '0.58423'}], position: 0, duration: 0, easing: "easeInOutQuad" }            ]
-        }
-    }
-},
-"cloud_cluster": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'cloud_3',
-                    type: 'rect',
-                    rect: ['272px', '12px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_22',
-                    type: 'rect',
-                    rect: ['574px', '84px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_12',
-                    type: 'rect',
-                    rect: ['30px', '38px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_3Copy',
-                    type: 'rect',
-                    rect: ['272px', '12px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_22Copy',
-                    type: 'rect',
-                    transform: [[0, 0], [], [], ['-1']],
-                    rect: ['142px', '102px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_12Copy',
-                    type: 'rect',
-                    transform: [[0, 0], [], [], ['-1']],
-                    rect: ['470px', '16px', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'cloud_12Copy',
-                symbolName: 'cloud_1',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_22',
-                symbolName: 'cloud_2',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_3Copy',
-                symbolName: 'cloud_3',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_12',
-                symbolName: 'cloud_1',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_3',
-                symbolName: 'cloud_3',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_22Copy',
-                symbolName: 'cloud_2',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_cloud_3}": [
-                ["style", "top", '0px'],
-                ["transform", "scaleX", '1'],
-                ["style", "left", '242px'],
-                ["transform", "scaleY", '1']
-            ],
-            "${_cloud_22}": [
-                ["style", "top", '84px'],
-                ["transform", "scaleX", '1'],
-                ["style", "left", '574px'],
-                ["transform", "scaleY", '1']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '302px'],
-                ["style", "width", '1104px']
-            ],
-            "${_cloud_12Copy}": [
-                ["style", "top", '16px'],
-                ["transform", "scaleX", '-1'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '470px']
-            ],
-            "${_cloud_12}": [
-                ["style", "top", '38px'],
-                ["transform", "scaleX", '1'],
-                ["style", "left", '30px'],
-                ["transform", "scaleY", '1']
-            ],
-            "${_cloud_22Copy}": [
-                ["style", "top", '102px'],
-                ["transform", "scaleX", '-1'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '142px']
-            ],
-            "${_cloud_3Copy}": [
-                ["style", "top", '100px'],
-                ["transform", "scaleX", '-1'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '362px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "start": 0
-            },
-            timeline: [
-                { id: "eid2170", tween: [ "transform", "${_cloud_12}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0 },
-                { id: "eid2169", tween: [ "transform", "${_cloud_22Copy}", "scaleY", '1', { fromValue: '1'}], position: 22, duration: 0 },
-                { id: "eid2178", tween: [ "transform", "${_cloud_12Copy}", "scaleX", '-1.15', { fromValue: '-1'}], position: 0, duration: 2000 },
-                { id: "eid2184", tween: [ "transform", "${_cloud_12Copy}", "scaleX", '-0.9', { fromValue: '-1.15'}], position: 2000, duration: 2000 },
-                { id: "eid2186", tween: [ "transform", "${_cloud_12Copy}", "scaleX", '-1.15', { fromValue: '-0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2189", tween: [ "transform", "${_cloud_12Copy}", "scaleX", '-1', { fromValue: '-1.15'}], position: 7000, duration: 3000 },
-                { id: "eid2192", tween: [ "transform", "${_cloud_12}", "scaleX", '1.14999', { fromValue: '1'}], position: 0, duration: 2000 },
-                { id: "eid2193", tween: [ "transform", "${_cloud_12}", "scaleX", '0.9', { fromValue: '1.14999'}], position: 2000, duration: 2000 },
-                { id: "eid2194", tween: [ "transform", "${_cloud_12}", "scaleX", '1.14999', { fromValue: '0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2195", tween: [ "transform", "${_cloud_12}", "scaleX", '1', { fromValue: '1.14999'}], position: 7000, duration: 3000 },
-                { id: "eid2171", tween: [ "transform", "${_cloud_22}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0 },
-                { id: "eid876", tween: [ "style", "${_cloud_3}", "left", '252px', { fromValue: '242px'}], position: 0, duration: 0 },
-                { id: "eid891", tween: [ "style", "${_cloud_3}", "left", '262px', { fromValue: '252px'}], position: 304, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid865", tween: [ "style", "${_cloud_3}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid890", tween: [ "style", "${_cloud_3}", "top", '10px', { fromValue: '0px'}], position: 304, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid875", tween: [ "style", "${_cloud_3Copy}", "left", '342px', { fromValue: '362px'}], position: 0, duration: 0 },
-                { id: "eid892", tween: [ "style", "${_cloud_3Copy}", "left", '332px', { fromValue: '342px'}], position: 304, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2200", tween: [ "transform", "${_cloud_3}", "scaleX", '1.14999', { fromValue: '1'}], position: 0, duration: 2000 },
-                { id: "eid2201", tween: [ "transform", "${_cloud_3}", "scaleX", '0.9', { fromValue: '1.14999'}], position: 2000, duration: 2000 },
-                { id: "eid2202", tween: [ "transform", "${_cloud_3}", "scaleX", '1.14999', { fromValue: '0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2203", tween: [ "transform", "${_cloud_3}", "scaleX", '1', { fromValue: '1.14999'}], position: 7000, duration: 3000 },
-                { id: "eid2196", tween: [ "transform", "${_cloud_22}", "scaleX", '1.14999', { fromValue: '1'}], position: 0, duration: 2000 },
-                { id: "eid2197", tween: [ "transform", "${_cloud_22}", "scaleX", '0.9', { fromValue: '1.14999'}], position: 2000, duration: 2000 },
-                { id: "eid2198", tween: [ "transform", "${_cloud_22}", "scaleX", '1.14999', { fromValue: '0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2199", tween: [ "transform", "${_cloud_22}", "scaleX", '1', { fromValue: '1.14999'}], position: 7000, duration: 3000 },
-                { id: "eid2177", tween: [ "transform", "${_cloud_22Copy}", "scaleX", '-1.15', { fromValue: '-1'}], position: 0, duration: 2000 },
-                { id: "eid2185", tween: [ "transform", "${_cloud_22Copy}", "scaleX", '-0.9', { fromValue: '-1.15'}], position: 2000, duration: 2000 },
-                { id: "eid2187", tween: [ "transform", "${_cloud_22Copy}", "scaleX", '-1.15', { fromValue: '-0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2190", tween: [ "transform", "${_cloud_22Copy}", "scaleX", '-1', { fromValue: '-1.15'}], position: 7000, duration: 3000 },
-                { id: "eid864", tween: [ "transform", "${_cloud_3Copy}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0 },
-                { id: "eid2167", tween: [ "transform", "${_cloud_3}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0 },
-                { id: "eid862", tween: [ "style", "${_cloud_3Copy}", "top", '100px', { fromValue: '100px'}], position: 0, duration: 0 },
-                { id: "eid893", tween: [ "style", "${_cloud_3Copy}", "top", '91px', { fromValue: '100px'}], position: 304, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2168", tween: [ "transform", "${_cloud_12Copy}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0 },
-                { id: "eid2179", tween: [ "transform", "${_cloud_3Copy}", "scaleX", '-1.15', { fromValue: '-1'}], position: 0, duration: 2000 },
-                { id: "eid2183", tween: [ "transform", "${_cloud_3Copy}", "scaleX", '-0.9', { fromValue: '-1.15'}], position: 2000, duration: 2022 },
-                { id: "eid2188", tween: [ "transform", "${_cloud_3Copy}", "scaleX", '-1.15', { fromValue: '-0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2191", tween: [ "transform", "${_cloud_3Copy}", "scaleX", '-1', { fromValue: '-1.15'}], position: 7000, duration: 3000 }            ]
-        }
-    }
-},
-"cloud_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_cloud2',
-                    type: 'image',
-                    rect: ['0px', '0px', '500px', '1200px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_cloud5.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_cloud2}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '200px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '500px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 600,
-            autoPlay: true,
-            timeline: [
-                { id: "eid881", tween: [ "style", "${_ss_cloud2}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid882", tween: [ "style", "${_ss_cloud2}", "top", '-200px', { fromValue: '0px'}], position: 100, duration: 0 },
-                { id: "eid18", tween: [ "style", "${_ss_cloud2}", "top", '-400px', { fromValue: '-200px'}], position: 200, duration: 0 },
-                { id: "eid19", tween: [ "style", "${_ss_cloud2}", "top", '-600px', { fromValue: '-400px'}], position: 299, duration: 0 },
-                { id: "eid20", tween: [ "style", "${_ss_cloud2}", "top", '-800px', { fromValue: '-600px'}], position: 399, duration: 0 },
-                { id: "eid21", tween: [ "style", "${_ss_cloud2}", "top", '-1000px', { fromValue: '-800px'}], position: 499, duration: 0 }            ]
-        }
-    }
-},
-"cloud_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_cloud2',
-                    type: 'image',
-                    rect: ['0px', '0px', '500px', '1200px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_cloud5.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_cloud2}": [
-                ["style", "left", '0px'],
-                ["style", "top", '-800px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '200px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '500px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 600,
-            autoPlay: true,
-            timeline: [
-                { id: "eid376", tween: [ "style", "${_ss_cloud2}", "top", '-800px', { fromValue: '-800px'}], position: 67, duration: 0 },
-                { id: "eid377", tween: [ "style", "${_ss_cloud2}", "top", '-1000px', { fromValue: '-800px'}], position: 167, duration: 0 },
-                { id: "eid16", tween: [ "style", "${_ss_cloud2}", "top", '0px', { fromValue: '-1000px'}], position: 267, duration: 0 },
-                { id: "eid17", tween: [ "style", "${_ss_cloud2}", "top", '-200px', { fromValue: '0px'}], position: 367, duration: 0 },
-                { id: "eid18", tween: [ "style", "${_ss_cloud2}", "top", '-400px', { fromValue: '-200px'}], position: 467, duration: 0 },
-                { id: "eid19", tween: [ "style", "${_ss_cloud2}", "top", '-600px', { fromValue: '-400px'}], position: 567, duration: 0 }            ]
-        }
-    }
-}
-};
-
-
-Edge.registerCompositionDefn(compId, symbols, fonts, resources, opts);
-
-/**
- * Adobe Edge DOM Ready Event Handler
- */
-$(window).ready(function() {
-     Edge.launchComposition(compId);
-});
-})(jQuery, AdobeEdge, "END");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("END_edgeActions.js");
+})("END");

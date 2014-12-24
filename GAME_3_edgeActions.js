@@ -20,7 +20,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_Stage}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${Stage}", "click", function(sym, e) {
          if(counter === 5){
          	sym.play('off');
          }
@@ -72,7 +72,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_C_wind1}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${C_wind1}", "click", function(sym, e) {
          counter++;
          sym.play('fly');
 
@@ -95,7 +95,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_C_wind3}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${C_wind3}", "click", function(sym, e) {
          counter++;
          sym.play('fly');
 
@@ -118,7 +118,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_C_wind2}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${C_wind2}", "click", function(sym, e) {
          counter++;
          sym.play('fly');
 
@@ -128,4 +128,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("C_wind2");
    //Edge symbol end:'C_wind2'
 
-})(jQuery, AdobeEdge, "GAME_3");
+})(window.jQuery || AdobeEdge.$, AdobeEdge, "GAME_3");

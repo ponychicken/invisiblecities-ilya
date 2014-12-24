@@ -1,3829 +1,8875 @@
-/**
- * Adobe Edge: symbol definitions
- */
-(function($, Edge, compId){
-//images folder
-var im='images/';
+/*jslint */
+/*global AdobeEdge: false, window: false, document: false, console:false, alert: false */
+(function (compId) {
 
-var fonts = {};
-var opts = {};
-var resources = [
-];
-var symbols = {
-"stage": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-            {
-                id: 'paper_bg_12',
-                type: 'image',
-                rect: ['0', '0','2050px','1536px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"paper_bg_1.png",'0px','0px']
-            },
-            {
-                id: 'houses_bg_1',
-                type: 'image',
-                rect: ['201px', '1487px','1096px','593px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"houses_bg_1.png",'0px','0px']
-            },
-            {
-                id: 'house_1',
-                type: 'image',
-                rect: ['30px', '1758px','372px','699px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"house_1.png",'0px','0px']
-            },
-            {
-                id: 'house_2',
-                type: 'image',
-                rect: ['1156px', '1758px','448px','679px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"house_2.png",'0px','0px']
-            },
-            {
-                id: 'Group3',
-                type: 'group',
-                rect: ['362', '1881','678','520','auto', 'auto'],
-                c: [
-                {
-                    id: 'house_3',
-                    type: 'image',
-                    rect: ['0px', '0px','402px','507px','auto', 'auto'],
-                    fill: ["rgba(0,0,0,0)",im+"house_3.png",'0px','0px']
+    "use strict";
+    var im='images/',
+        aud='media/',
+        vid='media/',
+        js='js/',
+        fonts = {
+        },
+        opts = {
+            'gAudioPreloadPreference': 'auto',
+            'gVideoPreloadPreference': 'auto'
+        },
+        resources = [
+        ],
+        scripts = [
+            js+"jquery-2.0.3.min.js"
+        ],
+        symbols = {
+            "stage": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'paper_bg_12',
+                            type: 'image',
+                            rect: ['0', '0', '2050px', '1536px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"paper_bg_1.png",'0px','0px']
+                        },
+                        {
+                            id: 'houses_bg_1',
+                            type: 'image',
+                            rect: ['201', '1537', '1096px', '593px', 'auto', 'auto'],
+                            opacity: '0.45528455284553',
+                            fill: ["rgba(0,0,0,0)",im+"houses_bg_1.png",'0px','0px']
+                        },
+                        {
+                            id: 'house_1',
+                            type: 'image',
+                            rect: ['30', '1752', '372px', '699px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"house_1.png",'0px','0px']
+                        },
+                        {
+                            id: 'house_2',
+                            type: 'image',
+                            rect: ['1156', '1752', '448px', '679px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"house_2.png",'0px','0px']
+                        },
+                        {
+                            id: 'Group3',
+                            type: 'group',
+                            rect: ['362', '1860', '678', '520', 'auto', 'auto'],
+                            c: [
+                            {
+                                id: 'house_3',
+                                type: 'image',
+                                rect: ['0', '0', '402px', '507px', 'auto', 'auto'],
+                                fill: ["rgba(0,0,0,0)",im+"house_3.png",'0px','0px']
+                            },
+                            {
+                                id: 'tree_1',
+                                type: 'image',
+                                rect: ['378', '204', '300', '316', 'auto', 'auto'],
+                                fill: ["rgba(0,0,0,0)",im+"tree_1.png",'0px','0px']
+                            }]
+                        },
+                        {
+                            id: 'Group4',
+                            type: 'group',
+                            rect: ['160', '1787', '2028', '973', 'auto', 'auto'],
+                            c: [
+                            {
+                                id: 'C_Esser',
+                                symbolName: 'C_Esser',
+                                display: 'none',
+                                type: 'rect',
+                                rect: ['1492', '500', '200', '480', 'auto', 'auto'],
+                                overflow: 'hidden',
+                                opacity: '1',
+                                filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0],
+                                transform: [[],[],[],['0.44','0.44']]
+                            },
+                            {
+                                id: 'bistro_0',
+                                type: 'image',
+                                rect: ['1426', '510', '492px', '355px', 'auto', 'auto'],
+                                fill: ["rgba(0,0,0,0)",im+"bistro_0.png",'0px','0px']
+                            },
+                            {
+                                id: 'BG_1',
+                                type: 'image',
+                                rect: ['0', '0', '2028px', '973px', 'auto', 'auto'],
+                                fill: ["rgba(0,0,0,0)",im+"BG_1.png",'0px','0px']
+                            }]
+                        },
+                        {
+                            id: 'C_Pisser',
+                            symbolName: 'C_Pisser',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['415', '1615', '230', '452', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            opacity: '1',
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0],
+                            transform: [[],[],[],['-0.80896','0.80896']]
+                        },
+                        {
+                            id: 'Group',
+                            display: 'none',
+                            type: 'group',
+                            rect: ['1928', '882', '763px', '419px', 'auto', 'auto'],
+                            c: [
+                            {
+                                id: 'bg_trash_cans',
+                                type: 'image',
+                                rect: ['0', '0', '654px', '400px', 'auto', 'auto'],
+                                fill: ["rgba(0,0,0,0)",im+"bg_trash_cans.png",'0px','0px'],
+                                transform: [[],[],[],['0.7','0.7']]
+                            },
+                            {
+                                id: 'A_trash_1',
+                                symbolName: 'A_trash_1',
+                                type: 'rect',
+                                rect: ['37', '96', '705', '300', 'auto', 'auto'],
+                                overflow: 'hidden',
+                                transform: [[],[],[],['0.7','0.7']]
+                            }]
+                        },
+                        {
+                            id: 'Title_Intro',
+                            symbolName: 'Title_Intro',
+                            type: 'rect',
+                            rect: ['0', '0', '2048', '1536', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            opacity: '0.60975618721024'
+                        },
+                        {
+                            id: 'taube',
+                            symbolName: 'taube',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['1537', '1737', '350', '500', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['0.48','0.48']]
+                        },
+                        {
+                            id: 'taubeCopy',
+                            symbolName: 'taube',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['875', '1602', '350', '500', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['0.35429','0.35429']]
+                        },
+                        {
+                            id: 'taubeCopy2',
+                            symbolName: 'taube',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['438', '1620', '350', '500', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['-0.28572','0.28571']]
+                        },
+                        {
+                            id: 'BG_0',
+                            type: 'image',
+                            rect: ['0', '2560', '4096px', '567px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"BG_0.png",'0px','0px']
+                        },
+                        {
+                            id: 'BG_12',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['2092', '184', '2028px', '973px', 'auto', 'auto'],
+                            clip: 'rect(0px 1941.1416015625px 973px 0px)',
+                            fill: ["rgba(0,0,0,0)",im+"BG_1.png",'0px','0px'],
+                            transform: [[],[],[],['-1']]
+                        },
+                        {
+                            id: 'A_trash_2',
+                            symbolName: 'A_trash_2',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['-79', '1844', '342', '300', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['-1']]
+                        },
+                        {
+                            id: 'A_trash_3',
+                            symbolName: 'A_trash_3',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['3599', '979', '333', '300', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['0.74667','0.74667']]
+                        },
+                        {
+                            id: 'trashBin',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['2108', '809', '144', '247', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"trashBin.png",'0px','0px']
+                        },
+                        {
+                            id: 'B_taube2',
+                            symbolName: 'B_taube2',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['1083', '1761', '500', '430', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['0.48','0.48']]
+                        },
+                        {
+                            id: 'BG5',
+                            display: 'none',
+                            type: 'image',
+                            rect: ['2094', '278', '890px', '711px', 'auto', 'auto'],
+                            opacity: '0.7',
+                            fill: ["rgba(0,0,0,0)",im+"BG5.png",'0px','0px'],
+                            transform: [[],['1']]
+                        },
+                        {
+                            id: 'plasticbag',
+                            symbolName: 'plasticbag',
+                            type: 'rect',
+                            rect: ['-355px', '486px', '400', '511', 'auto', 'auto'],
+                            autoOrient: true,
+                            overflow: 'hidden',
+                            transform: [[],[],[],['0.8','0.62622']]
+                        },
+                        {
+                            id: 'A_tv',
+                            symbolName: 'A_tv',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['3701', '854', '600', '600', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['0.29','0.29']]
+                        },
+                        {
+                            id: 'A_cigPile',
+                            symbolName: 'A_cigPile',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['3639', '1228', '538', '374', 'auto', 'auto'],
+                            transform: [[],[],[],['0.60428','0.60428']]
+                        },
+                        {
+                            id: 'A_shoes',
+                            symbolName: 'A_shoes',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['3146', '1036', '525', '420', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['0.5819','0.5819']]
+                        },
+                        {
+                            id: 'A_teddy',
+                            symbolName: 'A_teddy',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['2672', '985', '447', '400', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['0.4152','0.4152']]
+                        },
+                        {
+                            id: 'H_still_leftright',
+                            symbolName: 'H_still_leftright',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['884', '1870', '172', '500', 'auto', 'auto'],
+                            overflow: 'hidden'
+                        },
+                        {
+                            id: 'H_bag_appear',
+                            symbolName: 'H_bag_appear',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['676', '886', '510', '576', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            transform: [[],[],[],['0.86806','0.86806']]
+                        },
+                        {
+                            id: 'H_walk',
+                            symbolName: 'H_walk',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['898', '917', '320', '500', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            clip: 'rect(0px 320px 500px 13.044392585754395px)',
+                            transform: [[],[],[],['0.98125','0.98125']]
+                        },
+                        {
+                            id: 'C_paperball',
+                            symbolName: 'A_paperball',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['2835', '1209', '440', '300', 'auto', 'auto'],
+                            overflow: 'hidden'
+                        },
+                        {
+                            id: 'A_cripmate',
+                            symbolName: 'A_cripmate',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['-199', '2114', '1163', '410', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0],
+                            transform: [[],[],[],['0.6','0.6']]
+                        },
+                        {
+                            id: 'dust_button3',
+                            symbolName: 'dust_button',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['953', '1295', '193', '179', 'auto', 'auto'],
+                            opacity: '1'
+                        },
+                        {
+                            id: 'text_5',
+                            symbolName: 'text_5',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['591', '1143', '1360', '80', 'auto', 'auto'],
+                            opacity: '1'
+                        },
+                        {
+                            id: 'text_4',
+                            symbolName: 'text_4',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['586', '1022', '720', '80', 'auto', 'auto'],
+                            opacity: '1',
+                            transform: [[],['-1']]
+                        },
+                        {
+                            id: 'text_3',
+                            symbolName: 'text_3',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['130', '891', '1090', '80', 'auto', 'auto'],
+                            opacity: '1',
+                            transform: [[],['-2']]
+                        },
+                        {
+                            id: 'text_2',
+                            symbolName: 'text_2',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['671', '709', '1120', '80', 'auto', 'auto'],
+                            transform: [[],['3']]
+                        },
+                        {
+                            id: 'text_1',
+                            symbolName: 'text_1',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['244', '509', '1518', '80', 'auto', 'auto'],
+                            transform: [[],['-1']]
+                        },
+                        {
+                            id: 'Rectangle',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['0', '0', '2055px', '1536px', 'auto', 'auto'],
+                            opacity: '1',
+                            fill: ["rgba(0,0,0,1.00)"],
+                            stroke: [0,"rgba(0,0,0,1)","none"]
+                        },
+                        {
+                            id: 'Theodora',
+                            symbolName: 'Theodora',
+                            display: 'none',
+                            type: 'rect',
+                            rect: ['366', '521', '1317', '299', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            opacity: '1',
+                            transform: [[],[],[],['0.65072','0.65072']]
+                        },
+                        {
+                            id: 'dust_icon_invert4',
+                            symbolName: 'dust_icon_invert',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['935', '672', '179', '193', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            opacity: '0'
+                        },
+                        {
+                            id: 'SFX_rumble',
+                            type: 'audio',
+                            tag: 'audio',
+                            rect: ['570', '374', '320px', '45px', 'auto', 'auto'],
+                            source: [aud+"SFX_rumble.mp3"],
+                            preload: 'auto'
+                        }
+                    ],
+                    style: {
+                        '${Stage}': {
+                            isStage: true,
+                            rect: ['null', 'null', '2048', '1536', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            fill: ["rgba(255,249,240,1.00)"]
+                        }
+                    }
                 },
-                {
-                    id: 'tree_1',
-                    type: 'image',
-                    rect: ['378px', '204px','300px','316px','auto', 'auto'],
-                    fill: ["rgba(0,0,0,0)",im+"tree_1.png",'0px','0px']
-                }]
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    labels: {
+                        "start": 4272,
+                        "text_in": 10000,
+                        "city_start": 17000,
+                        "city_out": 44000
+                    },
+                    data: [
+                        [
+                            "eid1314",
+                            "display",
+                            17000,
+                            0,
+                            "easeOutQuad",
+                            "${H_still_leftright}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1699",
+                            "display",
+                            44000,
+                            0,
+                            "linear",
+                            "${H_still_leftright}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid2266",
+                            "scaleX",
+                            23000,
+                            0,
+                            "linear",
+                            "${A_trash_2}",
+                            '-1',
+                            '-1'
+                        ],
+                        [
+                            "eid2274",
+                            "scaleX",
+                            23000,
+                            0,
+                            "linear",
+                            "${A_trash_3}",
+                            '0.74667',
+                            '0.74667'
+                        ],
+                        [
+                            "eid2277",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${A_trash_2}",
+                            '1844px',
+                            '992px'
+                        ],
+                        [
+                            "eid2555",
+                            "display",
+                            54687,
+                            0,
+                            "linear",
+                            "${taube}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid2531",
+                            "display",
+                            50301,
+                            0,
+                            "linear",
+                            "${A_shoes}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1943",
+                            "left",
+                            23000,
+                            0,
+                            "easeOutQuad",
+                            "${C_Pisser}",
+                            '415px',
+                            '415px'
+                        ],
+                        [
+                            "eid1949",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${C_Pisser}",
+                            '415px',
+                            '-1633px'
+                        ],
+                        [
+                            "eid1713",
+                            "scaleX",
+                            5000,
+                            0,
+                            "linear",
+                            "${H_bag_appear}",
+                            '0.86806',
+                            '0.86806'
+                        ],
+                        [
+                            "eid1714",
+                            "scaleX",
+                            55454,
+                            0,
+                            "linear",
+                            "${H_bag_appear}",
+                            '0.86806',
+                            '-0.86806'
+                        ],
+                        [
+                            "eid2264",
+                            "left",
+                            23000,
+                            0,
+                            "linear",
+                            "${A_trash_2}",
+                            '-79px',
+                            '-79px'
+                        ],
+                        [
+                            "eid2294",
+                            "left",
+                            44000,
+                            3340,
+                            "linear",
+                            "${A_trash_2}",
+                            '-79px',
+                            '-827px'
+                        ],
+                        [
+                            "eid1275",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${Group4}",
+                            '1787px',
+                            '1101px'
+                        ],
+                        [
+                            "eid1693",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${Group4}",
+                            '1101px',
+                            '178px'
+                        ],
+                        [
+                            "eid1853",
+                            "top",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            '709px',
+                            '709px'
+                        ],
+                        [
+                            "eid1858",
+                            "top",
+                            23000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            '709px',
+                            '769px'
+                        ],
+                        [
+                            "eid1278",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${house_1}",
+                            '1752px',
+                            '1162px'
+                        ],
+                        [
+                            "eid1309",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${house_1}",
+                            '1162px',
+                            '376px'
+                        ],
+                        [
+                            "eid1526",
+                            "opacity",
+                            17000,
+                            1250,
+                            "linear",
+                            "${text_4}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid2042",
+                            "display",
+                            8588,
+                            0,
+                            "easeInOutQuad",
+                            "${Rectangle}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid2043",
+                            "display",
+                            56000,
+                            0,
+                            "easeInOutQuad",
+                            "${Rectangle}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1279",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${houses_bg_1}",
+                            '1537px',
+                            '1121px'
+                        ],
+                        [
+                            "eid1691",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${houses_bg_1}",
+                            '1121px',
+                            '389px'
+                        ],
+                        [
+                            "eid2116",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${B_taube2}",
+                            '1761px',
+                            '961px'
+                        ],
+                        [
+                            "eid1277",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${house_2}",
+                            '1752px',
+                            '1162px'
+                        ],
+                        [
+                            "eid1308",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${house_2}",
+                            '1162px',
+                            '386px'
+                        ],
+                        [
+                            "eid2030",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${C_Pisser}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid1984",
+                            "display",
+                            23000,
+                            0,
+                            "easeInOutQuad",
+                            "${C_Pisser}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid2553",
+                            "display",
+                            48000,
+                            0,
+                            "linear",
+                            "${C_Pisser}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1515",
+                            "display",
+                            0,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1842",
+                            "display",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid1880",
+                            "display",
+                            17000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1883",
+                            "display",
+                            18250,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid2527",
+                            "top",
+                            55000,
+                            0,
+                            "linear",
+                            "${A_shoes}",
+                            '1036px',
+                            '1036px'
+                        ],
+                        [
+                            "eid1851",
+                            "left",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '591px',
+                            '591px'
+                        ],
+                        [
+                            "eid1856",
+                            "left",
+                            23000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '591px',
+                            '551px'
+                        ],
+                        [
+                            "eid2286",
+                            "left",
+                            44000,
+                            11000,
+                            "linear",
+                            "${A_trash_3}",
+                            '3599px',
+                            '1645px'
+                        ],
+                        [
+                            "eid2291",
+                            "left",
+                            55000,
+                            1000,
+                            "linear",
+                            "${A_trash_3}",
+                            '1645px',
+                            '1485px'
+                        ],
+                        [
+                            "eid1670",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${taube}",
+                            '1537px',
+                            '-482px'
+                        ],
+                        [
+                            "eid2206",
+                            "left",
+                            56000,
+                            69,
+                            "easeInOutQuad",
+                            "${taube}",
+                            '-482px',
+                            '-512px'
+                        ],
+                        [
+                            "eid2013",
+                            "display",
+                            44000,
+                            0,
+                            "easeInOutQuad",
+                            "${Group}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid2530",
+                            "display",
+                            48000,
+                            0,
+                            "linear",
+                            "${A_teddy}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid937",
+                            "location",
+                            11000,
+                            2000,
+                            "easeInOutQuad",
+                            "${plasticbag}",
+                            [[2292, 815.8, 0, 0, 0, 0,0],[1980.6, 614.04, -483.89, -92.57, -554.15, -106.01,378.22],[1473.35, 766.57, -494.46, -149.16, -1299.56, -392.03,959.94],[1038.58, 778.26, -159.21, 245.04, -560.74, 863.06,1489.08],[814.62, 484.07, 29.44, -70.07, 391.32, -931.4,2009.3],[968.29, 426.61, 482.35, 261.41, 140.23, 76,2182.97],[611.03, 768.16, -863.16, 118.01, -773.67, 105.78,2789.55],[204.41, 784.9, -613.25, 27.24, -77.99, 3.46,3197.49],[-236.95, 719.5, 0, 0, 0, 0,3645.47]]
+                        ],
+                        [
+                            "eid1052",
+                            "scaleX",
+                            5000,
+                            0,
+                            "linear",
+                            "${H_walk}",
+                            '0.98125',
+                            '0.98125'
+                        ],
+                        [
+                            "eid1945",
+                            "left",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${C_Esser}",
+                            '1492px',
+                            '1496px'
+                        ],
+                        [
+                            "eid1981",
+                            "left",
+                            44000,
+                            12768,
+                            "linear",
+                            "${C_Esser}",
+                            '1496px',
+                            '1492px'
+                        ],
+                        [
+                            "eid2590",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${trashBin}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid2591",
+                            "display",
+                            52376,
+                            0,
+                            "linear",
+                            "${trashBin}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1151",
+                            "left",
+                            0,
+                            0,
+                            "easeOutQuad",
+                            "${BG_1}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid2559",
+                            "left",
+                            56000,
+                            0,
+                            "linear",
+                            "${BG_1}",
+                            '0px',
+                            '13px'
+                        ],
+                        [
+                            "eid2571",
+                            "left",
+                            53000,
+                            2000,
+                            "linear",
+                            "${trashBin}",
+                            '2108px',
+                            '1751px'
+                        ],
+                        [
+                            "eid2572",
+                            "left",
+                            55000,
+                            1000,
+                            "linear",
+                            "${trashBin}",
+                            '1751px',
+                            '1591px'
+                        ],
+                        [
+                            "eid1892",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${bistro_0}",
+                            '510px',
+                            '580px'
+                        ],
+                        [
+                            "eid1982",
+                            "top",
+                            44000,
+                            0,
+                            "easeInQuad",
+                            "${bistro_0}",
+                            '580px',
+                            '579px'
+                        ],
+                        [
+                            "eid2271",
+                            "display",
+                            23000,
+                            0,
+                            "linear",
+                            "${BG_12}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid2528",
+                            "top",
+                            55000,
+                            0,
+                            "linear",
+                            "${A_tv}",
+                            '854px',
+                            '854px'
+                        ],
+                        [
+                            "eid1467",
+                            "rotateZ",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            '-1deg',
+                            '-1deg'
+                        ],
+                        [
+                            "eid2263",
+                            "display",
+                            23000,
+                            0,
+                            "linear",
+                            "${A_trash_2}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid2557",
+                            "display",
+                            45362,
+                            0,
+                            "linear",
+                            "${A_trash_2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1939",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${C_Pisser}",
+                            '1615px',
+                            '762px'
+                        ],
+                        [
+                            "eid1952",
+                            "top",
+                            44000,
+                            12000,
+                            "linear",
+                            "${C_Pisser}",
+                            '762px',
+                            '765px'
+                        ],
+                        [
+                            "eid1864",
+                            "top",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            '1022px',
+                            '1022px'
+                        ],
+                        [
+                            "eid1872",
+                            "top",
+                            23000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            '1022px',
+                            '1092px'
+                        ],
+                        [
+                            "eid2289",
+                            "left",
+                            44000,
+                            11000,
+                            "linear",
+                            "${BG_12}",
+                            '2092px',
+                            '138px'
+                        ],
+                        [
+                            "eid2290",
+                            "left",
+                            55000,
+                            1000,
+                            "linear",
+                            "${BG_12}",
+                            '138px',
+                            '-22px'
+                        ],
+                        [
+                            "eid1512",
+                            "display",
+                            0,
+                            0,
+                            "easeInOutBounce",
+                            "${text_1}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1877",
+                            "display",
+                            17000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_1}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid1838",
+                            "left",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            '130px',
+                            '130px'
+                        ],
+                        [
+                            "eid1859",
+                            "left",
+                            23000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            '130px',
+                            '558px'
+                        ],
+                        [
+                            "eid1687",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${H_still_leftright}",
+                            '1870px',
+                            '1700px'
+                        ],
+                        [
+                            "eid1323",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${H_still_leftright}",
+                            '1700px',
+                            '921px'
+                        ],
+                        [
+                            "eid2299",
+                            "top",
+                            44000,
+                            0,
+                            "linear",
+                            "${BG_12}",
+                            '184px',
+                            '184px'
+                        ],
+                        [
+                            "eid2301",
+                            "top",
+                            55000,
+                            0,
+                            "linear",
+                            "${BG_12}",
+                            '184px',
+                            '185px'
+                        ],
+                        [
+                            "eid1525",
+                            "opacity",
+                            17000,
+                            1250,
+                            "linear",
+                            "${text_3}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid1855",
+                            "rotateZ",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            '-2deg',
+                            '-2deg'
+                        ],
+                        [
+                            "eid1861",
+                            "rotateZ",
+                            23000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            '-2deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid2532",
+                            "display",
+                            44000,
+                            0,
+                            "linear",
+                            "${A_tv}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid2302",
+                            "top",
+                            44000,
+                            0,
+                            "linear",
+                            "${A_trash_3}",
+                            '979px',
+                            '979px'
+                        ],
+                        [
+                            "eid1871",
+                            "top",
+                            17000,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_button3}",
+                            '1295px',
+                            '1295px'
+                        ],
+                        [
+                            "eid1271",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${BG_0}",
+                            '2560px',
+                            '1804px'
+                        ],
+                        [
+                            "eid1695",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${BG_0}",
+                            '1804px',
+                            '951px'
+                        ],
+                        [
+                            "eid1717",
+                            "top",
+                            44000,
+                            0,
+                            "easeInOutQuad",
+                            "${BG_0}",
+                            '951px',
+                            '951px'
+                        ],
+                        [
+                            "eid1610",
+                            "display",
+                            0,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_button3}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1621",
+                            "display",
+                            17000,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_button3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1886",
+                            "display",
+                            17521,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_button3}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid2112",
+                            "left",
+                            23000,
+                            0,
+                            "linear",
+                            "${B_taube2}",
+                            '1083px',
+                            '1087px'
+                        ],
+                        [
+                            "eid2117",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${B_taube2}",
+                            '1087px',
+                            '-1066px'
+                        ],
+                        [
+                            "eid2016",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${Group}",
+                            '1928px',
+                            '-114px'
+                        ],
+                        [
+                            "eid1145",
+                            "left",
+                            17000,
+                            0,
+                            "easeOutQuad",
+                            "${Group3}",
+                            '362px',
+                            '362px'
+                        ],
+                        [
+                            "eid1674",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${Group3}",
+                            '362px',
+                            '-1686px'
+                        ],
+                        [
+                            "eid2545",
+                            "left",
+                            44000,
+                            11000,
+                            "linear",
+                            "${A_tv}",
+                            '3701px',
+                            '1699px'
+                        ],
+                        [
+                            "eid2546",
+                            "left",
+                            55000,
+                            1000,
+                            "linear",
+                            "${A_tv}",
+                            '1699px',
+                            '1543px'
+                        ],
+                        [
+                            "eid1337",
+                            "opacity",
+                            10000,
+                            1000,
+                            "easeOutCubic",
+                            "${Theodora}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid2109",
+                            "display",
+                            23000,
+                            0,
+                            "linear",
+                            "${B_taube2}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid2558",
+                            "display",
+                            53695,
+                            0,
+                            "linear",
+                            "${B_taube2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1841",
+                            "top",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            '891px',
+                            '891px'
+                        ],
+                        [
+                            "eid1860",
+                            "top",
+                            23000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            '891px',
+                            '1001px'
+                        ],
+                        [
+                            "eid1614",
+                            "opacity",
+                            17000,
+                            521,
+                            "easeInOutBounce",
+                            "${dust_button3}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid1524",
+                            "opacity",
+                            17000,
+                            1250,
+                            "linear",
+                            "${text_5}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid1682",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${taubeCopy}",
+                            '875px',
+                            '-1173px'
+                        ],
+                        [
+                            "eid1867",
+                            "rotateZ",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid1874",
+                            "rotateZ",
+                            23000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '0deg',
+                            '-2deg'
+                        ],
+                        [
+                            "eid1099",
+                            "left",
+                            5000,
+                            0,
+                            "linear",
+                            "${Title_Intro}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1140",
+                            "left",
+                            17000,
+                            0,
+                            "easeInOutCubic",
+                            "${Title_Intro}",
+                            '0px',
+                            '1px'
+                        ],
+                        [
+                            "eid1632",
+                            "left",
+                            44000,
+                            0,
+                            "easeOutCubic",
+                            "${Title_Intro}",
+                            '1px',
+                            '1px'
+                        ],
+                        [
+                            "eid1156",
+                            "top",
+                            17000,
+                            0,
+                            "easeOutQuad",
+                            "${house_3}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1289",
+                            "top",
+                            44000,
+                            0,
+                            "easeOutQuad",
+                            "${house_3}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1624",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${BG_1}",
+                            '0px',
+                            '-110px'
+                        ],
+                        [
+                            "eid1625",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${BG_1}",
+                            '-110px',
+                            '0px'
+                        ],
+                        [
+                            "eid2560",
+                            "top",
+                            56000,
+                            0,
+                            "linear",
+                            "${BG_1}",
+                            '0px',
+                            '-3px'
+                        ],
+                        [
+                            "eid1506",
+                            "left",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_1}",
+                            '244px',
+                            '244px'
+                        ],
+                        [
+                            "eid2275",
+                            "scaleY",
+                            23000,
+                            0,
+                            "linear",
+                            "${A_trash_3}",
+                            '0.74667',
+                            '0.74667'
+                        ],
+                        [
+                            "eid1504",
+                            "rotateZ",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_1}",
+                            '-1deg',
+                            '-1deg'
+                        ],
+                        [
+                            "eid1844",
+                            "left",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            '586px',
+                            '586px'
+                        ],
+                        [
+                            "eid1862",
+                            "left",
+                            23000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_4}",
+                            '586px',
+                            '696px'
+                        ],
+                        [
+                            "eid2538",
+                            "left",
+                            44000,
+                            11000,
+                            "linear",
+                            "${A_teddy}",
+                            '2672px',
+                            '670px'
+                        ],
+                        [
+                            "eid2547",
+                            "left",
+                            55000,
+                            1000,
+                            "linear",
+                            "${A_teddy}",
+                            '670px',
+                            '486px'
+                        ],
+                        [
+                            "eid2267",
+                            "scaleY",
+                            23000,
+                            0,
+                            "linear",
+                            "${A_trash_2}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2041",
+                            "opacity",
+                            5000,
+                            3000,
+                            "easeInQuad",
+                            "${Rectangle}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid2045",
+                            "opacity",
+                            57537,
+                            2000,
+                            "easeInOutQuad",
+                            "${Rectangle}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid2381",
+                            "display",
+                            4272,
+                            0,
+                            "easeInQuad",
+                            "${dust_icon_invert4}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1513",
+                            "display",
+                            0,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1839",
+                            "display",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid1878",
+                            "display",
+                            17000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid1672",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${Group4}",
+                            '160px',
+                            '-1888px'
+                        ],
+                        [
+                            "eid1276",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${Group3}",
+                            '1860px',
+                            '1285px'
+                        ],
+                        [
+                            "eid1307",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${Group3}",
+                            '1285px',
+                            '529px'
+                        ],
+                        [
+                            "eid1273",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${taubeCopy}",
+                            '1602px',
+                            '806px'
+                        ],
+                        [
+                            "eid1304",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${taubeCopy}",
+                            '806px',
+                            '-10px'
+                        ],
+                        [
+                            "eid1683",
+                            "top",
+                            44000,
+                            12000,
+                            "linear",
+                            "${taubeCopy}",
+                            '-10px',
+                            '11px'
+                        ],
+                        [
+                            "eid2245",
+                            "display",
+                            23000,
+                            0,
+                            "linear",
+                            "${A_cripmate}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid2551",
+                            "display",
+                            48000,
+                            0,
+                            "linear",
+                            "${A_cripmate}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid2540",
+                            "left",
+                            44000,
+                            4000,
+                            "linear",
+                            "${A_cigPile}",
+                            '3639px',
+                            '2877px'
+                        ],
+                        [
+                            "eid2550",
+                            "left",
+                            48000,
+                            7000,
+                            "linear",
+                            "${A_cigPile}",
+                            '2877px',
+                            '1547px'
+                        ],
+                        [
+                            "eid2549",
+                            "left",
+                            55000,
+                            1000,
+                            "linear",
+                            "${A_cigPile}",
+                            '1547px',
+                            '1353px'
+                        ],
+                        [
+                            "eid1053",
+                            "scaleY",
+                            5000,
+                            0,
+                            "linear",
+                            "${H_walk}",
+                            '0.98125',
+                            '0.98125'
+                        ],
+                        [
+                            "eid2566",
+                            "display",
+                            44000,
+                            0,
+                            "linear",
+                            "${BG5}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid2025",
+                            "left",
+                            44000,
+                            11000,
+                            "linear",
+                            "${C_paperball}",
+                            '2835px',
+                            '689px'
+                        ],
+                        [
+                            "eid2027",
+                            "left",
+                            55000,
+                            1000,
+                            "linear",
+                            "${C_paperball}",
+                            '689px',
+                            '460px'
+                        ],
+                        [
+                            "eid1668",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${houses_bg_1}",
+                            '201px',
+                            '-1847px'
+                        ],
+                        [
+                            "eid2382",
+                            "opacity",
+                            0,
+                            560,
+                            "easeInQuad",
+                            "${dust_icon_invert4}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid2383",
+                            "opacity",
+                            4272,
+                            560,
+                            "easeInQuad",
+                            "${dust_icon_invert4}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid2529",
+                            "top",
+                            55000,
+                            0,
+                            "linear",
+                            "${A_cigPile}",
+                            '1228px',
+                            '1228px'
+                        ],
+                        [
+                            "eid1514",
+                            "display",
+                            0,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1837",
+                            "display",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid1879",
+                            "display",
+                            17000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid1884",
+                            "display",
+                            18250,
+                            0,
+                            "easeInOutBounce",
+                            "${text_3}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid2569",
+                            "display",
+                            53000,
+                            0,
+                            "linear",
+                            "${A_trash_3}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1272",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${taubeCopy2}",
+                            '1620px',
+                            '824px'
+                        ],
+                        [
+                            "eid1303",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${taubeCopy2}",
+                            '824px',
+                            '8px'
+                        ],
+                        [
+                            "eid1685",
+                            "top",
+                            44000,
+                            12000,
+                            "linear",
+                            "${taubeCopy2}",
+                            '8px',
+                            '29px'
+                        ],
+                        [
+                            "eid1274",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${taube}",
+                            '1737px',
+                            '941px'
+                        ],
+                        [
+                            "eid1305",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${taube}",
+                            '941px',
+                            '128px'
+                        ],
+                        [
+                            "eid1671",
+                            "top",
+                            44000,
+                            12000,
+                            "linear",
+                            "${taube}",
+                            '128px',
+                            '149px'
+                        ],
+                        [
+                            "eid1708",
+                            "left",
+                            5000,
+                            0,
+                            "linear",
+                            "${H_bag_appear}",
+                            '676px',
+                            '676px'
+                        ],
+                        [
+                            "eid1817",
+                            "left",
+                            55454,
+                            546,
+                            "linear",
+                            "${H_bag_appear}",
+                            '936px',
+                            '836px'
+                        ],
+                        [
+                            "eid1507",
+                            "left",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            '671px',
+                            '671px'
+                        ],
+                        [
+                            "eid1148",
+                            "left",
+                            17000,
+                            0,
+                            "easeOutQuad",
+                            "${house_2}",
+                            '1156px',
+                            '1156px'
+                        ],
+                        [
+                            "eid1678",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${house_2}",
+                            '1156px',
+                            '-892px'
+                        ],
+                        [
+                            "eid2568",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${C_paperball}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid2567",
+                            "display",
+                            48000,
+                            0,
+                            "linear",
+                            "${C_paperball}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1100",
+                            "top",
+                            5000,
+                            0,
+                            "linear",
+                            "${Title_Intro}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1341",
+                            "top",
+                            10000,
+                            3130,
+                            "easeInOutCubic",
+                            "${Title_Intro}",
+                            '0px',
+                            '-690px'
+                        ],
+                        [
+                            "eid1617",
+                            "top",
+                            17000,
+                            6000,
+                            "easeOutQuad",
+                            "${Title_Intro}",
+                            '-690px',
+                            '-963px'
+                        ],
+                        [
+                            "eid1620",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${Title_Intro}",
+                            '-963px',
+                            '-1523px'
+                        ],
+                        [
+                            "eid2103",
+                            "scaleX",
+                            23000,
+                            0,
+                            "linear",
+                            "${B_taube2}",
+                            '0.48',
+                            '0.48'
+                        ],
+                        [
+                            "eid1516",
+                            "display",
+                            0,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1847",
+                            "display",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid1881",
+                            "display",
+                            17000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1882",
+                            "display",
+                            18250,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1807",
+                            "scaleY",
+                            23000,
+                            0,
+                            "easeInOutQuad",
+                            "${C_Esser}",
+                            '0.44',
+                            '0.44'
+                        ],
+                        [
+                            "eid2251",
+                            "display",
+                            4272,
+                            0,
+                            "easeOutCubic",
+                            "${Theodora}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1155",
+                            "top",
+                            17000,
+                            0,
+                            "easeOutQuad",
+                            "${tree_1}",
+                            '204px',
+                            '204px'
+                        ],
+                        [
+                            "eid1288",
+                            "top",
+                            44000,
+                            0,
+                            "easeOutQuad",
+                            "${tree_1}",
+                            '204px',
+                            '204px'
+                        ],
+                        [
+                            "eid1967",
+                            "left",
+                            23000,
+                            0,
+                            "easeOutQuad",
+                            "${A_cripmate}",
+                            '-199px',
+                            '-199px'
+                        ],
+                        [
+                            "eid1971",
+                            "left",
+                            44000,
+                            11000,
+                            "linear",
+                            "${A_cripmate}",
+                            '-199px',
+                            '-2927px'
+                        ],
+                        [
+                            "eid1486",
+                            "rotateZ",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_2}",
+                            '3deg',
+                            '3deg'
+                        ],
+                        [
+                            "eid1051",
+                            "top",
+                            5000,
+                            0,
+                            "linear",
+                            "${H_walk}",
+                            '917px',
+                            '917px'
+                        ],
+                        [
+                            "eid1054",
+                            "display",
+                            5000,
+                            0,
+                            "linear",
+                            "${H_walk}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid1700",
+                            "display",
+                            44000,
+                            0,
+                            "linear",
+                            "${H_walk}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1701",
+                            "display",
+                            55454,
+                            0,
+                            "linear",
+                            "${H_walk}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid2556",
+                            "display",
+                            54687,
+                            0,
+                            "linear",
+                            "${taubeCopy}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid2533",
+                            "display",
+                            52811,
+                            0,
+                            "linear",
+                            "${A_cigPile}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1813",
+                            "display",
+                            23000,
+                            0,
+                            "easeInOutQuad",
+                            "${C_Esser}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid2554",
+                            "display",
+                            54687,
+                            0,
+                            "linear",
+                            "${C_Esser}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid2564",
+                            "left",
+                            44000,
+                            11000,
+                            "linear",
+                            "${BG5}",
+                            '2094px',
+                            '144px'
+                        ],
+                        [
+                            "eid2565",
+                            "left",
+                            55000,
+                            1000,
+                            "linear",
+                            "${BG5}",
+                            '144px',
+                            '-10px'
+                        ],
+                        [
+                            "eid1146",
+                            "left",
+                            17000,
+                            0,
+                            "easeOutQuad",
+                            "${tree_1}",
+                            '378px',
+                            '378px'
+                        ],
+                        [
+                            "eid1637",
+                            "left",
+                            44000,
+                            0,
+                            "easeOutCubic",
+                            "${tree_1}",
+                            '378px',
+                            '378px'
+                        ],
+                        [
+                            "eid2539",
+                            "left",
+                            44000,
+                            11000,
+                            "linear",
+                            "${A_shoes}",
+                            '3146px',
+                            '1054px'
+                        ],
+                        [
+                            "eid2548",
+                            "left",
+                            55000,
+                            1000,
+                            "linear",
+                            "${A_shoes}",
+                            '1054px',
+                            '860px'
+                        ],
+                        [
+                            "eid1684",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${taubeCopy2}",
+                            '438px',
+                            '-1610px'
+                        ],
+                        [
+                            "eid1893",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${C_Esser}",
+                            '500px',
+                            '570px'
+                        ],
+                        [
+                            "eid2552",
+                            "display",
+                            48000,
+                            0,
+                            "linear",
+                            "${taubeCopy2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1021",
+                            "display",
+                            5000,
+                            0,
+                            "easeInOutBounce",
+                            "${H_bag_appear}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid1702",
+                            "display",
+                            55454,
+                            0,
+                            "linear",
+                            "${H_bag_appear}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid1147",
+                            "left",
+                            17000,
+                            0,
+                            "easeOutQuad",
+                            "${house_3}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1638",
+                            "left",
+                            44000,
+                            0,
+                            "easeOutCubic",
+                            "${house_3}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1185",
+                            "left",
+                            17000,
+                            0,
+                            "easeOutQuad",
+                            "${BG_0}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1680",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${BG_0}",
+                            '0px',
+                            '-2048px'
+                        ],
+                        [
+                            "eid1126",
+                            "top",
+                            5000,
+                            0,
+                            "linear",
+                            "${H_bag_appear}",
+                            '886px',
+                            '886px'
+                        ],
+                        [
+                            "eid1706",
+                            "top",
+                            55454,
+                            0,
+                            "linear",
+                            "${H_bag_appear}",
+                            '886px',
+                            '886px'
+                        ],
+                        [
+                            "eid1050",
+                            "left",
+                            5000,
+                            0,
+                            "linear",
+                            "${H_walk}",
+                            '898px',
+                            '898px'
+                        ],
+                        [
+                            "eid1712",
+                            "scaleY",
+                            5000,
+                            0,
+                            "linear",
+                            "${H_bag_appear}",
+                            '0.86806',
+                            '0.86806'
+                        ],
+                        [
+                            "eid1707",
+                            "scaleY",
+                            55454,
+                            0,
+                            "linear",
+                            "${H_bag_appear}",
+                            '0.86806',
+                            '0.86806'
+                        ],
+                        [
+                            "eid1149",
+                            "left",
+                            17000,
+                            0,
+                            "easeOutQuad",
+                            "${house_1}",
+                            '30px',
+                            '30px'
+                        ],
+                        [
+                            "eid1676",
+                            "left",
+                            44000,
+                            12000,
+                            "linear",
+                            "${house_1}",
+                            '30px',
+                            '-2018px'
+                        ],
+                        [
+                            "eid2104",
+                            "scaleY",
+                            23000,
+                            0,
+                            "linear",
+                            "${B_taube2}",
+                            '0.48',
+                            '0.48'
+                        ],
+                        [
+                            "eid1869",
+                            "left",
+                            17000,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_button3}",
+                            '953px',
+                            '953px'
+                        ],
+                        [
+                            "eid1505",
+                            "top",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_1}",
+                            '509px',
+                            '509px'
+                        ],
+                        [
+                            "eid1865",
+                            "top",
+                            13409,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '1143px',
+                            '1143px'
+                        ],
+                        [
+                            "eid1873",
+                            "top",
+                            23000,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '1143px',
+                            '1313px'
+                        ],
+                        [
+                            "eid1972",
+                            "top",
+                            23000,
+                            5000,
+                            "easeInOutQuad",
+                            "${A_cripmate}",
+                            '2114px',
+                            '1180px'
+                        ],
+                            [ "eid2589", "trigger", 5000, function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['play', '${Theodora}', [] ] ],
+                            [ "eid2592", "trigger", 10000, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${SFX_rumble}', [] ] ],
+                            [ "eid1710", "trigger", 55454.980961894, function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['play', '${H_bag_appear}', ['still'] ] ]
+                    ]
+                }
             },
-            {
-                id: 'Group4',
-                type: 'group',
-                rect: ['160', '1527','2028','973','auto', 'auto'],
-                c: [
-                {
-                    id: 'C_Esser',
-                    display: 'none',
-                    type: 'rect',
-                    rect: ['3246px', '676px','auto','auto','auto', 'auto'],
-                    filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
+            "Theodora": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [39, -1177, '1255px', '1800px', 'auto', 'auto'],
+                            id: 'Name_sprite',
+                            opacity: '0.46',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/Name_sprite.png', '0px', '0px']
+                        },
+                        {
+                            rect: [39, 3, '1255px', '1800px', 'auto', 'auto'],
+                            id: 'Name_spriteCopy',
+                            opacity: '0.47',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/Name_sprite.png', '0px', '0px']
+                        },
+                        {
+                            fi: ['1', '0deg', '1', '1', '0', '0', '0', '0px', 'rgba(0,0,0,0)', '0px', '0px', '0px'],
+                            type: 'image',
+                            filter: ['1', '0deg', '1', '1', '0', '0', '0', '0px', 'rgba(0,0,0,0)', '0px', '0px', '0px'],
+                            id: 'Name_00072',
+                            opacity: '0.01',
+                            rect: [0, -34, '1317px', '394px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/Name_0007.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 1317, 299]
+                        }
+                    }
                 },
-                {
-                    id: 'bistro_0',
-                    type: 'image',
-                    rect: ['1426px', '540px','492px','355px','auto', 'auto'],
-                    fill: ["rgba(0,0,0,0)",im+"bistro_0.png",'0px','0px']
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "name_opaque": 625,
+                        "full_opacity": 1209,
+                        "fade": 2000
+                    },
+                    data: [
+                        [
+                            "eid214",
+                            "opacity",
+                            0,
+                            300,
+                            "easeInOutQuad",
+                            "${Name_spriteCopy}",
+                            '0.47',
+                            '0.15'
+                        ],
+                        [
+                            "eid215",
+                            "opacity",
+                            300,
+                            325,
+                            "easeInOutQuad",
+                            "${Name_spriteCopy}",
+                            '0.15',
+                            '0.47'
+                        ],
+                        [
+                            "eid187",
+                            "opacity",
+                            625,
+                            584,
+                            "easeInOutQuad",
+                            "${Name_spriteCopy}",
+                            '0.47',
+                            '0.4'
+                        ],
+                        [
+                            "eid1333",
+                            "opacity",
+                            2000,
+                            3000,
+                            "easeInOutQuad",
+                            "${Name_spriteCopy}",
+                            '0.4',
+                            '0'
+                        ],
+                        [
+                            "eid216",
+                            "opacity",
+                            0,
+                            300,
+                            "easeInOutQuad",
+                            "${Name_sprite}",
+                            '0.46',
+                            '0.15'
+                        ],
+                        [
+                            "eid217",
+                            "opacity",
+                            300,
+                            325,
+                            "easeInOutQuad",
+                            "${Name_sprite}",
+                            '0.15',
+                            '0.46'
+                        ],
+                        [
+                            "eid130",
+                            "opacity",
+                            625,
+                            584,
+                            "easeInOutQuad",
+                            "${Name_sprite}",
+                            '0.46',
+                            '0.4'
+                        ],
+                        [
+                            "eid1334",
+                            "opacity",
+                            2000,
+                            3000,
+                            "easeInOutQuad",
+                            "${Name_sprite}",
+                            '0.4',
+                            '0'
+                        ],
+                        [
+                            "eid188",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-1177px',
+                            '-1177px'
+                        ],
+                        [
+                            "eid189",
+                            "top",
+                            100,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-1177px',
+                            '-1476px'
+                        ],
+                        [
+                            "eid6",
+                            "top",
+                            200,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-1476px',
+                            '3px'
+                        ],
+                        [
+                            "eid7",
+                            "top",
+                            300,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '3px',
+                            '-290px'
+                        ],
+                        [
+                            "eid8",
+                            "top",
+                            400,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-285px',
+                            '-588px'
+                        ],
+                        [
+                            "eid9",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-585px',
+                            '-891px'
+                        ],
+                        [
+                            "eid190",
+                            "top",
+                            625,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-891px',
+                            '-1177px'
+                        ],
+                        [
+                            "eid191",
+                            "top",
+                            725,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-1177px',
+                            '-1476px'
+                        ],
+                        [
+                            "eid192",
+                            "top",
+                            825,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-1476px',
+                            '3px'
+                        ],
+                        [
+                            "eid193",
+                            "top",
+                            925,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '3px',
+                            '-290px'
+                        ],
+                        [
+                            "eid194",
+                            "top",
+                            1025,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-290px',
+                            '-588px'
+                        ],
+                        [
+                            "eid195",
+                            "top",
+                            1125,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-588px',
+                            '-891px'
+                        ],
+                        [
+                            "eid196",
+                            "top",
+                            1209,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-891px',
+                            '3px'
+                        ],
+                        [
+                            "eid197",
+                            "top",
+                            1309,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-1177px',
+                            '-1476px'
+                        ],
+                        [
+                            "eid198",
+                            "top",
+                            1409,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-1476px',
+                            '3px'
+                        ],
+                        [
+                            "eid199",
+                            "top",
+                            1509,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '3px',
+                            '-290px'
+                        ],
+                        [
+                            "eid200",
+                            "top",
+                            1609,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-290px',
+                            '-588px'
+                        ],
+                        [
+                            "eid201",
+                            "top",
+                            1709,
+                            0,
+                            "linear",
+                            "${Name_sprite}",
+                            '-588px',
+                            '-891px'
+                        ],
+                        [
+                            "eid54",
+                            "opacity",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${Name_00072}",
+                            '0.01',
+                            '0.01'
+                        ],
+                        [
+                            "eid129",
+                            "opacity",
+                            625,
+                            584,
+                            "easeOutQuad",
+                            "${Name_00072}",
+                            '0.01',
+                            '1'
+                        ],
+                        [
+                            "eid1332",
+                            "opacity",
+                            2000,
+                            3000,
+                            "easeInOutQuad",
+                            "${Name_00072}",
+                            '1',
+                            '0'
+                        ],
+                        [
+                            "eid1142",
+                            "filter.invert",
+                            1509,
+                            0,
+                            "easeOutQuad",
+                            "${Name_00072}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid168",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '3px',
+                            '3px'
+                        ],
+                        [
+                            "eid169",
+                            "top",
+                            100,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '3px',
+                            '-290px'
+                        ],
+                        [
+                            "eid170",
+                            "top",
+                            200,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-290px',
+                            '-588px'
+                        ],
+                        [
+                            "eid171",
+                            "top",
+                            300,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-588px',
+                            '-891px'
+                        ],
+                        [
+                            "eid172",
+                            "top",
+                            400,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-891px',
+                            '-1177px'
+                        ],
+                        [
+                            "eid173",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-1177px',
+                            '-1476px'
+                        ],
+                        [
+                            "eid174",
+                            "top",
+                            625,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-1476px',
+                            '3px'
+                        ],
+                        [
+                            "eid175",
+                            "top",
+                            725,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '3px',
+                            '-290px'
+                        ],
+                        [
+                            "eid176",
+                            "top",
+                            825,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-290px',
+                            '-588px'
+                        ],
+                        [
+                            "eid177",
+                            "top",
+                            925,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-588px',
+                            '-891px'
+                        ],
+                        [
+                            "eid178",
+                            "top",
+                            1025,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-891px',
+                            '-1177px'
+                        ],
+                        [
+                            "eid179",
+                            "top",
+                            1125,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-1177px',
+                            '-1476px'
+                        ],
+                        [
+                            "eid180",
+                            "top",
+                            1209,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-1476px',
+                            '3px'
+                        ],
+                        [
+                            "eid181",
+                            "top",
+                            1309,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '3px',
+                            '-290px'
+                        ],
+                        [
+                            "eid182",
+                            "top",
+                            1409,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-290px',
+                            '-588px'
+                        ],
+                        [
+                            "eid183",
+                            "top",
+                            1509,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-588px',
+                            '-891px'
+                        ],
+                        [
+                            "eid184",
+                            "top",
+                            1609,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-891px',
+                            '-1177px'
+                        ],
+                        [
+                            "eid185",
+                            "top",
+                            1709,
+                            0,
+                            "linear",
+                            "${Name_spriteCopy}",
+                            '-1177px',
+                            '-1476px'
+                        ]
+                    ]
+                }
+            },
+            "cloud_2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, -1000, '500px', '1200px', 'auto', 'auto'],
+                            id: 'ss_cloud2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_cloud.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 500, 200]
+                        }
+                    }
                 },
-                {
-                    id: 'BG_1',
-                    type: 'image',
-                    rect: ['0px', '0px','2028px','973px','auto', 'auto'],
-                    fill: ["rgba(0,0,0,0)",im+"BG_1.png",'0px','0px']
-                }]
+                timeline: {
+                    duration: 600,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid879",
+                            "top",
+                            33,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-1000px',
+                            '-1000px'
+                        ],
+                        [
+                            "eid880",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-1000px',
+                            '0px'
+                        ],
+                        [
+                            "eid17",
+                            "top",
+                            233,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '0px',
+                            '-200px'
+                        ],
+                        [
+                            "eid18",
+                            "top",
+                            333,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-200px',
+                            '-400px'
+                        ],
+                        [
+                            "eid19",
+                            "top",
+                            433,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-400px',
+                            '-600px'
+                        ],
+                        [
+                            "eid20",
+                            "top",
+                            533,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-600px',
+                            '-800px'
+                        ]
+                    ]
+                }
             },
-            {
-                id: 'C_Pisser',
-                display: 'none',
-                type: 'rect',
-                rect: ['680px', '745px','auto','auto','auto', 'auto'],
-                filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0]
-            },
-            {
-                id: 'Group',
-                display: 'none',
-                type: 'group',
-                rect: ['1933px', '882','763px','419px','auto', 'auto'],
-                c: [
-                {
-                    id: 'bg_trash_cans',
-                    type: 'image',
-                    rect: ['0px', '0px','654px','400px','auto', 'auto'],
-                    fill: ["rgba(0,0,0,0)",im+"bg_trash_cans.png",'0px','0px'],
-                    transform: [[],[],[],['0.7','0.7']]
+            "cloud_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, -800, '500px', '1200px', 'auto', 'auto'],
+                            id: 'ss_cloud2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_cloud.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 500, 200]
+                        }
+                    }
                 },
-                {
-                    id: 'A_trash_1',
-                    type: 'rect',
-                    rect: ['721px', '255px','auto','auto','auto', 'auto']
-                }]
-            },
-            {
-                id: 'Title_Intro',
-                type: 'rect',
-                rect: ['-1288px', '-111px','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'taube',
-                display: 'block',
-                type: 'rect',
-                rect: ['1537px', '1477px','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['0.48','0.48']]
-            },
-            {
-                id: 'taubeCopy',
-                display: 'block',
-                type: 'rect',
-                rect: ['875px', '1342px','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['0.35429','0.35429']]
-            },
-            {
-                id: 'taubeCopy2',
-                display: 'block',
-                type: 'rect',
-                rect: ['438px', '1360px','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['-0.28572','0.28571']]
-            },
-            {
-                id: 'BG_0',
-                type: 'image',
-                rect: ['0px', '2350px','4096px','567px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"BG_0.png",'0px','0px']
-            },
-            {
-                id: 'BG_12',
-                display: 'none',
-                type: 'image',
-                rect: ['2092px', '991px','2028px','973px','auto', 'auto'],
-                clip: ['rect(0px 1941.1416015625px 973px 0px)'],
-                fill: ["rgba(0,0,0,0)",im+"BG_1.png",'0px','0px'],
-                transform: [[],[],[],['-1']]
-            },
-            {
-                id: 'A_trash_2',
-                display: 'none',
-                type: 'rect',
-                rect: ['1118', '924','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'A_trash_3',
-                display: 'none',
-                type: 'rect',
-                rect: ['1566', '924','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'trashBin',
-                display: 'none',
-                type: 'image',
-                rect: ['1749px', '809px','144px','247px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"trashBin.png",'0px','0px']
-            },
-            {
-                id: 'B_taube2',
-                display: 'none',
-                type: 'rect',
-                rect: ['485px', '503px','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'BG5',
-                display: 'none',
-                type: 'image',
-                rect: ['22px', '278px','890px','711px','auto', 'auto'],
-                opacity: 0.7,
-                fill: ["rgba(0,0,0,0)",im+"BG5.png",'0px','0px'],
-                transform: [[],['1']]
-            },
-            {
-                id: 'plasticbag',
-                type: 'rect',
-                rect: ['-355px', '486px','auto','auto','auto', 'auto'],
-                autoOrient: true
-            },
-            {
-                id: 'A_tv',
-                display: 'none',
-                type: 'rect',
-                rect: ['1679px', '854px','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['0.29','0.29']]
-            },
-            {
-                id: 'A_cigPile',
-                display: 'none',
-                type: 'rect',
-                rect: ['1567px', '1228px','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['0.60428','0.60428']]
-            },
-            {
-                id: 'A_shoes',
-                display: 'none',
-                type: 'rect',
-                rect: ['1074px', '1036px','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['0.5819','0.5819']]
-            },
-            {
-                id: 'A_teddy',
-                display: 'none',
-                type: 'rect',
-                rect: ['600px', '985px','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['0.4152','0.4152']]
-            },
-            {
-                id: 'H_still_leftright',
-                display: 'none',
-                type: 'rect',
-                rect: ['964px', '1001px','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'H_bag_appear',
-                display: 'none',
-                type: 'rect',
-                rect: ['756px', '966px','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['0.86806','0.86806']]
-            },
-            {
-                id: 'H_walk',
-                display: 'none',
-                type: 'rect',
-                rect: ['1152', '1104','auto','auto','auto', 'auto'],
-                clip: ['rect(0px 320px 500px 13.044392585754395px)']
-            },
-            {
-                id: 'C_paperball',
-                display: 'none',
-                type: 'rect',
-                rect: ['1170px', '715px','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'A_cripmate',
-                display: 'none',
-                type: 'rect',
-                rect: ['442', '488','auto','auto','auto', 'auto'],
-                filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(0,0,0,0)", 0, 0, 0],
-                transform: [[],[],[],['0.6','0.6']]
-            },
-            {
-                id: 'dust_button3',
-                display: 'block',
-                type: 'rect',
-                rect: ['958', '663','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'text_5',
-                display: 'block',
-                type: 'rect',
-                rect: ['508', '496','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'text_4',
-                display: 'block',
-                type: 'rect',
-                rect: ['508px', '496px','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'text_3',
-                display: 'block',
-                type: 'rect',
-                rect: ['508px', '496px','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'text_2',
-                display: 'block',
-                type: 'rect',
-                rect: ['508', '496','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'text_1',
-                display: 'block',
-                type: 'rect',
-                rect: ['508px', '496px','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'Rectangle',
-                display: 'block',
-                type: 'rect',
-                rect: ['-2px', '3px','2055px','1536px','auto', 'auto'],
-                fill: ["rgba(0,0,0,1.00)"],
-                stroke: [0,"rgba(0,0,0,1)","none"]
-            },
-            {
-                id: 'Theodora',
-                display: 'none',
-                type: 'rect',
-                rect: ['366px', '521px','auto','auto','auto', 'auto'],
-                transform: [[],[],[],['0.65072','0.65072']]
-            },
-            {
-                id: 'dust_icon_invert4',
-                display: 'block',
-                type: 'rect',
-                rect: ['935px', '672px','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'SFX_rumble',
-                type: 'audio',
-                tag: 'audio',
-                rect: ['570', '374','320px','45px','auto', 'auto'],
-                source: ['media/SFX_rumble.mp3']
-            }],
-            symbolInstances: [
-            {
-                id: 'A_cigPile',
-                symbolName: 'A_cigPile',
-                autoPlay: {
-
+                timeline: {
+                    duration: 600,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid376",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-800px',
+                            '-800px'
+                        ],
+                        [
+                            "eid377",
+                            "top",
+                            167,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-800px',
+                            '-1000px'
+                        ],
+                        [
+                            "eid16",
+                            "top",
+                            267,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-1000px',
+                            '0px'
+                        ],
+                        [
+                            "eid17",
+                            "top",
+                            367,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '0px',
+                            '-200px'
+                        ],
+                        [
+                            "eid18",
+                            "top",
+                            467,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-200px',
+                            '-400px'
+                        ],
+                        [
+                            "eid19",
+                            "top",
+                            567,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-400px',
+                            '-600px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'A_trash_2',
-                symbolName: 'A_trash_2',
-                autoPlay: {
-
+            "taube": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '2450px', '500px', 'auto', 'auto'],
+                            id: 'ss_taube_12',
+                            opacity: '1',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_taube_1.png', '0px', '0px']
+                        },
+                        {
+                            rect: ['54', '40', '320px', '45px', 'auto', 'auto'],
+                            source: ['media/SFX_pigeon.mp3'],
+                            volume: '0',
+                            id: 'SFX_pigeon',
+                            type: 'audio',
+                            tag: 'audio'
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 350, 500]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 1292,
+                    autoPlay: true,
+                    labels: {
+                        "taube_fett": 292
+                    },
+                    data: [
+                        [
+                            "eid66",
+                            "left",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid67",
+                            "left",
+                            83,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '0px',
+                            '-350px'
+                        ],
+                        [
+                            "eid68",
+                            "left",
+                            167,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-350px',
+                            '-700px'
+                        ],
+                        [
+                            "eid69",
+                            "left",
+                            292,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-700px',
+                            '-1050px'
+                        ],
+                        [
+                            "eid70",
+                            "left",
+                            375,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-1050px',
+                            '-1400px'
+                        ],
+                        [
+                            "eid71",
+                            "left",
+                            459,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-1400px',
+                            '-1750px'
+                        ],
+                        [
+                            "eid72",
+                            "left",
+                            542,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-1750px',
+                            '-2100px'
+                        ],
+                        [
+                            "eid73",
+                            "left",
+                            625,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-2100px',
+                            '-1400px'
+                        ],
+                        [
+                            "eid74",
+                            "left",
+                            709,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-1400px',
+                            '-1750px'
+                        ],
+                        [
+                            "eid75",
+                            "left",
+                            792,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-1750px',
+                            '-2100px'
+                        ],
+                        [
+                            "eid76",
+                            "left",
+                            875,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-2100px',
+                            '-1400px'
+                        ],
+                        [
+                            "eid77",
+                            "left",
+                            959,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-1400px',
+                            '-1750px'
+                        ],
+                        [
+                            "eid78",
+                            "left",
+                            1042,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-1750px',
+                            '-2100px'
+                        ],
+                        [
+                            "eid79",
+                            "left",
+                            1125,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-2100px',
+                            '-1400px'
+                        ],
+                        [
+                            "eid80",
+                            "left",
+                            1209,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-1400px',
+                            '-1750px'
+                        ],
+                        [
+                            "eid81",
+                            "left",
+                            1292,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_taube_12}",
+                            '-1750px',
+                            '-2100px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_5',
-                symbolName: 'text_5',
-                autoPlay: {
-
+            "cloud_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '500px', '1200px', 'auto', 'auto'],
+                            id: 'ss_cloud2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_cloud.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 500, 200]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 600,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid881",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid882",
+                            "top",
+                            100,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '0px',
+                            '-200px'
+                        ],
+                        [
+                            "eid18",
+                            "top",
+                            200,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-200px',
+                            '-400px'
+                        ],
+                        [
+                            "eid19",
+                            "top",
+                            299,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-400px',
+                            '-600px'
+                        ],
+                        [
+                            "eid20",
+                            "top",
+                            399,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-600px',
+                            '-800px'
+                        ],
+                        [
+                            "eid21",
+                            "top",
+                            499,
+                            0,
+                            "linear",
+                            "${ss_cloud2}",
+                            '-800px',
+                            '-1000px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_1',
-                symbolName: 'text_1',
-                autoPlay: {
-
+            "cloud_cluster": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [242, 0, 500, 200, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'cloud_3',
+                            symbolName: 'cloud_3',
+                            type: 'rect'
+                        },
+                        {
+                            rect: [574, 84, 500, 200, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'cloud_22',
+                            symbolName: 'cloud_2',
+                            type: 'rect'
+                        },
+                        {
+                            rect: [30, 38, 500, 200, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'cloud_12',
+                            symbolName: 'cloud_1',
+                            type: 'rect'
+                        },
+                        {
+                            rect: [362, 100, 500, 200, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'cloud_3Copy',
+                            symbolName: 'cloud_3',
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-1', 1, 1], ['50%', '50%']]
+                        },
+                        {
+                            rect: [142, 102, 500, 200, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'cloud_22Copy',
+                            symbolName: 'cloud_2',
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-1', '1', 1], ['50%', '50%']]
+                        },
+                        {
+                            rect: [470, 16, 500, 200, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'cloud_12Copy',
+                            symbolName: 'cloud_1',
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-1', '1', 1], ['50%', '50%']]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 1104, 302]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 10000,
+                    autoPlay: true,
+                    labels: {
+                        "start": 0
+                    },
+                    data: [
+                        [
+                            "eid2178",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_12Copy}",
+                            '-1',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2184",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_12Copy}",
+                            '-1.15',
+                            '-0.9'
+                        ],
+                        [
+                            "eid2186",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_12Copy}",
+                            '-0.9',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2189",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_12Copy}",
+                            '-1.15',
+                            '-1'
+                        ],
+                        [
+                            "eid2171",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_22}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid876",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3}",
+                            '242px',
+                            '252px'
+                        ],
+                        [
+                            "eid891",
+                            "left",
+                            304,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_3}",
+                            '252px',
+                            '262px'
+                        ],
+                        [
+                            "eid862",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '100px',
+                            '100px'
+                        ],
+                        [
+                            "eid893",
+                            "top",
+                            304,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_3Copy}",
+                            '100px',
+                            '91px'
+                        ],
+                        [
+                            "eid2200",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_3}",
+                            '1',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2201",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_3}",
+                            '1.14999',
+                            '0.9'
+                        ],
+                        [
+                            "eid2202",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_3}",
+                            '0.9',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2203",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_3}",
+                            '1.14999',
+                            '1'
+                        ],
+                        [
+                            "eid2196",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_22}",
+                            '1',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2197",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_22}",
+                            '1.14999',
+                            '0.9'
+                        ],
+                        [
+                            "eid2198",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_22}",
+                            '0.9',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2199",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_22}",
+                            '1.14999',
+                            '1'
+                        ],
+                        [
+                            "eid2177",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '-1',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2185",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '-1.15',
+                            '-0.9'
+                        ],
+                        [
+                            "eid2187",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '-0.9',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2190",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '-1.15',
+                            '-1'
+                        ],
+                        [
+                            "eid875",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '362px',
+                            '342px'
+                        ],
+                        [
+                            "eid892",
+                            "left",
+                            304,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_3Copy}",
+                            '342px',
+                            '332px'
+                        ],
+                        [
+                            "eid2179",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '-1',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2183",
+                            "scaleX",
+                            2000,
+                            2022,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '-1.15',
+                            '-0.9'
+                        ],
+                        [
+                            "eid2188",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '-0.9',
+                            '-1.15'
+                        ],
+                        [
+                            "eid2191",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '-1.15',
+                            '-1'
+                        ],
+                        [
+                            "eid2170",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_12}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2192",
+                            "scaleX",
+                            0,
+                            2000,
+                            "linear",
+                            "${cloud_12}",
+                            '1',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2193",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_12}",
+                            '1.14999',
+                            '0.9'
+                        ],
+                        [
+                            "eid2194",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_12}",
+                            '0.9',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2195",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_12}",
+                            '1.14999',
+                            '1'
+                        ],
+                        [
+                            "eid2169",
+                            "scaleY",
+                            22,
+                            0,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2167",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2168",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_12Copy}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid865",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid890",
+                            "top",
+                            304,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_3}",
+                            '0px',
+                            '10px'
+                        ],
+                        [
+                            "eid864",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3Copy}",
+                            '1',
+                            '1'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'dust_icon_invert4',
-                symbolName: 'dust_icon_invert',
-                autoPlay: {
-
+            "Title_Intro": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['934px', '1214px', 1104, 302, 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.43478', '0.43478', 1], ['50%', '50%']],
+                            id: 'cloud_clusterCopy4',
+                            symbolName: 'cloud_cluster',
+                            autoOrient: false,
+                            type: 'rect'
+                        },
+                        {
+                            rect: ['-1113px', '900px', 1104, 302, 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['1.18114', '-1.1411', 1], ['50%', '50%']],
+                            id: 'cloud_clusterCopy2',
+                            symbolName: 'cloud_cluster',
+                            autoOrient: false,
+                            type: 'rect'
+                        },
+                        {
+                            rect: [3458, 267, 1104, 302, 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-0.86322', '-0.86322', 1], ['50%', '50%']],
+                            id: 'cloud_cluster',
+                            symbolName: 'cloud_cluster',
+                            autoOrient: 'true',
+                            type: 'rect'
+                        },
+                        {
+                            rect: ['-884px', '186px', 1104, 302, 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.58423', '-0.58423', 1], ['50%', '50%']],
+                            id: 'cloud_clusterCopy3',
+                            symbolName: 'cloud_cluster',
+                            autoOrient: false,
+                            type: 'rect'
+                        },
+                        {
+                            rect: [3276, 267, 1104, 302, 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['1.0317', '1.0317', 1], ['50%', '50%']],
+                            id: 'cloud_clusterCopy',
+                            symbolName: 'cloud_cluster',
+                            autoOrient: false,
+                            type: 'rect'
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 20000,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid1820",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_cluster}",
+                            '-0.86322',
+                            '-0.86322'
+                        ],
+                        [
+                            "eid1821",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_cluster}",
+                            '-0.86322',
+                            '-0.86322'
+                        ],
+                        [
+                            "eid1095",
+                            "location",
+                            0,
+                            13386,
+                            "linear",
+                            "${cloud_clusterCopy4}",
+                            [[1473.74, 1364.65, -2265.5, 0, 0, 0,0],[-262.13, 1364.65, 0, 0, 0, 0,1735.87]]
+                        ],
+                        [
+                            "eid1098",
+                            "location",
+                            13629,
+                            6371,
+                            "linear",
+                            "${cloud_clusterCopy4}",
+                            [[2288, 1364.65, 0, 0, 0, 0,0],[1473.74, 1364.65, 0, 0, 0, 0,814.26]]
+                        ],
+                        [
+                            "eid1831",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            '-1.1411',
+                            '-0.95'
+                        ],
+                        [
+                            "eid1830",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            '1.18114',
+                            '0.95'
+                        ],
+                        [
+                            "eid1112",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy4}",
+                            '0.43478',
+                            '0.43478'
+                        ],
+                        [
+                            "eid1115",
+                            "location",
+                            0,
+                            17537,
+                            "linear",
+                            "${cloud_clusterCopy}",
+                            [[2284.05, 60.25, 0, 0, 0, 0,0],[-645.75, 60.25, 0, 0, 0, 0,2929.8]]
+                        ],
+                        [
+                            "eid1121",
+                            "location",
+                            18000,
+                            2000,
+                            "linear",
+                            "${cloud_clusterCopy}",
+                            [[2775.88, 24.25, 0, 0, 0, 0,0],[2279.13, 24.25, 0, 0, 0, 0,496.75]]
+                        ],
+                        [
+                            "eid1090",
+                            "location",
+                            0,
+                            16341,
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            [[-352.92, 1051, 2093.13, 0, 0, 0,0],[2765, 1051, 0, 0, 0, 0,3117.92]]
+                        ],
+                        [
+                            "eid1093",
+                            "location",
+                            17000,
+                            3000,
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            [[-678.75, 1051, 0, 0, 0, 0,0],[-352.92, 1051, 0, 0, 0, 0,325.83]]
+                        ],
+                        [
+                            "eid1077",
+                            "location",
+                            0,
+                            13000,
+                            "linear",
+                            "${cloud_clusterCopy3}",
+                            [[618.1, 336.78, 2349.22, 0, 0, 0,0],[2383.63, 336.78, 0, 0, 0, 0,1765.53]]
+                        ],
+                        [
+                            "eid1080",
+                            "location",
+                            13386,
+                            6614,
+                            "linear",
+                            "${cloud_clusterCopy3}",
+                            [[-331.12, 336.78, 0, 0, 0, 0,0],[618.1, 336.78, 0, 0, 0, 0,949.22]]
+                        ],
+                        [
+                            "eid1061",
+                            "scaleX",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_clusterCopy3}",
+                            '0.58423',
+                            '0.58423'
+                        ],
+                        [
+                            "eid1086",
+                            "location",
+                            0,
+                            10000,
+                            "linear",
+                            "${cloud_cluster}",
+                            [[1027.38, 711.75, -2397.37, 0, 0, 0,0],[-570.87, 711.75, 0, 0, 0, 0,1598.25]]
+                        ],
+                        [
+                            "eid1089",
+                            "location",
+                            10335,
+                            9665,
+                            "linear",
+                            "${cloud_cluster}",
+                            [[2599.88, 711.75, 0, 0, 0, 0,0],[1027.38, 711.75, 0, 0, 0, 0,1572.5]]
+                        ],
+                        [
+                            "eid1828",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy}",
+                            '1.0317',
+                            '1.0317'
+                        ],
+                        [
+                            "eid1062",
+                            "scaleY",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_clusterCopy3}",
+                            '-0.58423',
+                            '-0.58423'
+                        ],
+                        [
+                            "eid2165",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy}",
+                            '1.0317',
+                            '1.0317'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_4',
-                symbolName: 'text_4',
-                autoPlay: {
-
+            "plasticbag": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '1200px', '511px', 'auto', 'auto'],
+                            overflow: 'visible',
+                            id: 'ss_plasticbag',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_plasticbag.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 400, 511]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 867,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid918",
+                            "left",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_plasticbag}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid919",
+                            "left",
+                            67,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_plasticbag}",
+                            '0px',
+                            '-400px'
+                        ],
+                        [
+                            "eid920",
+                            "left",
+                            333,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_plasticbag}",
+                            '-400px',
+                            '-800px'
+                        ],
+                        [
+                            "eid921",
+                            "left",
+                            400,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_plasticbag}",
+                            '-800px',
+                            '0px'
+                        ],
+                        [
+                            "eid922",
+                            "left",
+                            600,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_plasticbag}",
+                            '0px',
+                            '-400px'
+                        ],
+                        [
+                            "eid941",
+                            "left",
+                            667,
+                            33,
+                            "easeInOutQuad",
+                            "${ss_plasticbag}",
+                            '800px',
+                            '-800px'
+                        ],
+                        [
+                            "eid943",
+                            "left",
+                            733,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_plasticbag}",
+                            '-800px',
+                            '-800px'
+                        ],
+                        [
+                            "eid925",
+                            "left",
+                            800,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_plasticbag}",
+                            '-800px',
+                            '-800px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'taube',
-                symbolName: 'taube',
-                autoPlay: {
-
+            "H_still_leftright": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [-1, 5, '1200px', '500px', 'auto', 'auto'],
+                            id: 'ss_still_leftright_500px',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_still_leftright_500px.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 172, 500]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 15333,
+                    autoPlay: true,
+                    labels: {
+                        "start": 0
+                    },
+                    data: [
+                        [
+                            "eid947",
+                            "left",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-1px',
+                            '-173px'
+                        ],
+                        [
+                            "eid950",
+                            "left",
+                            467,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-348px',
+                            '-515px'
+                        ],
+                        [
+                            "eid952",
+                            "left",
+                            533,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-687px',
+                            '-859px'
+                        ],
+                        [
+                            "eid953",
+                            "left",
+                            600,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-858px',
+                            '-1028px'
+                        ],
+                        [
+                            "eid2305",
+                            "left",
+                            1647,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-1028px',
+                            '-515px'
+                        ],
+                        [
+                            "eid2306",
+                            "left",
+                            1712,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-515px',
+                            '-348px'
+                        ],
+                        [
+                            "eid2307",
+                            "left",
+                            1779,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-348px',
+                            '-173px'
+                        ],
+                        [
+                            "eid2384",
+                            "left",
+                            3867,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-173px',
+                            '-515px'
+                        ],
+                        [
+                            "eid2385",
+                            "left",
+                            3933,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-515px',
+                            '-859px'
+                        ],
+                        [
+                            "eid2386",
+                            "left",
+                            4000,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-859px',
+                            '-1028px'
+                        ],
+                        [
+                            "eid2387",
+                            "left",
+                            7567,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-1028px',
+                            '-515px'
+                        ],
+                        [
+                            "eid2388",
+                            "left",
+                            7632,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-515px',
+                            '-348px'
+                        ],
+                        [
+                            "eid2389",
+                            "left",
+                            7699,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-348px',
+                            '-173px'
+                        ],
+                        [
+                            "eid2390",
+                            "left",
+                            8867,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-173px',
+                            '-515px'
+                        ],
+                        [
+                            "eid2391",
+                            "left",
+                            8933,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-515px',
+                            '-859px'
+                        ],
+                        [
+                            "eid2392",
+                            "left",
+                            9000,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-859px',
+                            '-1028px'
+                        ],
+                        [
+                            "eid2393",
+                            "left",
+                            13000,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-1028px',
+                            '-515px'
+                        ],
+                        [
+                            "eid2394",
+                            "left",
+                            13065,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-515px',
+                            '-348px'
+                        ],
+                        [
+                            "eid2395",
+                            "left",
+                            13132,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_still_leftright_500px}",
+                            '-348px',
+                            '-173px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'Theodora',
-                symbolName: 'Theodora',
-                autoPlay: {
-
+            "H_bag_appear": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '7140px', '1152px', 'auto', 'auto'],
+                            id: 'ss_bag_appear_576px',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_bag_appear_576px.png', '0px', '0px']
+                        },
+                        {
+                            rect: ['-2px', '2px', '516px', '584px', 'auto', 'auto'],
+                            opacity: '0',
+                            id: 'Rectangle2',
+                            stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            type: 'rect',
+                            fill: ['rgba(0,0,0,1)']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 510, 576]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 1733,
+                    autoPlay: false,
+                    labels: {
+                        "still": 1533
+                    },
+                    data: [
+                        [
+                            "eid969",
+                            "top",
+                            933,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '0px',
+                            '-576px'
+                        ],
+                        [
+                            "eid954",
+                            "left",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid955",
+                            "left",
+                            67,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '0px',
+                            '-510px'
+                        ],
+                        [
+                            "eid956",
+                            "left",
+                            133,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-510px',
+                            '-1020px'
+                        ],
+                        [
+                            "eid957",
+                            "left",
+                            200,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-1020px',
+                            '-1530px'
+                        ],
+                        [
+                            "eid958",
+                            "left",
+                            267,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-1530px',
+                            '-2040px'
+                        ],
+                        [
+                            "eid959",
+                            "left",
+                            333,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '2040px',
+                            '-2550px'
+                        ],
+                        [
+                            "eid960",
+                            "left",
+                            400,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-2550px',
+                            '-3060px'
+                        ],
+                        [
+                            "eid961",
+                            "left",
+                            467,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-3060px',
+                            '-3570px'
+                        ],
+                        [
+                            "eid962",
+                            "left",
+                            533,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-3570px',
+                            '-4080px'
+                        ],
+                        [
+                            "eid963",
+                            "left",
+                            600,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '4080px',
+                            '-4590px'
+                        ],
+                        [
+                            "eid964",
+                            "left",
+                            667,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-4590px',
+                            '-5100px'
+                        ],
+                        [
+                            "eid965",
+                            "left",
+                            733,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-5100px',
+                            '-5610px'
+                        ],
+                        [
+                            "eid966",
+                            "left",
+                            800,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-5610px',
+                            '-6120px'
+                        ],
+                        [
+                            "eid967",
+                            "left",
+                            867,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-6120px',
+                            '-6630px'
+                        ],
+                        [
+                            "eid970",
+                            "left",
+                            933,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-6630px',
+                            '-6630px'
+                        ],
+                        [
+                            "eid971",
+                            "left",
+                            1000,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-6630px',
+                            '-6120px'
+                        ],
+                        [
+                            "eid972",
+                            "left",
+                            1067,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-6120px',
+                            '-5610px'
+                        ],
+                        [
+                            "eid973",
+                            "left",
+                            1133,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-5610px',
+                            '-5100px'
+                        ],
+                        [
+                            "eid974",
+                            "left",
+                            1200,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-5100px',
+                            '-4590px'
+                        ],
+                        [
+                            "eid975",
+                            "left",
+                            1267,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-4590px',
+                            '-4080px'
+                        ],
+                        [
+                            "eid976",
+                            "left",
+                            1333,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-4080px',
+                            '-3580px'
+                        ],
+                        [
+                            "eid977",
+                            "left",
+                            1400,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-3570px',
+                            '-3070px'
+                        ],
+                        [
+                            "eid978",
+                            "left",
+                            1467,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-3055px',
+                            '-2560px'
+                        ],
+                        [
+                            "eid979",
+                            "left",
+                            1533,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_bag_appear_576px}",
+                            '-2557px',
+                            '-2050px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_2',
-                symbolName: 'text_2',
-                autoPlay: {
-
+            "H_walk": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [-3, 0, '2880px', '1000px', 'auto', 'auto'],
+                            id: 'ss_H_walk3',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_H_walk.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 320, 500]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 1133,
+                    autoPlay: false,
+                    labels: {
+                        "turn": 0,
+                        "loop": 267
+                    },
+                    data: [
+                        [
+                            "eid1022",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-3px',
+                            '-3px'
+                        ],
+                        [
+                            "eid1024",
+                            "left",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-3px',
+                            '-329px'
+                        ],
+                        [
+                            "eid1025",
+                            "left",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-326px',
+                            '-645px'
+                        ],
+                        [
+                            "eid1026",
+                            "left",
+                            200,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-638px',
+                            '-951px'
+                        ],
+                        [
+                            "eid1027",
+                            "left",
+                            267,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-936px',
+                            '-1266px'
+                        ],
+                        [
+                            "eid1028",
+                            "left",
+                            333,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-1258px',
+                            '-1594px'
+                        ],
+                        [
+                            "eid1029",
+                            "left",
+                            400,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-1594px',
+                            '-1909px'
+                        ],
+                        [
+                            "eid1030",
+                            "left",
+                            467,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-1920px',
+                            '-2234px'
+                        ],
+                        [
+                            "eid1031",
+                            "left",
+                            533,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-2231px',
+                            '-2549px'
+                        ],
+                        [
+                            "eid1037",
+                            "left",
+                            667,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-2546px',
+                            '-2234px'
+                        ],
+                        [
+                            "eid1038",
+                            "left",
+                            733,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-2231px',
+                            '-1909px'
+                        ],
+                        [
+                            "eid1039",
+                            "left",
+                            800,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-1909px',
+                            '-1593px'
+                        ],
+                        [
+                            "eid1040",
+                            "left",
+                            867,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-1593px',
+                            '-1272px'
+                        ],
+                        [
+                            "eid1041",
+                            "left",
+                            933,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-1266px',
+                            '-951px'
+                        ],
+                        [
+                            "eid1042",
+                            "left",
+                            1000,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-951px',
+                            '-640px'
+                        ],
+                        [
+                            "eid1043",
+                            "left",
+                            1067,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '-642px',
+                            '-308px'
+                        ],
+                        [
+                            "eid1023",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1036",
+                            "top",
+                            600,
+                            0,
+                            "linear",
+                            "${ss_H_walk3}",
+                            '0px',
+                            '-500px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'text_3',
-                symbolName: 'text_3',
-                autoPlay: {
+            "bg_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'paper_bg_02',
+                            type: 'image',
+                            rect: ['0', '0', '2050px', '1536px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/paper_bg_0.png', '0px', '0px']
+                        },
+                        {
+                            id: 'houses_bg_1',
+                            type: 'image',
+                            rect: [201, 110, '1096px', '593px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/houses_bg_1.png', '0px', '0px']
+                        },
+                        {
+                            id: 'house_3',
+                            type: 'image',
+                            rect: [362, 504, '402px', '507px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/house_3.png', '0px', '0px']
+                        },
+                        {
+                            id: 'house_1',
+                            type: 'image',
+                            rect: [30, 381, '372px', '699px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/house_1.png', '0px', '0px']
+                        },
+                        {
+                            id: 'house_2',
+                            type: 'image',
+                            rect: [1156, 381, '448px', '679px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/house_2.png', '0px', '0px']
+                        },
+                        {
+                            id: 'tree_1',
+                            type: 'image',
+                            rect: [740, 668, '362px', '381px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/tree_1.png', '0px', '0px']
+                        },
+                        {
+                            id: 'bistro_0',
+                            type: 'image',
+                            rect: [1586, 720, '492px', '355px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/bistro_0.png', '0px', '0px']
+                        },
+                        {
+                            id: 'BG_1',
+                            type: 'image',
+                            rect: [160, 150, '2028px', '973px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/BG_1.png', '0px', '0px']
+                        },
+                        {
+                            id: 'BG_0',
+                            type: 'image',
+                            rect: [0, 973, '4096px', '567px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/BG_0.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
 
+                    ]
                 }
             },
-            {
-                id: 'taubeCopy2',
-                symbolName: 'taube',
-                autoPlay: {
-
+            "text_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '1536px', '72px', 'auto', 'auto'],
+                            id: 'text_01',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/text_01.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 1518, 80]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4600,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 822,
+                        "fade_still": 1955,
+                        "still_loop": 2222,
+                        "opaque": 2822,
+                        "opaque_loop": 3622,
+                        "fade": 4022
+                    },
+                    data: [
+                        [
+                            "eid2577",
+                            "opacity",
+                            0,
+                            822,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid1346",
+                            "opacity",
+                            822,
+                            129,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid1719",
+                            "opacity",
+                            951,
+                            140,
+                            "easeOutBounce",
+                            "${text_01}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid1721",
+                            "opacity",
+                            1091,
+                            106,
+                            "easeOutBounce",
+                            "${text_01}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid1722",
+                            "opacity",
+                            1197,
+                            61,
+                            "easeOutBounce",
+                            "${text_01}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid1349",
+                            "opacity",
+                            1258,
+                            164,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid1723",
+                            "opacity",
+                            1422,
+                            67,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid1724",
+                            "opacity",
+                            1489,
+                            66,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid1351",
+                            "opacity",
+                            1555,
+                            200,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid1352",
+                            "opacity",
+                            1755,
+                            67,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid1354",
+                            "opacity",
+                            1955,
+                            96,
+                            "easeInBounce",
+                            "${text_01}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid1355",
+                            "opacity",
+                            2051,
+                            171,
+                            "easeOutBounce",
+                            "${text_01}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid1356",
+                            "opacity",
+                            2222,
+                            67,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid1357",
+                            "opacity",
+                            2289,
+                            34,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid1358",
+                            "opacity",
+                            2323,
+                            70,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid1359",
+                            "opacity",
+                            2393,
+                            55,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid1360",
+                            "opacity",
+                            2448,
+                            41,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid1361",
+                            "opacity",
+                            2489,
+                            38,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid1363",
+                            "opacity",
+                            2527,
+                            64,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid1365",
+                            "opacity",
+                            2822,
+                            800,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid1368",
+                            "opacity",
+                            3822,
+                            0,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid1370",
+                            "opacity",
+                            4022,
+                            578,
+                            "easeInOutBounce",
+                            "${text_01}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'dust_button3',
-                symbolName: 'dust_button',
-                autoPlay: {
-
+            "text_2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0', 10, '1115px', '71px', 'auto', 'auto'],
+                            id: 'text_022',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/text_02.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 1120, 80]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4200,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 482,
+                        "fade_still": 1615,
+                        "still_loop": 1882,
+                        "opaque": 2482,
+                        "opaque_loop": 3282,
+                        "fade": 3682
+                    },
+                    data: [
+                        [
+                            "eid2579",
+                            "opacity",
+                            0,
+                            482,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid2396",
+                            "opacity",
+                            482,
+                            129,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid2397",
+                            "opacity",
+                            611,
+                            140,
+                            "easeOutBounce",
+                            "${text_022}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid2398",
+                            "opacity",
+                            751,
+                            106,
+                            "easeOutBounce",
+                            "${text_022}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid2399",
+                            "opacity",
+                            857,
+                            61,
+                            "easeOutBounce",
+                            "${text_022}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid2400",
+                            "opacity",
+                            918,
+                            164,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid2401",
+                            "opacity",
+                            1082,
+                            67,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid2402",
+                            "opacity",
+                            1149,
+                            66,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid2403",
+                            "opacity",
+                            1215,
+                            200,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid2404",
+                            "opacity",
+                            1415,
+                            67,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid2405",
+                            "opacity",
+                            1615,
+                            96,
+                            "easeInBounce",
+                            "${text_022}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid2406",
+                            "opacity",
+                            1711,
+                            171,
+                            "easeOutBounce",
+                            "${text_022}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid2407",
+                            "opacity",
+                            1882,
+                            67,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid2408",
+                            "opacity",
+                            1949,
+                            34,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid2409",
+                            "opacity",
+                            1983,
+                            70,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid2410",
+                            "opacity",
+                            2053,
+                            55,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid2411",
+                            "opacity",
+                            2108,
+                            41,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid2412",
+                            "opacity",
+                            2149,
+                            38,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid2413",
+                            "opacity",
+                            2187,
+                            64,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid2414",
+                            "opacity",
+                            2482,
+                            800,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid2415",
+                            "opacity",
+                            3482,
+                            0,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2586",
+                            "opacity",
+                            3682,
+                            518,
+                            "easeInOutBounce",
+                            "${text_022}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'A_trash_3',
-                symbolName: 'A_trash_3',
-                autoPlay: {
-
+            "text_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0', 5, '1092px', '79px', 'auto', 'auto'],
+                            id: 'text_032',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/text_03.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 1090, 80]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4133,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 452,
+                        "fade_still": 1585,
+                        "still_loop": 1852,
+                        "opaque": 2452,
+                        "opaque_loop": 3252,
+                        "fade": 3652
+                    },
+                    data: [
+                        [
+                            "eid2581",
+                            "opacity",
+                            0,
+                            452,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid2480",
+                            "opacity",
+                            452,
+                            129,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid2481",
+                            "opacity",
+                            581,
+                            140,
+                            "easeOutBounce",
+                            "${text_032}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid2482",
+                            "opacity",
+                            721,
+                            106,
+                            "easeOutBounce",
+                            "${text_032}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid2483",
+                            "opacity",
+                            827,
+                            61,
+                            "easeOutBounce",
+                            "${text_032}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid2484",
+                            "opacity",
+                            888,
+                            164,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid2485",
+                            "opacity",
+                            1052,
+                            67,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid2486",
+                            "opacity",
+                            1119,
+                            66,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid2487",
+                            "opacity",
+                            1185,
+                            200,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid2488",
+                            "opacity",
+                            1385,
+                            67,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid2489",
+                            "opacity",
+                            1585,
+                            96,
+                            "easeInBounce",
+                            "${text_032}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid2490",
+                            "opacity",
+                            1681,
+                            171,
+                            "easeOutBounce",
+                            "${text_032}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid2491",
+                            "opacity",
+                            1852,
+                            67,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid2492",
+                            "opacity",
+                            1919,
+                            34,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid2493",
+                            "opacity",
+                            1953,
+                            70,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid2494",
+                            "opacity",
+                            2023,
+                            55,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid2495",
+                            "opacity",
+                            2078,
+                            41,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid2496",
+                            "opacity",
+                            2119,
+                            38,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid2497",
+                            "opacity",
+                            2157,
+                            64,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid2498",
+                            "opacity",
+                            2452,
+                            800,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid2499",
+                            "opacity",
+                            3452,
+                            0,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2587",
+                            "opacity",
+                            3652,
+                            481,
+                            "easeInOutBounce",
+                            "${text_032}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'B_taube2',
-                symbolName: 'B_taube2',
-                autoPlay: {
-
+            "text_4": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0', -2, '718px', '81px', 'auto', 'auto'],
+                            id: 'text_042',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/text_04.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 720, 80]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4445,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 467,
+                        "fade_still": 1600,
+                        "still_loop": 1867,
+                        "opaque": 2467,
+                        "opaque_loop": 3267,
+                        "fade": 3667
+                    },
+                    data: [
+                        [
+                            "eid2583",
+                            "opacity",
+                            0,
+                            467,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid2459",
+                            "opacity",
+                            467,
+                            129,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid2460",
+                            "opacity",
+                            596,
+                            140,
+                            "easeOutBounce",
+                            "${text_042}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid2461",
+                            "opacity",
+                            736,
+                            106,
+                            "easeOutBounce",
+                            "${text_042}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid2462",
+                            "opacity",
+                            842,
+                            61,
+                            "easeOutBounce",
+                            "${text_042}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid2463",
+                            "opacity",
+                            903,
+                            164,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid2464",
+                            "opacity",
+                            1067,
+                            67,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid2465",
+                            "opacity",
+                            1134,
+                            66,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid2466",
+                            "opacity",
+                            1200,
+                            200,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid2467",
+                            "opacity",
+                            1400,
+                            67,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid2468",
+                            "opacity",
+                            1600,
+                            96,
+                            "easeInBounce",
+                            "${text_042}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid2469",
+                            "opacity",
+                            1696,
+                            171,
+                            "easeOutBounce",
+                            "${text_042}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid2470",
+                            "opacity",
+                            1867,
+                            67,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid2471",
+                            "opacity",
+                            1934,
+                            34,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid2472",
+                            "opacity",
+                            1968,
+                            70,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid2473",
+                            "opacity",
+                            2038,
+                            55,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid2474",
+                            "opacity",
+                            2093,
+                            41,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid2475",
+                            "opacity",
+                            2134,
+                            38,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid2476",
+                            "opacity",
+                            2172,
+                            64,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid2477",
+                            "opacity",
+                            2467,
+                            800,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid2478",
+                            "opacity",
+                            3467,
+                            0,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2588",
+                            "opacity",
+                            3667,
+                            777,
+                            "easeInOutBounce",
+                            "${text_042}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'A_cripmate',
-                symbolName: 'A_cripmate',
-                autoPlay: {
-
+            "text_5": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0', '0', '1338px', '79px', 'auto', 'auto'],
+                            id: 'text_052',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/text_05.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 1360, 80]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4105,
+                    autoPlay: false,
+                    labels: {
+                        "fade_flimmer": 438,
+                        "fade_still": 1571,
+                        "still_loop": 1838,
+                        "opaque": 2438,
+                        "opaque_loop": 3238,
+                        "fade": 3638
+                    },
+                    data: [
+                        [
+                            "eid2585",
+                            "opacity",
+                            0,
+                            438,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0',
+                            '0.18'
+                        ],
+                        [
+                            "eid2501",
+                            "opacity",
+                            438,
+                            129,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.18',
+                            '0.21'
+                        ],
+                        [
+                            "eid2502",
+                            "opacity",
+                            567,
+                            140,
+                            "easeOutBounce",
+                            "${text_052}",
+                            '0.21',
+                            '0.24'
+                        ],
+                        [
+                            "eid2503",
+                            "opacity",
+                            707,
+                            106,
+                            "easeOutBounce",
+                            "${text_052}",
+                            '0.24',
+                            '0.19'
+                        ],
+                        [
+                            "eid2504",
+                            "opacity",
+                            813,
+                            61,
+                            "easeOutBounce",
+                            "${text_052}",
+                            '0.19',
+                            '0.16'
+                        ],
+                        [
+                            "eid2505",
+                            "opacity",
+                            874,
+                            164,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.16',
+                            '0.21'
+                        ],
+                        [
+                            "eid2506",
+                            "opacity",
+                            1038,
+                            67,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.21',
+                            '0.23'
+                        ],
+                        [
+                            "eid2507",
+                            "opacity",
+                            1105,
+                            66,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.23',
+                            '0.25'
+                        ],
+                        [
+                            "eid2508",
+                            "opacity",
+                            1171,
+                            200,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.25',
+                            '0.22'
+                        ],
+                        [
+                            "eid2509",
+                            "opacity",
+                            1371,
+                            67,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.22',
+                            '0.18'
+                        ],
+                        [
+                            "eid2510",
+                            "opacity",
+                            1571,
+                            96,
+                            "easeInBounce",
+                            "${text_052}",
+                            '0.18',
+                            '0.146612'
+                        ],
+                        [
+                            "eid2511",
+                            "opacity",
+                            1667,
+                            171,
+                            "easeOutBounce",
+                            "${text_052}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid2512",
+                            "opacity",
+                            1838,
+                            67,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid2513",
+                            "opacity",
+                            1905,
+                            34,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid2514",
+                            "opacity",
+                            1939,
+                            70,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid2515",
+                            "opacity",
+                            2009,
+                            55,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid2516",
+                            "opacity",
+                            2064,
+                            41,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid2517",
+                            "opacity",
+                            2105,
+                            38,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid2518",
+                            "opacity",
+                            2143,
+                            64,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid2519",
+                            "opacity",
+                            2438,
+                            800,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid2520",
+                            "opacity",
+                            3438,
+                            0,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2521",
+                            "opacity",
+                            3638,
+                            467,
+                            "easeInOutBounce",
+                            "${text_052}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'C_paperball',
-                symbolName: 'A_paperball',
-                autoPlay: {
-
+            "dust_icon": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [50, 0, '1242px', '193px', 'auto', 'auto'],
+                            id: 'dust_iconCopy',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/dust_icon.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 179, 193]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 537,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid1543",
+                            "scaleY",
+                            0,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid1536",
+                            "left",
+                            0,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '50px',
+                            '50px'
+                        ],
+                        [
+                            "eid1537",
+                            "left",
+                            83,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '50px',
+                            '-111px'
+                        ],
+                        [
+                            "eid1538",
+                            "left",
+                            167,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '-111px',
+                            '-283px'
+                        ],
+                        [
+                            "eid1539",
+                            "left",
+                            250,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '-283px',
+                            '-481px'
+                        ],
+                        [
+                            "eid1540",
+                            "left",
+                            333,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '-481px',
+                            '-670px'
+                        ],
+                        [
+                            "eid1541",
+                            "left",
+                            417,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '-670px',
+                            '-876px'
+                        ],
+                        [
+                            "eid1542",
+                            "left",
+                            500,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_iconCopy}",
+                            '-876px',
+                            '-1055px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'H_walk',
-                symbolName: 'H_walk',
-                autoPlay: {
-
+            "dust_button": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [7, -7, 179, 193, 'auto', 'auto'],
+                            opacity: '0.06',
+                            overflow: 'hidden',
+                            id: 'dust_icon2',
+                            symbolName: 'dust_icon',
+                            type: 'rect',
+                            transform: [[0, 0, 0], ['90', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 193, 179]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 8409,
+                    autoPlay: true,
+                    labels: {
+                        "fade_flimmer": 0,
+                        "fade_still": 1133,
+                        "still_loop": 1400,
+                        "opaque": 2000,
+                        "opaque_loop": 2400,
+                        "fade": 2800
+                    },
+                    data: [
+                        [
+                            "eid1551",
+                            "left",
+                            8409,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon2}",
+                            '7px',
+                            '7px'
+                        ],
+                        [
+                            "eid1591",
+                            "opacity",
+                            0,
+                            129,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.06',
+                            '0.01'
+                        ],
+                        [
+                            "eid1592",
+                            "opacity",
+                            129,
+                            140,
+                            "easeInBounce",
+                            "${dust_icon2}",
+                            '0.01',
+                            '0.05'
+                        ],
+                        [
+                            "eid1593",
+                            "opacity",
+                            269,
+                            167,
+                            "easeOutBounce",
+                            "${dust_icon2}",
+                            '0.05',
+                            '0.03'
+                        ],
+                        [
+                            "eid1594",
+                            "opacity",
+                            436,
+                            164,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.03',
+                            '0.04'
+                        ],
+                        [
+                            "eid1595",
+                            "opacity",
+                            630,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.04',
+                            '0.04'
+                        ],
+                        [
+                            "eid1596",
+                            "opacity",
+                            733,
+                            200,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.040000',
+                            '0.06'
+                        ],
+                        [
+                            "eid1597",
+                            "opacity",
+                            933,
+                            67,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.060000',
+                            '0.1'
+                        ],
+                        [
+                            "eid1598",
+                            "opacity",
+                            1133,
+                            96,
+                            "easeInBounce",
+                            "${dust_icon2}",
+                            '0.100000',
+                            '0.146612'
+                        ],
+                        [
+                            "eid1599",
+                            "opacity",
+                            1229,
+                            171,
+                            "easeOutBounce",
+                            "${dust_icon2}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid1600",
+                            "opacity",
+                            1400,
+                            67,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid1601",
+                            "opacity",
+                            1467,
+                            34,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid1602",
+                            "opacity",
+                            1501,
+                            70,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid1603",
+                            "opacity",
+                            1571,
+                            55,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid1604",
+                            "opacity",
+                            1626,
+                            41,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid1605",
+                            "opacity",
+                            1667,
+                            38,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid1606",
+                            "opacity",
+                            1705,
+                            64,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid1607",
+                            "opacity",
+                            2000,
+                            400,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid1608",
+                            "opacity",
+                            2600,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid1609",
+                            "opacity",
+                            2800,
+                            467,
+                            "easeInOutBounce",
+                            "${dust_icon2}",
+                            '0.5',
+                            '0'
+                        ],
+                        [
+                            "eid1549",
+                            "rotateZ",
+                            0,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon2}",
+                            '90deg',
+                            '90deg'
+                        ],
+                        [
+                            "eid1550",
+                            "top",
+                            8409,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon2}",
+                            '-7px',
+                            '-7px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'plasticbag',
-                symbolName: 'plasticbag',
-                autoPlay: {
-
+            "C_Esser": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '840px', '480px', 'auto', 'auto'],
+                            id: 'ss_esser',
+                            opacity: '0.75',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_esser.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 200, 480]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 267,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid1798",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_esser}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1799",
+                            "left",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_esser}",
+                            '0px',
+                            '-210px'
+                        ],
+                        [
+                            "eid1800",
+                            "left",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_esser}",
+                            '-210px',
+                            '-420px'
+                        ],
+                        [
+                            "eid1801",
+                            "left",
+                            200,
+                            0,
+                            "linear",
+                            "${ss_esser}",
+                            '-420px',
+                            '-630px'
+                        ],
+                        [
+                            "eid2033",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_esser}",
+                            '0.75',
+                            '0.75'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'taubeCopy',
-                symbolName: 'taube',
-                autoPlay: {
-
+            "C_Pisser": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '690px', '452px', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'ss_pisser',
+                            opacity: '0.8',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_pisser.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 230, 452]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid1901",
+                            "left",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_pisser}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1902",
+                            "left",
+                            67,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_pisser}",
+                            '0px',
+                            '-230px'
+                        ],
+                        [
+                            "eid1903",
+                            "left",
+                            133,
+                            0,
+                            "easeInOutQuad",
+                            "${ss_pisser}",
+                            '-230px',
+                            '-458px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'A_shoes',
-                symbolName: 'A_shoes',
-                autoPlay: {
-
+            "A_cripmate": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '1163px', '1200px', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 's_cripmate2',
+                            opacity: '0.9',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/disposable/s_cripmate.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 1163, 410]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid2038",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${s_cripmate2}",
+                            '0.9',
+                            '0.9'
+                        ],
+                        [
+                            "eid1954",
+                            "top",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${s_cripmate2}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1957",
+                            "top",
+                            67,
+                            0,
+                            "easeInOutQuad",
+                            "${s_cripmate2}",
+                            '0px',
+                            '-400px'
+                        ],
+                        [
+                            "eid1958",
+                            "top",
+                            133,
+                            0,
+                            "easeInOutQuad",
+                            "${s_cripmate2}",
+                            '-400px',
+                            '-800px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'H_bag_appear',
-                symbolName: 'H_bag_appear',
-                autoPlay: {
-
+            "A_trash_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '705px', '900px', 'auto', 'auto'],
+                            type: 'image',
+                            id: 'ss_trash_1',
+                            opacity: '0.9',
+                            clip: 'rect(0px 700.5224609375px 900px 0px)',
+                            fill: ['rgba(0,0,0,0)', 'images/disposable/ss_trash_1.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 705, 300]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid1987",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_trash_1}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid1988",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_trash_1}",
+                            '0px',
+                            '-300px'
+                        ],
+                        [
+                            "eid1989",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_trash_1}",
+                            '-300px',
+                            '-600px'
+                        ],
+                        [
+                            "eid2303",
+                            "clip",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_trash_1}",
+                            [0,700.5224609375,900,0],
+                            [0,700.5224609375,900,0],
+                            {valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'}
+                        ],
+                        [
+                            "eid2035",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_trash_1}",
+                            '0.9',
+                            '0.9'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'C_Esser',
-                symbolName: 'C_Esser',
-                autoPlay: {
-
+            "A_paperball": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '440px', '900px', 'auto', 'auto'],
+                            id: 'ss_paperball',
+                            opacity: '0.9',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/disposable/ss_paperball.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 440, 300]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid2036",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_paperball}",
+                            '0.9',
+                            '0.9'
+                        ],
+                        [
+                            "eid2019",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_paperball}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid2020",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_paperball}",
+                            '0px',
+                            '-300px'
+                        ],
+                        [
+                            "eid2021",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_paperball}",
+                            '-300px',
+                            '-600px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'Title_Intro',
-                symbolName: 'Title_Intro',
-                autoPlay: {
+            "preloader": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            type: 'rect',
+                            opacity: '1',
+                            id: 'RectangleCopy',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            rect: [0, 0, '2055px', '1536px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,1.00)']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2055, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
 
+                    ]
                 }
             },
-            {
-                id: 'H_still_leftright',
-                symbolName: 'H_still_leftright',
-                autoPlay: {
-
+            "B_taube2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '500px', '2971px', 'auto', 'auto'],
+                            id: 'ss_taube_2',
+                            opacity: '0.9',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/disposable/ss_taube_2.png', '0px', '0px']
+                        },
+                        {
+                            rect: ['54', '40', '320px', '45px', 'auto', 'auto'],
+                            source: ['media/SFX_pigeon.mp3'],
+                            volume: '0',
+                            id: 'SFX_pigeon',
+                            type: 'audio',
+                            tag: 'audio'
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 500, 430]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 1867,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0,
+                        "touch": 533
+                    },
+                    data: [
+                        [
+                            "eid2051",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid2052",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '0px',
+                            '-423px'
+                        ],
+                        [
+                            "eid2053",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-423px',
+                            '-846px'
+                        ],
+                        [
+                            "eid2121",
+                            "top",
+                            533,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-846px',
+                            '-1274px'
+                        ],
+                        [
+                            "eid2124",
+                            "top",
+                            600,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-1274px',
+                            '-1696px'
+                        ],
+                        [
+                            "eid2123",
+                            "top",
+                            667,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-1696px',
+                            '-2121px'
+                        ],
+                        [
+                            "eid2122",
+                            "top",
+                            733,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2121px',
+                            '-2545px'
+                        ],
+                        [
+                            "eid2150",
+                            "top",
+                            800,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2545px',
+                            '-1696px'
+                        ],
+                        [
+                            "eid2151",
+                            "top",
+                            867,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-1696px',
+                            '-2121px'
+                        ],
+                        [
+                            "eid2152",
+                            "top",
+                            933,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2121px',
+                            '-2545px'
+                        ],
+                        [
+                            "eid2153",
+                            "top",
+                            1000,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2545px',
+                            '-1696px'
+                        ],
+                        [
+                            "eid2154",
+                            "top",
+                            1067,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-1696px',
+                            '-2121px'
+                        ],
+                        [
+                            "eid2155",
+                            "top",
+                            1133,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2121px',
+                            '-2545px'
+                        ],
+                        [
+                            "eid2156",
+                            "top",
+                            1200,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2545px',
+                            '-1696px'
+                        ],
+                        [
+                            "eid2157",
+                            "top",
+                            1267,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-1696px',
+                            '-2121px'
+                        ],
+                        [
+                            "eid2158",
+                            "top",
+                            1333,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2121px',
+                            '-2545px'
+                        ],
+                        [
+                            "eid2159",
+                            "top",
+                            1400,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2545px',
+                            '-1696px'
+                        ],
+                        [
+                            "eid2160",
+                            "top",
+                            1467,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-1696px',
+                            '-2121px'
+                        ],
+                        [
+                            "eid2161",
+                            "top",
+                            1533,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2121px',
+                            '-2545px'
+                        ],
+                        [
+                            "eid2162",
+                            "top",
+                            1600,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2545px',
+                            '-1696px'
+                        ],
+                        [
+                            "eid2163",
+                            "top",
+                            1667,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-1696px',
+                            '-2121px'
+                        ],
+                        [
+                            "eid2164",
+                            "top",
+                            1733,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2121px',
+                            '-2545px'
+                        ],
+                        [
+                            "eid2137",
+                            "top",
+                            1800,
+                            0,
+                            "linear",
+                            "${ss_taube_2}",
+                            '-2545px',
+                            '-1274px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'A_tv',
-                symbolName: 'A_tv',
-                autoPlay: {
-
+            "SFX_wind": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            autoplay: 'autoplay',
+                            rect: [0, 0, '320px', '45px', 'auto', 'auto'],
+                            source: ['media/SFX_windLoop.mp3'],
+                            volume: '0.50000028571429',
+                            id: 'SFX_windLoop',
+                            loop: 'loop',
+                            type: 'audio',
+                            tag: 'audio'
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 0, 0]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 40255,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid2239",
+                            "volume",
+                            0,
+                            0,
+                            "linear",
+                            "${SFX_windLoop}",
+                            '0.50000028571429',
+                            '0.50000028571429'
+                        ],
+                            [ "eid2214", "trigger", 0, function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${SFX_windLoop}', [] ] ]
+                    ]
                 }
             },
-            {
-                id: 'A_teddy',
-                symbolName: 'A_teddy',
-                autoPlay: {
-
+            "A_trash_2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '342px', '900px', 'auto', 'auto'],
+                            id: 'ss_trash_2',
+                            opacity: '0.9',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/disposable/ss_trash_2.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 342, 300]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid2260",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_trash_2}",
+                            '0.9',
+                            '0.9'
+                        ],
+                        [
+                            "eid2254",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_trash_2}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid2255",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_trash_2}",
+                            '0px',
+                            '-300px'
+                        ],
+                        [
+                            "eid2256",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_trash_2}",
+                            '-300px',
+                            '-600px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'A_trash_1',
-                symbolName: 'A_trash_1',
-                autoPlay: {
-
+            "A_trash_3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '333px', '900px', 'auto', 'auto'],
+                            type: 'image',
+                            id: 'ss_trash_3',
+                            opacity: '0.9',
+                            clip: 'rect(0px 330.0146484375px 900px 0px)',
+                            fill: ['rgba(0,0,0,0)', 'images/disposable/ss_trash_3.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 333, 300]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid2261",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_trash_3}",
+                            '0.9',
+                            '0.9'
+                        ],
+                        [
+                            "eid2257",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_trash_3}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid2258",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_trash_3}",
+                            '0px',
+                            '-300px'
+                        ],
+                        [
+                            "eid2259",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_trash_3}",
+                            '-300px',
+                            '-600px'
+                        ],
+                        [
+                            "eid2304",
+                            "clip",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_trash_3}",
+                            [0,330.0146484375,900,0],
+                            [0,330.0146484375,900,0],
+                            {valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'}
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'C_Pisser',
-                symbolName: 'C_Pisser',
-                autoPlay: {
-
+            "dust_button_invert": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            opacity: '0.06',
+                            rect: [7, -7, 179, 193, 'auto', 'auto'],
+                            filter: ['0', '0deg', '1', '1', '0', '0', '0', '0px', 'rgba(0,0,0,0)', '0px', '0px', '0px'],
+                            overflow: 'hidden',
+                            id: 'dust_icon_invert3',
+                            symbolName: 'dust_icon_invert',
+                            type: 'rect',
+                            transform: [[0, 0, 0], ['90', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 193, 179]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 8409,
+                    autoPlay: true,
+                    labels: {
+                        "fade_flimmer": 0,
+                        "fade_still": 1133,
+                        "still_loop": 1400,
+                        "opaque": 2000,
+                        "opaque_loop": 2400,
+                        "fade": 2800
+                    },
+                    data: [
+                        [
+                            "eid2376",
+                            "left",
+                            8409,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert3}",
+                            '7px',
+                            '7px'
+                        ],
+                        [
+                            "eid2354",
+                            "top",
+                            8409,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert3}",
+                            '-7px',
+                            '-7px'
+                        ],
+                        [
+                            "eid2377",
+                            "filter.invert",
+                            0,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid2355",
+                            "rotateZ",
+                            0,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert3}",
+                            '90deg',
+                            '90deg'
+                        ],
+                        [
+                            "eid2357",
+                            "opacity",
+                            0,
+                            129,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.06',
+                            '0.01'
+                        ],
+                        [
+                            "eid2358",
+                            "opacity",
+                            129,
+                            140,
+                            "easeInBounce",
+                            "${dust_icon_invert3}",
+                            '0.01',
+                            '0.05'
+                        ],
+                        [
+                            "eid2359",
+                            "opacity",
+                            269,
+                            167,
+                            "easeOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.05',
+                            '0.03'
+                        ],
+                        [
+                            "eid2360",
+                            "opacity",
+                            436,
+                            164,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.03',
+                            '0.04'
+                        ],
+                        [
+                            "eid2361",
+                            "opacity",
+                            630,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.04',
+                            '0.04'
+                        ],
+                        [
+                            "eid2362",
+                            "opacity",
+                            733,
+                            200,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.040000',
+                            '0.06'
+                        ],
+                        [
+                            "eid2363",
+                            "opacity",
+                            933,
+                            67,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.060000',
+                            '0.1'
+                        ],
+                        [
+                            "eid2364",
+                            "opacity",
+                            1133,
+                            96,
+                            "easeInBounce",
+                            "${dust_icon_invert3}",
+                            '0.100000',
+                            '0.146612'
+                        ],
+                        [
+                            "eid2365",
+                            "opacity",
+                            1229,
+                            171,
+                            "easeOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.146612',
+                            '0.5'
+                        ],
+                        [
+                            "eid2366",
+                            "opacity",
+                            1400,
+                            67,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid2367",
+                            "opacity",
+                            1467,
+                            34,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.550000',
+                            '0.59'
+                        ],
+                        [
+                            "eid2368",
+                            "opacity",
+                            1501,
+                            70,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.590000',
+                            '0.4'
+                        ],
+                        [
+                            "eid2369",
+                            "opacity",
+                            1571,
+                            55,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.400000',
+                            '0.46'
+                        ],
+                        [
+                            "eid2370",
+                            "opacity",
+                            1626,
+                            41,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.460000',
+                            '0.5'
+                        ],
+                        [
+                            "eid2371",
+                            "opacity",
+                            1667,
+                            38,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.500000',
+                            '0.55'
+                        ],
+                        [
+                            "eid2372",
+                            "opacity",
+                            1705,
+                            64,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.550000',
+                            '0.5'
+                        ],
+                        [
+                            "eid2373",
+                            "opacity",
+                            2000,
+                            400,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.500000',
+                            '1'
+                        ],
+                        [
+                            "eid2374",
+                            "opacity",
+                            2600,
+                            0,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2375",
+                            "opacity",
+                            2800,
+                            467,
+                            "easeInOutBounce",
+                            "${dust_icon_invert3}",
+                            '0.5',
+                            '0'
+                        ]
+                    ]
+                }
+            },
+            "dust_icon_invert": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [50, '-1', '1242px', '193px', 'auto', 'auto'],
+                            id: 'dust_icon_invert2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/dust_icon_invert.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 179, 193]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 537,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid2353",
+                            "scaleY",
+                            0,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert2}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2346",
+                            "left",
+                            0,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert2}",
+                            '50px',
+                            '50px'
+                        ],
+                        [
+                            "eid2347",
+                            "left",
+                            83,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert2}",
+                            '50px',
+                            '-111px'
+                        ],
+                        [
+                            "eid2348",
+                            "left",
+                            167,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert2}",
+                            '-111px',
+                            '-283px'
+                        ],
+                        [
+                            "eid2349",
+                            "left",
+                            250,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert2}",
+                            '-283px',
+                            '-481px'
+                        ],
+                        [
+                            "eid2350",
+                            "left",
+                            333,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert2}",
+                            '-481px',
+                            '-670px'
+                        ],
+                        [
+                            "eid2351",
+                            "left",
+                            417,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert2}",
+                            '-670px',
+                            '-876px'
+                        ],
+                        [
+                            "eid2352",
+                            "left",
+                            500,
+                            0,
+                            "easeInOutCubic",
+                            "${dust_icon_invert2}",
+                            '-876px',
+                            '-1055px'
+                        ]
+                    ]
+                }
+            },
+            "A_cigPile": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [-46, 44, 529, 260, 'auto', 'auto'],
+                            opacity: '0.8',
+                            overflow: 'hidden',
+                            id: 'A_cig2',
+                            symbolName: 'A_cig2',
+                            type: 'rect',
+                            transform: [[0, 0, 0], ['-1', 0, 0], [0, 0], ['0.81759', '0.81759', 1], ['50%', '50%']]
+                        },
+                        {
+                            rect: [97, 99, 550, 250, 'auto', 'auto'],
+                            opacity: '0.8',
+                            overflow: 'hidden',
+                            id: 'A_cig1',
+                            symbolName: 'A_cig1',
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.60545', '0.60545', 1], ['50%', '50%']]
+                        },
+                        {
+                            rect: [17, -24, 300, 387, 'auto', 'auto'],
+                            opacity: '0.8',
+                            overflow: 'hidden',
+                            id: 'A_cig4',
+                            symbolName: 'A_cig4',
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.87855', '0.87855', 1], ['50%', '50%']]
+                        },
+                        {
+                            rect: [42, 164, 590, 260, 'auto', 'auto'],
+                            opacity: '0.8',
+                            overflow: 'hidden',
+                            id: 'A_cig3',
+                            symbolName: 'A_cig3',
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-0.61539', '0.61538', 1], ['50%', '50%']]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 538, 374]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid167",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig1}",
+                            '97px',
+                            '97px'
+                        ],
+                        [
+                            "eid175",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig2}",
+                            '44px',
+                            '44px'
+                        ],
+                        [
+                            "eid192",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig4}",
+                            '0.87855',
+                            '0.87855'
+                        ],
+                        [
+                            "eid194",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig4}",
+                            '17px',
+                            '17px'
+                        ],
+                        [
+                            "eid202",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig2}",
+                            '0.8',
+                            '0.8'
+                        ],
+                        [
+                            "eid183",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig3}",
+                            '0.61538',
+                            '0.61538'
+                        ],
+                        [
+                            "eid203",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig3}",
+                            '0.8',
+                            '0.8'
+                        ],
+                        [
+                            "eid173",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig2}",
+                            '0.81759',
+                            '0.81759'
+                        ],
+                        [
+                            "eid205",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig1}",
+                            '0.8',
+                            '0.8'
+                        ],
+                        [
+                            "eid172",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig2}",
+                            '0.81759',
+                            '0.81759'
+                        ],
+                        [
+                            "eid176",
+                            "rotateZ",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig2}",
+                            '-1deg',
+                            '-1deg'
+                        ],
+                        [
+                            "eid204",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig4}",
+                            '0.8',
+                            '0.8'
+                        ],
+                        [
+                            "eid182",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig3}",
+                            '-0.61539',
+                            '-0.61539'
+                        ],
+                        [
+                            "eid195",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig4}",
+                            '-24px',
+                            '-24px'
+                        ],
+                        [
+                            "eid163",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig1}",
+                            '0.60545',
+                            '0.60545'
+                        ],
+                        [
+                            "eid174",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig2}",
+                            '-46px',
+                            '-46px'
+                        ],
+                        [
+                            "eid185",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig3}",
+                            '164px',
+                            '164px'
+                        ],
+                        [
+                            "eid193",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig4}",
+                            '0.87855',
+                            '0.87855'
+                        ],
+                        [
+                            "eid184",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig3}",
+                            '42px',
+                            '42px'
+                        ],
+                        [
+                            "eid168",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig1}",
+                            '99px',
+                            '99px'
+                        ],
+                        [
+                            "eid164",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${A_cig1}",
+                            '0.60545',
+                            '0.60545'
+                        ]
+                    ]
+                }
+            },
+            "A_cig3": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '590px', '780px', 'auto', 'auto'],
+                            id: 'ss_cig3',
+                            type: 'image',
+                            clip: 'rect(0px 576px 780px 0px)',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_cig3.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 590, 260]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid177",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_cig3}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid178",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_cig3}",
+                            '0px',
+                            '-260px'
+                        ],
+                        [
+                            "eid179",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_cig3}",
+                            '-260px',
+                            '-520px'
+                        ],
+                        [
+                            "eid181",
+                            "clip",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_cig3}",
+                            [0,576,780,0],
+                            [0,576,780,0],
+                            {valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'}
+                        ]
+                    ]
+                }
+            },
+            "A_tv": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '1800px', '600px', 'auto', 'auto'],
+                            id: 'A_tv',
+                            opacity: '0.9',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/A_tv.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 600, 600]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid236",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${A_tv}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid237",
+                            "left",
+                            67,
+                            0,
+                            "linear",
+                            "${A_tv}",
+                            '0px',
+                            '-600px'
+                        ],
+                        [
+                            "eid238",
+                            "left",
+                            133,
+                            0,
+                            "linear",
+                            "${A_tv}",
+                            '-600px',
+                            '-1200px'
+                        ],
+                        [
+                            "eid239",
+                            "opacity",
+                            133,
+                            0,
+                            "linear",
+                            "${A_tv}",
+                            '0.9',
+                            '0.9'
+                        ]
+                    ]
+                }
+            },
+            "A_cig1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '550px', '750px', 'auto', 'auto'],
+                            id: 'ss_cig1',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_cig1.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 550, 250]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid158",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_cig1}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid159",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_cig1}",
+                            '0px',
+                            '-250px'
+                        ],
+                        [
+                            "eid160",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_cig1}",
+                            '-250px',
+                            '-500px'
+                        ]
+                    ]
+                }
+            },
+            "A_cig4": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '900px', '387px', 'auto', 'auto'],
+                            id: 'ss_cig4',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_cig4.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 300, 387]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid186",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_cig4}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid187",
+                            "left",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_cig4}",
+                            '0px',
+                            '-300px'
+                        ],
+                        [
+                            "eid188",
+                            "left",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_cig4}",
+                            '-300px',
+                            '-600px'
+                        ]
+                    ]
+                }
+            },
+            "A_teddy": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '447px', '1200px', 'auto', 'auto'],
+                            id: 'A_teddy',
+                            opacity: '0.9',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/A_teddy.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 447, 400]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid229",
+                            "opacity",
+                            200,
+                            0,
+                            "linear",
+                            "${A_teddy}",
+                            '0.9',
+                            '0.9'
+                        ],
+                        [
+                            "eid226",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${A_teddy}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid228",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${A_teddy}",
+                            '0px',
+                            '-400px'
+                        ],
+                        [
+                            "eid227",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${A_teddy}",
+                            '-400px',
+                            '-800px'
+                        ]
+                    ]
+                }
+            },
+            "A_cig2": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, -6, '529px', '780px', 'auto', 'auto'],
+                            id: 'ss_cig2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ss_cig2.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 529, 260]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid169",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${ss_cig2}",
+                            '-6px',
+                            '-6px'
+                        ],
+                        [
+                            "eid170",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${ss_cig2}",
+                            '-6px',
+                            '-258px'
+                        ],
+                        [
+                            "eid171",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${ss_cig2}",
+                            '-260px',
+                            '-518px'
+                        ]
+                    ]
+                }
+            },
+            "A_shoes": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '525px', '1260px', 'auto', 'auto'],
+                            id: 'A_shoes',
+                            opacity: '0.9',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/A_shoes.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 525, 420]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 200,
+                    autoPlay: true,
+                    labels: {
+                        "loop": 0
+                    },
+                    data: [
+                        [
+                            "eid216",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${A_shoes}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid218",
+                            "top",
+                            67,
+                            0,
+                            "linear",
+                            "${A_shoes}",
+                            '0px',
+                            '-420px'
+                        ],
+                        [
+                            "eid219",
+                            "top",
+                            133,
+                            0,
+                            "linear",
+                            "${A_shoes}",
+                            '-420px',
+                            '-840px'
+                        ]
+                    ]
                 }
             }
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_A_cigPile}": [
-                ["style", "top", '1228px'],
-                ["transform", "scaleY", '0.60428'],
-                ["transform", "scaleX", '0.60428'],
-                ["style", "left", '3639px'],
-                ["style", "display", 'none']
-            ],
-            "${_Group3}": [
-                ["style", "top", '1860px'],
-                ["style", "left", '362px']
-            ],
-            "${_paper_bg_12}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${_H_walk}": [
-                ["style", "top", '917px'],
-                ["transform", "scaleY", '0.98125'],
-                ["transform", "scaleX", '0.98125'],
-                ["style", "display", 'none'],
-                ["style", "clip", [0,320,500,13.044392585754395], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
-                ["style", "left", '898px']
-            ],
-            "${_A_trash_1}": [
-                ["style", "top", '96px'],
-                ["transform", "scaleY", '0.7'],
-                ["style", "left", '37px'],
-                ["transform", "scaleX", '0.7']
-            ],
-            "${_H_bag_appear}": [
-                ["style", "top", '886px'],
-                ["transform", "scaleY", '0.86806'],
-                ["transform", "scaleX", '0.86806'],
-                ["style", "left", '676px'],
-                ["style", "display", 'none']
-            ],
-            "${_plasticbag}": [
-                ["motion", "location", '2292px 815.79638671875px'],
-                ["transform", "scaleY", '0.62622'],
-                ["transform", "scaleX", '0.8']
-            ],
-            "${_Theodora}": [
-                ["style", "top", '521px'],
-                ["transform", "scaleY", '0.65072'],
-                ["style", "display", 'none'],
-                ["style", "opacity", '1'],
-                ["style", "left", '366px'],
-                ["transform", "scaleX", '0.65072']
-            ],
-            "${_house_2}": [
-                ["style", "top", '1752px'],
-                ["style", "left", '1156px']
-            ],
-            "${_BG_1}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_taube}": [
-                ["style", "top", '1737px'],
-                ["transform", "scaleY", '0.48'],
-                ["transform", "scaleX", '0.48'],
-                ["style", "left", '1537px'],
-                ["style", "display", 'block']
-            ],
-            "${_Group}": [
-                ["style", "display", 'none'],
-                ["style", "left", '1928px']
-            ],
-            "${_B_taube2}": [
-                ["style", "top", '1761px'],
-                ["transform", "scaleY", '0.48'],
-                ["transform", "scaleX", '0.48'],
-                ["style", "left", '1083px'],
-                ["style", "display", 'none']
-            ],
-            "${_text_2}": [
-                ["style", "display", 'block'],
-                ["style", "top", '709px'],
-                ["style", "left", '671px'],
-                ["transform", "rotateZ", '3deg']
-            ],
-            "${_Group4}": [
-                ["style", "top", '1787px'],
-                ["style", "left", '160px']
-            ],
-            "${_tree_1}": [
-                ["style", "height", '316px'],
-                ["style", "top", '204px'],
-                ["style", "left", '378px'],
-                ["style", "width", '300px']
-            ],
-            "${_bg_trash_cans}": [
-                ["style", "top", '0px'],
-                ["transform", "scaleY", '0.7'],
-                ["style", "left", '0px'],
-                ["transform", "scaleX", '0.7']
-            ],
-            "${_Title_Intro}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.60975618721024'],
-                ["style", "left", '0px']
-            ],
-            "${_C_Esser}": [
-                ["style", "top", '500px'],
-                ["transform", "scaleY", '0.44'],
-                ["style", "display", 'none'],
-                ["transform", "scaleX", '0.44'],
-                ["subproperty", "filter.blur", '0px'],
-                ["style", "left", '1492px'],
-                ["style", "opacity", '1']
-            ],
-            "${_dust_button3}": [
-                ["style", "display", 'block'],
-                ["style", "opacity", '1'],
-                ["style", "left", '953px'],
-                ["style", "top", '1295px']
-            ],
-            "${_A_teddy}": [
-                ["style", "top", '985px'],
-                ["transform", "scaleY", '0.4152'],
-                ["transform", "scaleX", '0.4152'],
-                ["style", "left", '2672px'],
-                ["style", "display", 'none']
-            ],
-            "${_text_3}": [
-                ["style", "top", '891px'],
-                ["transform", "rotateZ", '-2deg'],
-                ["style", "display", 'block'],
-                ["style", "opacity", '1'],
-                ["style", "left", '130px']
-            ],
-            "${_A_tv}": [
-                ["style", "top", '854px'],
-                ["transform", "scaleY", '0.29'],
-                ["transform", "scaleX", '0.29'],
-                ["style", "left", '3701px'],
-                ["style", "display", 'none']
-            ],
-            "${_A_trash_3}": [
-                ["style", "top", '979px'],
-                ["transform", "scaleY", '0.74667'],
-                ["style", "display", 'none'],
-                ["style", "left", '3599px'],
-                ["transform", "scaleX", '0.74667']
-            ],
-            "${_Rectangle}": [
-                ["style", "top", '0px'],
-                ["style", "display", 'block'],
-                ["style", "opacity", '1'],
-                ["style", "left", '0px'],
-                ["color", "background-color", 'rgba(0,0,0,1.00)']
-            ],
-            "${_trashBin}": [
-                ["style", "top", '809px'],
-                ["style", "height", '247px'],
-                ["style", "display", 'none'],
-                ["style", "left", '2108px'],
-                ["style", "width", '144px']
-            ],
-            "${_text_1}": [
-                ["style", "display", 'block'],
-                ["style", "top", '509px'],
-                ["style", "left", '244px'],
-                ["transform", "rotateZ", '-1deg']
-            ],
-            "${_A_trash_2}": [
-                ["style", "top", '1844px'],
-                ["transform", "scaleY", '1'],
-                ["transform", "scaleX", '-1'],
-                ["style", "left", '-79px'],
-                ["style", "display", 'none']
-            ],
-            "${_BG_12}": [
-                ["style", "top", '184px'],
-                ["style", "display", 'none'],
-                ["style", "clip", [0,1941.1416015625,973,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
-                ["style", "left", '2092px'],
-                ["transform", "scaleX", '-1']
-            ],
-            "${_house_1}": [
-                ["style", "top", '1752px'],
-                ["style", "left", '30px']
-            ],
-            "${_houses_bg_1}": [
-                ["style", "top", '1537px'],
-                ["style", "opacity", '0.45528455284553'],
-                ["style", "left", '201px']
-            ],
-            "${_taubeCopy}": [
-                ["style", "top", '1602px'],
-                ["transform", "scaleY", '0.35429'],
-                ["transform", "scaleX", '0.35429'],
-                ["style", "left", '875px'],
-                ["style", "display", 'block']
-            ],
-            "${_H_still_leftright}": [
-                ["style", "top", '1870px'],
-                ["style", "left", '884px'],
-                ["style", "display", 'none']
-            ],
-            "${_house_3}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_C_paperball}": [
-                ["style", "top", '1209px'],
-                ["style", "left", '2835px'],
-                ["style", "display", 'none']
-            ],
-            "${_C_Pisser}": [
-                ["style", "top", '1615px'],
-                ["transform", "scaleY", '0.80896'],
-                ["style", "display", 'none'],
-                ["transform", "scaleX", '-0.80896'],
-                ["subproperty", "filter.blur", '0px'],
-                ["style", "left", '415px'],
-                ["style", "opacity", '1']
-            ],
-            "${_text_5}": [
-                ["style", "top", '1143px'],
-                ["transform", "rotateZ", '0deg'],
-                ["style", "display", 'block'],
-                ["style", "opacity", '1'],
-                ["style", "left", '591px']
-            ],
-            "${_A_cripmate}": [
-                ["style", "top", '2114px'],
-                ["transform", "scaleY", '0.6'],
-                ["transform", "scaleX", '0.6'],
-                ["subproperty", "filter.blur", '0px'],
-                ["style", "left", '-199px'],
-                ["style", "display", 'none']
-            ],
-            "${_BG5}": [
-                ["style", "top", '278px'],
-                ["transform", "rotateZ", '1deg'],
-                ["style", "display", 'none'],
-                ["style", "opacity", '0.7'],
-                ["style", "left", '2094px']
-            ],
-            "${_bistro_0}": [
-                ["style", "left", '1426px'],
-                ["style", "top", '510px']
-            ],
-            "${_dust_icon_invert4}": [
-                ["style", "display", 'block'],
-                ["style", "opacity", '0'],
-                ["style", "left", '935px'],
-                ["style", "top", '672px']
-            ],
-            "${_text_4}": [
-                ["style", "top", '1022px'],
-                ["transform", "rotateZ", '-1deg'],
-                ["style", "display", 'block'],
-                ["style", "opacity", '1'],
-                ["style", "left", '586px']
-            ],
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(255,249,240,1.00)'],
-                ["style", "width", '2048px'],
-                ["style", "height", '1536px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_taubeCopy2}": [
-                ["style", "top", '1620px'],
-                ["transform", "scaleY", '0.28571'],
-                ["transform", "scaleX", '-0.28572'],
-                ["style", "left", '438px'],
-                ["style", "display", 'block']
-            ],
-            "${_BG_0}": [
-                ["style", "top", '2560px'],
-                ["style", "left", '0px']
-            ],
-            "${_A_shoes}": [
-                ["style", "top", '1036px'],
-                ["transform", "scaleY", '0.5819'],
-                ["transform", "scaleX", '0.5819'],
-                ["style", "left", '3146px'],
-                ["style", "display", 'none']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 59537,
-            autoPlay: true,
-            labels: {
-                "start": 4272,
-                "text_in": 10000,
-                "city_start": 17000,
-                "city_out": 44000
-            },
-            timeline: [
-                { id: "eid1278", tween: [ "style", "${_house_1}", "top", '1162px', { fromValue: '1752px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1309", tween: [ "style", "${_house_1}", "top", '376px', { fromValue: '1162px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1807", tween: [ "transform", "${_C_Esser}", "scaleY", '0.44', { fromValue: '0.44'}], position: 23000, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid1274", tween: [ "style", "${_taube}", "top", '941px', { fromValue: '1737px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1305", tween: [ "style", "${_taube}", "top", '128px', { fromValue: '941px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1671", tween: [ "style", "${_taube}", "top", '149px', { fromValue: '128px'}], position: 44000, duration: 12000 },
-                { id: "eid1871", tween: [ "style", "${_dust_button3}", "top", '1295px', { fromValue: '1295px'}], position: 17000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1967", tween: [ "style", "${_A_cripmate}", "left", '-199px', { fromValue: '-199px'}], position: 23000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1971", tween: [ "style", "${_A_cripmate}", "left", '-2927px', { fromValue: '-199px'}], position: 44000, duration: 11000 },
-                { id: "eid2299", tween: [ "style", "${_BG_12}", "top", '184px', { fromValue: '184px'}], position: 44000, duration: 0 },
-                { id: "eid2301", tween: [ "style", "${_BG_12}", "top", '185px', { fromValue: '184px'}], position: 55000, duration: 0 },
-                { id: "eid1051", tween: [ "style", "${_H_walk}", "top", '917px', { fromValue: '917px'}], position: 5000, duration: 0 },
-                { id: "eid2013", tween: [ "style", "${_Group}", "display", 'block', { fromValue: 'none'}], position: 44000, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2267", tween: [ "transform", "${_A_trash_2}", "scaleY", '1', { fromValue: '1'}], position: 23000, duration: 0 },
-                { id: "eid1972", tween: [ "style", "${_A_cripmate}", "top", '1180px', { fromValue: '2114px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1279", tween: [ "style", "${_houses_bg_1}", "top", '1121px', { fromValue: '1537px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1691", tween: [ "style", "${_houses_bg_1}", "top", '389px', { fromValue: '1121px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1151", tween: [ "style", "${_BG_1}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0, easing: "easeOutQuad" },
-                { id: "eid2559", tween: [ "style", "${_BG_1}", "left", '13px', { fromValue: '0px'}], position: 56000, duration: 0 },
-                { id: "eid1614", tween: [ "style", "${_dust_button3}", "opacity", '0', { fromValue: '1'}], position: 17000, duration: 521, easing: "easeInOutBounce" },
-                { id: "eid1273", tween: [ "style", "${_taubeCopy}", "top", '806px', { fromValue: '1602px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1304", tween: [ "style", "${_taubeCopy}", "top", '-10px', { fromValue: '806px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1683", tween: [ "style", "${_taubeCopy}", "top", '11px', { fromValue: '-10px'}], position: 44000, duration: 12000 },
-                { id: "eid1146", tween: [ "style", "${_tree_1}", "left", '378px', { fromValue: '378px'}], position: 17000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1637", tween: [ "style", "${_tree_1}", "left", '378px', { fromValue: '378px'}], position: 44000, duration: 0, easing: "easeOutCubic" },
-                { id: "eid1516", tween: [ "style", "${_text_5}", "display", 'none', { fromValue: 'block'}], position: 0, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1847", tween: [ "style", "${_text_5}", "display", 'none', { fromValue: 'none'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1881", tween: [ "style", "${_text_5}", "display", 'block', { fromValue: 'none'}], position: 17000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1882", tween: [ "style", "${_text_5}", "display", 'none', { fromValue: 'block'}], position: 18250, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1505", tween: [ "style", "${_text_1}", "top", '509px', { fromValue: '509px'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2266", tween: [ "transform", "${_A_trash_2}", "scaleX", '-1', { fromValue: '-1'}], position: 23000, duration: 0 },
-                { id: "eid1277", tween: [ "style", "${_house_2}", "top", '1162px', { fromValue: '1752px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1308", tween: [ "style", "${_house_2}", "top", '386px', { fromValue: '1162px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1185", tween: [ "style", "${_BG_0}", "left", '0px', { fromValue: '0px'}], position: 17000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1680", tween: [ "style", "${_BG_0}", "left", '-2048px', { fromValue: '0px'}], position: 44000, duration: 12000 },
-                { id: "eid2539", tween: [ "style", "${_A_shoes}", "left", '1054px', { fromValue: '3146px'}], position: 44000, duration: 11000 },
-                { id: "eid2548", tween: [ "style", "${_A_shoes}", "left", '860px', { fromValue: '1054px'}], position: 55000, duration: 1000 },
-                { id: "eid1943", tween: [ "style", "${_C_Pisser}", "left", '415px', { fromValue: '415px'}], position: 23000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1949", tween: [ "style", "${_C_Pisser}", "left", '-1633px', { fromValue: '415px'}], position: 44000, duration: 12000 },
-                { id: "eid1684", tween: [ "style", "${_taubeCopy2}", "left", '-1610px', { fromValue: '438px'}], position: 44000, duration: 12000 },
-                { id: "eid2104", tween: [ "transform", "${_B_taube2}", "scaleY", '0.48', { fromValue: '0.48'}], position: 23000, duration: 0 },
-                { id: "eid1524", tween: [ "style", "${_text_5}", "opacity", '0', { fromValue: '1'}], position: 17000, duration: 1250 },
-                { id: "eid1867", tween: [ "transform", "${_text_5}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1874", tween: [ "transform", "${_text_5}", "rotateZ", '-2deg', { fromValue: '0deg'}], position: 23000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2545", tween: [ "style", "${_A_tv}", "left", '1699px', { fromValue: '3701px'}], position: 44000, duration: 11000 },
-                { id: "eid2546", tween: [ "style", "${_A_tv}", "left", '1543px', { fromValue: '1699px'}], position: 55000, duration: 1000 },
-                { id: "eid1712", tween: [ "transform", "${_H_bag_appear}", "scaleY", '0.86806', { fromValue: '0.86806'}], position: 5000, duration: 0 },
-                { id: "eid1707", tween: [ "transform", "${_H_bag_appear}", "scaleY", '0.86806', { fromValue: '0.86806'}], position: 55454, duration: 0 },
-                { id: "eid2245", tween: [ "style", "${_A_cripmate}", "display", 'block', { fromValue: 'none'}], position: 23000, duration: 0 },
-                { id: "eid2551", tween: [ "style", "${_A_cripmate}", "display", 'none', { fromValue: 'block'}], position: 48000, duration: 0 },
-                { id: "eid2564", tween: [ "style", "${_BG5}", "left", '144px', { fromValue: '2094px'}], position: 44000, duration: 11000 },
-                { id: "eid2565", tween: [ "style", "${_BG5}", "left", '-10px', { fromValue: '144px'}], position: 55000, duration: 1000 },
-                { id: "eid1021", tween: [ "style", "${_H_bag_appear}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1702", tween: [ "style", "${_H_bag_appear}", "display", 'block', { fromValue: 'none'}], position: 55454, duration: 0 },
-                { id: "eid1945", tween: [ "style", "${_C_Esser}", "left", '1496px', { fromValue: '1492px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1981", tween: [ "style", "${_C_Esser}", "left", '1492px', { fromValue: '1496px'}], position: 44000, duration: 12768 },
-                { id: "eid2103", tween: [ "transform", "${_B_taube2}", "scaleX", '0.48', { fromValue: '0.48'}], position: 23000, duration: 0 },
-                { id: "eid2540", tween: [ "style", "${_A_cigPile}", "left", '2877px', { fromValue: '3639px'}], position: 44000, duration: 4000 },
-                { id: "eid2550", tween: [ "style", "${_A_cigPile}", "left", '1547px', { fromValue: '2877px'}], position: 48000, duration: 7000 },
-                { id: "eid2549", tween: [ "style", "${_A_cigPile}", "left", '1353px', { fromValue: '1547px'}], position: 55000, duration: 1000 },
-                { id: "eid2274", tween: [ "transform", "${_A_trash_3}", "scaleX", '0.74667', { fromValue: '0.74667'}], position: 23000, duration: 0 },
-                { id: "eid1149", tween: [ "style", "${_house_1}", "left", '30px', { fromValue: '30px'}], position: 17000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1676", tween: [ "style", "${_house_1}", "left", '-2018px', { fromValue: '30px'}], position: 44000, duration: 12000 },
-                { id: "eid1276", tween: [ "style", "${_Group3}", "top", '1285px', { fromValue: '1860px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1307", tween: [ "style", "${_Group3}", "top", '529px', { fromValue: '1285px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid2529", tween: [ "style", "${_A_cigPile}", "top", '1228px', { fromValue: '1228px'}], position: 55000, duration: 0 },
-                { id: "eid1624", tween: [ "style", "${_BG_1}", "top", '-110px', { fromValue: '0px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1625", tween: [ "style", "${_BG_1}", "top", '0px', { fromValue: '-110px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid2560", tween: [ "style", "${_BG_1}", "top", '-3px', { fromValue: '0px'}], position: 56000, duration: 0 },
-                { id: "eid2538", tween: [ "style", "${_A_teddy}", "left", '670px', { fromValue: '2672px'}], position: 44000, duration: 11000 },
-                { id: "eid2547", tween: [ "style", "${_A_teddy}", "left", '486px', { fromValue: '670px'}], position: 55000, duration: 1000 },
-                { id: "eid1813", tween: [ "style", "${_C_Esser}", "display", 'block', { fromValue: 'none'}], position: 23000, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2554", tween: [ "style", "${_C_Esser}", "display", 'none', { fromValue: 'block'}], position: 54687, duration: 0 },
-                { id: "eid2533", tween: [ "style", "${_A_cigPile}", "display", 'block', { fromValue: 'none'}], position: 52811, duration: 0 },
-                { id: "eid2555", tween: [ "style", "${_taube}", "display", 'none', { fromValue: 'block'}], position: 54687, duration: 0 },
-                { id: "eid2590", tween: [ "style", "${_trashBin}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid2591", tween: [ "style", "${_trashBin}", "display", 'block', { fromValue: 'none'}], position: 52376, duration: 0 },
-                { id: "eid1272", tween: [ "style", "${_taubeCopy2}", "top", '824px', { fromValue: '1620px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1303", tween: [ "style", "${_taubeCopy2}", "top", '8px', { fromValue: '824px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1685", tween: [ "style", "${_taubeCopy2}", "top", '29px', { fromValue: '8px'}], position: 44000, duration: 12000 },
-                { id: "eid1314", tween: [ "style", "${_H_still_leftright}", "display", 'block', { fromValue: 'none'}], position: 17000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1699", tween: [ "style", "${_H_still_leftright}", "display", 'none', { fromValue: 'block'}], position: 44000, duration: 0 },
-                { id: "eid1851", tween: [ "style", "${_text_5}", "left", '591px', { fromValue: '591px'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1856", tween: [ "style", "${_text_5}", "left", '551px', { fromValue: '591px'}], position: 23000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1713", tween: [ "transform", "${_H_bag_appear}", "scaleX", '0.86806', { fromValue: '0.86806'}], position: 5000, duration: 0 },
-                { id: "eid1714", tween: [ "transform", "${_H_bag_appear}", "scaleX", '-0.86806', { fromValue: '0.86806'}], position: 55454, duration: 0 },
-                { id: "eid1155", tween: [ "style", "${_tree_1}", "top", '204px', { fromValue: '204px'}], position: 17000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1288", tween: [ "style", "${_tree_1}", "top", '204px', { fromValue: '204px'}], position: 44000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1939", tween: [ "style", "${_C_Pisser}", "top", '762px', { fromValue: '1615px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1952", tween: [ "style", "${_C_Pisser}", "top", '765px', { fromValue: '762px'}], position: 44000, duration: 12000 },
-                { id: "eid1526", tween: [ "style", "${_text_4}", "opacity", '0', { fromValue: '1'}], position: 17000, duration: 1250 },
-                { id: "eid1467", tween: [ "transform", "${_text_4}", "rotateZ", '-1deg', { fromValue: '-1deg'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1708", tween: [ "style", "${_H_bag_appear}", "left", '676px', { fromValue: '676px'}], position: 5000, duration: 0 },
-                { id: "eid1817", tween: [ "style", "${_H_bag_appear}", "left", '836px', { fromValue: '936px'}], position: 55454, duration: 546 },
-                { id: "eid1869", tween: [ "style", "${_dust_button3}", "left", '953px', { fromValue: '953px'}], position: 17000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1050", tween: [ "style", "${_H_walk}", "left", '898px', { fromValue: '898px'}], position: 5000, duration: 0 },
-                { id: "eid2275", tween: [ "transform", "${_A_trash_3}", "scaleY", '0.74667', { fromValue: '0.74667'}], position: 23000, duration: 0 },
-                { id: "eid1126", tween: [ "style", "${_H_bag_appear}", "top", '886px', { fromValue: '886px'}], position: 5000, duration: 0 },
-                { id: "eid1706", tween: [ "style", "${_H_bag_appear}", "top", '886px', { fromValue: '886px'}], position: 55454, duration: 0 },
-                { id: "eid1147", tween: [ "style", "${_house_3}", "left", '0px', { fromValue: '0px'}], position: 17000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1638", tween: [ "style", "${_house_3}", "left", '0px', { fromValue: '0px'}], position: 44000, duration: 0, easing: "easeOutCubic" },
-                { id: "eid2532", tween: [ "style", "${_A_tv}", "display", 'block', { fromValue: 'none'}], position: 44000, duration: 0 },
-                { id: "eid1156", tween: [ "style", "${_house_3}", "top", '0px', { fromValue: '0px'}], position: 17000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1289", tween: [ "style", "${_house_3}", "top", '0px', { fromValue: '0px'}], position: 44000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1893", tween: [ "style", "${_C_Esser}", "top", '570px', { fromValue: '500px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid2382", tween: [ "style", "${_dust_icon_invert4}", "opacity", '1', { fromValue: '0'}], position: 0, duration: 560, easing: "easeInQuad" },
-                { id: "eid2383", tween: [ "style", "${_dust_icon_invert4}", "opacity", '0', { fromValue: '1'}], position: 4272, duration: 560, easing: "easeInQuad" },
-                { id: "eid1687", tween: [ "style", "${_H_still_leftright}", "top", '1700px', { fromValue: '1870px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1323", tween: [ "style", "${_H_still_leftright}", "top", '921px', { fromValue: '1700px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid2566", tween: [ "style", "${_BG5}", "display", 'block', { fromValue: 'none'}], position: 44000, duration: 0 },
-                { id: "eid1610", tween: [ "style", "${_dust_button3}", "display", 'none', { fromValue: 'block'}], position: 0, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1621", tween: [ "style", "${_dust_button3}", "display", 'block', { fromValue: 'none'}], position: 17000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1886", tween: [ "style", "${_dust_button3}", "display", 'none', { fromValue: 'block'}], position: 17521, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1855", tween: [ "transform", "${_text_3}", "rotateZ", '-2deg', { fromValue: '-2deg'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1861", tween: [ "transform", "${_text_3}", "rotateZ", '0deg', { fromValue: '-2deg'}], position: 23000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1841", tween: [ "style", "${_text_3}", "top", '891px', { fromValue: '891px'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1860", tween: [ "style", "${_text_3}", "top", '1001px', { fromValue: '891px'}], position: 23000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1271", tween: [ "style", "${_BG_0}", "top", '1804px', { fromValue: '2560px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1695", tween: [ "style", "${_BG_0}", "top", '951px', { fromValue: '1804px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1717", tween: [ "style", "${_BG_0}", "top", '951px', { fromValue: '951px'}], position: 44000, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2277", tween: [ "style", "${_A_trash_2}", "top", '992px', { fromValue: '1844px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1100", tween: [ "style", "${_Title_Intro}", "top", '0px', { fromValue: '0px'}], position: 5000, duration: 0 },
-                { id: "eid1341", tween: [ "style", "${_Title_Intro}", "top", '-690px', { fromValue: '0px'}], position: 10000, duration: 3130, easing: "easeInOutCubic" },
-                { id: "eid1617", tween: [ "style", "${_Title_Intro}", "top", '-963px', { fromValue: '-690px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1620", tween: [ "style", "${_Title_Intro}", "top", '-1523px', { fromValue: '-963px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid2568", tween: [ "style", "${_C_paperball}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid2567", tween: [ "style", "${_C_paperball}", "display", 'block', { fromValue: 'none'}], position: 48000, duration: 0 },
-                { id: "eid1514", tween: [ "style", "${_text_3}", "display", 'none', { fromValue: 'block'}], position: 0, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1837", tween: [ "style", "${_text_3}", "display", 'none', { fromValue: 'none'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1879", tween: [ "style", "${_text_3}", "display", 'none', { fromValue: 'none'}], position: 17000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1884", tween: [ "style", "${_text_3}", "display", 'none', { fromValue: 'none'}], position: 18250, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1275", tween: [ "style", "${_Group4}", "top", '1101px', { fromValue: '1787px'}], position: 17000, duration: 6000, easing: "easeOutQuad" },
-                { id: "eid1693", tween: [ "style", "${_Group4}", "top", '178px', { fromValue: '1101px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1513", tween: [ "style", "${_text_2}", "display", 'none', { fromValue: 'block'}], position: 0, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1839", tween: [ "style", "${_text_2}", "display", 'none', { fromValue: 'none'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1878", tween: [ "style", "${_text_2}", "display", 'none', { fromValue: 'none'}], position: 17000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2025", tween: [ "style", "${_C_paperball}", "left", '689px', { fromValue: '2835px'}], position: 44000, duration: 11000 },
-                { id: "eid2027", tween: [ "style", "${_C_paperball}", "left", '460px', { fromValue: '689px'}], position: 55000, duration: 1000 },
-                { id: "eid1682", tween: [ "style", "${_taubeCopy}", "left", '-1173px', { fromValue: '875px'}], position: 44000, duration: 12000 },
-                { id: "eid1668", tween: [ "style", "${_houses_bg_1}", "left", '-1847px', { fromValue: '201px'}], position: 44000, duration: 12000 },
-                { id: "eid2286", tween: [ "style", "${_A_trash_3}", "left", '1645px', { fromValue: '3599px'}], position: 44000, duration: 11000 },
-                { id: "eid2291", tween: [ "style", "${_A_trash_3}", "left", '1485px', { fromValue: '1645px'}], position: 55000, duration: 1000 },
-                { id: "eid1507", tween: [ "style", "${_text_2}", "left", '671px', { fromValue: '671px'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2271", tween: [ "style", "${_BG_12}", "display", 'block', { fromValue: 'none'}], position: 23000, duration: 0 },
-                { id: "eid1865", tween: [ "style", "${_text_5}", "top", '1143px', { fromValue: '1143px'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1873", tween: [ "style", "${_text_5}", "top", '1313px', { fromValue: '1143px'}], position: 23000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1054", tween: [ "style", "${_H_walk}", "display", 'none', { fromValue: 'none'}], position: 5000, duration: 0 },
-                { id: "eid1700", tween: [ "style", "${_H_walk}", "display", 'block', { fromValue: 'none'}], position: 44000, duration: 0 },
-                { id: "eid1701", tween: [ "style", "${_H_walk}", "display", 'none', { fromValue: 'block'}], position: 55454, duration: 0 },
-                { id: "eid2569", tween: [ "style", "${_A_trash_3}", "display", 'block', { fromValue: 'none'}], position: 53000, duration: 0 },
-                { id: "eid1148", tween: [ "style", "${_house_2}", "left", '1156px', { fromValue: '1156px'}], position: 17000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1678", tween: [ "style", "${_house_2}", "left", '-892px', { fromValue: '1156px'}], position: 44000, duration: 12000 },
-                { id: "eid2556", tween: [ "style", "${_taubeCopy}", "display", 'none', { fromValue: 'block'}], position: 54687, duration: 0 },
-                { id: "eid2042", tween: [ "style", "${_Rectangle}", "display", 'none', { fromValue: 'block'}], position: 8588, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2043", tween: [ "style", "${_Rectangle}", "display", 'block', { fromValue: 'none'}], position: 56000, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid1672", tween: [ "style", "${_Group4}", "left", '-1888px', { fromValue: '160px'}], position: 44000, duration: 12000 },
-                { id: "eid1892", tween: [ "style", "${_bistro_0}", "top", '580px', { fromValue: '510px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid1982", tween: [ "style", "${_bistro_0}", "top", '579px', { fromValue: '580px'}], position: 44000, duration: 0, easing: "easeInQuad" },
-                { id: "eid2041", tween: [ "style", "${_Rectangle}", "opacity", '0', { fromValue: '1'}], position: 5000, duration: 3000, easing: "easeInQuad" },
-                { id: "eid2045", tween: [ "style", "${_Rectangle}", "opacity", '1', { fromValue: '0'}], position: 57537, duration: 2000, easing: "easeInOutQuad" },
-                { id: "eid937", tween: [ "motion", "${_plasticbag}", [[2292, 815.8, 0, 0],[1980.6, 614.04, -483.89, -92.57, -554.15, -106.01],[1473.35, 766.57, -494.46, -149.16, -1299.56, -392.03],[1038.58, 778.26, -159.21, 245.04, -560.74, 863.06],[814.62, 484.07, 29.44, -70.07, 391.32, -931.4],[968.29, 426.61, 482.35, 261.41, 140.23, 76],[611.03, 768.16, -863.16, 118.01, -773.67, 105.78],[204.41, 784.9, -613.25, 27.24, -77.99, 3.46],[-236.95, 719.5, 0, 0]]], position: 11000, duration: 2000, easing: "easeInOutQuad" },
-                { id: "eid2112", tween: [ "style", "${_B_taube2}", "left", '1087px', { fromValue: '1083px'}], position: 23000, duration: 0 },
-                { id: "eid2117", tween: [ "style", "${_B_taube2}", "left", '-1066px', { fromValue: '1087px'}], position: 44000, duration: 12000 },
-                { id: "eid1844", tween: [ "style", "${_text_4}", "left", '586px', { fromValue: '586px'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1862", tween: [ "style", "${_text_4}", "left", '696px', { fromValue: '586px'}], position: 23000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1504", tween: [ "transform", "${_text_1}", "rotateZ", '-1deg', { fromValue: '-1deg'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1506", tween: [ "style", "${_text_1}", "left", '244px', { fromValue: '244px'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1099", tween: [ "style", "${_Title_Intro}", "left", '0px', { fromValue: '0px'}], position: 5000, duration: 0 },
-                { id: "eid1140", tween: [ "style", "${_Title_Intro}", "left", '1px', { fromValue: '0px'}], position: 17000, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1632", tween: [ "style", "${_Title_Intro}", "left", '1px', { fromValue: '1px'}], position: 44000, duration: 0, easing: "easeOutCubic" },
-                { id: "eid1853", tween: [ "style", "${_text_2}", "top", '709px', { fromValue: '709px'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1858", tween: [ "style", "${_text_2}", "top", '769px', { fromValue: '709px'}], position: 23000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1337", tween: [ "style", "${_Theodora}", "opacity", '0', { fromValue: '1'}], position: 10000, duration: 1000, easing: "easeOutCubic" },
-                { id: "eid1145", tween: [ "style", "${_Group3}", "left", '362px', { fromValue: '362px'}], position: 17000, duration: 0, easing: "easeOutQuad" },
-                { id: "eid1674", tween: [ "style", "${_Group3}", "left", '-1686px', { fromValue: '362px'}], position: 44000, duration: 12000 },
-                { id: "eid1864", tween: [ "style", "${_text_4}", "top", '1022px', { fromValue: '1022px'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1872", tween: [ "style", "${_text_4}", "top", '1092px', { fromValue: '1022px'}], position: 23000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1486", tween: [ "transform", "${_text_2}", "rotateZ", '3deg', { fromValue: '3deg'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2251", tween: [ "style", "${_Theodora}", "display", 'block', { fromValue: 'none'}], position: 4272, duration: 0, easing: "easeOutCubic" },
-                { id: "eid2030", tween: [ "style", "${_C_Pisser}", "display", 'none', { fromValue: 'none'}], position: 0, duration: 0 },
-                { id: "eid1984", tween: [ "style", "${_C_Pisser}", "display", 'block', { fromValue: 'none'}], position: 23000, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2553", tween: [ "style", "${_C_Pisser}", "display", 'none', { fromValue: 'block'}], position: 48000, duration: 0 },
-                { id: "eid2302", tween: [ "style", "${_A_trash_3}", "top", '979px', { fromValue: '979px'}], position: 44000, duration: 0 },
-                { id: "eid2552", tween: [ "style", "${_taubeCopy2}", "display", 'none', { fromValue: 'block'}], position: 48000, duration: 0 },
-                { id: "eid1525", tween: [ "style", "${_text_3}", "opacity", '0', { fromValue: '1'}], position: 17000, duration: 1250 },
-                { id: "eid1838", tween: [ "style", "${_text_3}", "left", '130px', { fromValue: '130px'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1859", tween: [ "style", "${_text_3}", "left", '558px', { fromValue: '130px'}], position: 23000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1512", tween: [ "style", "${_text_1}", "display", 'none', { fromValue: 'block'}], position: 0, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1877", tween: [ "style", "${_text_1}", "display", 'none', { fromValue: 'none'}], position: 17000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2289", tween: [ "style", "${_BG_12}", "left", '138px', { fromValue: '2092px'}], position: 44000, duration: 11000 },
-                { id: "eid2290", tween: [ "style", "${_BG_12}", "left", '-22px', { fromValue: '138px'}], position: 55000, duration: 1000 },
-                { id: "eid2531", tween: [ "style", "${_A_shoes}", "display", 'block', { fromValue: 'none'}], position: 50301, duration: 0 },
-                { id: "eid2016", tween: [ "style", "${_Group}", "left", '-114px', { fromValue: '1928px'}], position: 44000, duration: 12000 },
-                { id: "eid2116", tween: [ "style", "${_B_taube2}", "top", '961px', { fromValue: '1761px'}], position: 23000, duration: 5000, easing: "easeInOutQuad" },
-                { id: "eid2263", tween: [ "style", "${_A_trash_2}", "display", 'block', { fromValue: 'none'}], position: 23000, duration: 0 },
-                { id: "eid2557", tween: [ "style", "${_A_trash_2}", "display", 'none', { fromValue: 'block'}], position: 45362, duration: 0 },
-                { id: "eid2528", tween: [ "style", "${_A_tv}", "top", '854px', { fromValue: '854px'}], position: 55000, duration: 0 },
-                { id: "eid2381", tween: [ "style", "${_dust_icon_invert4}", "display", 'none', { fromValue: 'block'}], position: 4272, duration: 0, easing: "easeInQuad" },
-                { id: "eid2571", tween: [ "style", "${_trashBin}", "left", '1751px', { fromValue: '2108px'}], position: 53000, duration: 2000 },
-                { id: "eid2572", tween: [ "style", "${_trashBin}", "left", '1591px', { fromValue: '1751px'}], position: 55000, duration: 1000 },
-                { id: "eid1052", tween: [ "transform", "${_H_walk}", "scaleX", '0.98125', { fromValue: '0.98125'}], position: 5000, duration: 0 },
-                { id: "eid2530", tween: [ "style", "${_A_teddy}", "display", 'block', { fromValue: 'none'}], position: 48000, duration: 0 },
-                { id: "eid1670", tween: [ "style", "${_taube}", "left", '-482px', { fromValue: '1537px'}], position: 44000, duration: 12000 },
-                { id: "eid2206", tween: [ "style", "${_taube}", "left", '-512px', { fromValue: '-482px'}], position: 56000, duration: 69, easing: "easeInOutQuad" },
-                { id: "eid2527", tween: [ "style", "${_A_shoes}", "top", '1036px', { fromValue: '1036px'}], position: 55000, duration: 0 },
-                { id: "eid1515", tween: [ "style", "${_text_4}", "display", 'none', { fromValue: 'block'}], position: 0, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1842", tween: [ "style", "${_text_4}", "display", 'none', { fromValue: 'none'}], position: 13409, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1880", tween: [ "style", "${_text_4}", "display", 'block', { fromValue: 'none'}], position: 17000, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1883", tween: [ "style", "${_text_4}", "display", 'none', { fromValue: 'block'}], position: 18250, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1053", tween: [ "transform", "${_H_walk}", "scaleY", '0.98125', { fromValue: '0.98125'}], position: 5000, duration: 0 },
-                { id: "eid2109", tween: [ "style", "${_B_taube2}", "display", 'block', { fromValue: 'none'}], position: 23000, duration: 0 },
-                { id: "eid2558", tween: [ "style", "${_B_taube2}", "display", 'none', { fromValue: 'block'}], position: 53695, duration: 0 },
-                { id: "eid2264", tween: [ "style", "${_A_trash_2}", "left", '-79px', { fromValue: '-79px'}], position: 23000, duration: 0 },
-                { id: "eid2294", tween: [ "style", "${_A_trash_2}", "left", '-827px', { fromValue: '-79px'}], position: 44000, duration: 3340 },
-                { id: "eid2589", trigger: [ function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['play', '${_Theodora}', [] ], ""], position: 5000 },
-                { id: "eid2592", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_SFX_rumble}', [] ], ""], position: 10000 },
-                { id: "eid1710", trigger: [ function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['play', '${_H_bag_appear}', ['still'] ], ""], position: 55454.980961894 }            ]
-        }
-    }
-},
-"Theodora": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'Name_sprite',
-                    type: 'image',
-                    rect: ['42px', '11px', '1255px', '1800px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/Name_sprite.png', '0px', '0px']
-                },
-                {
-                    id: 'Name_spriteCopy',
-                    type: 'image',
-                    rect: ['42px', '11px', '1255px', '1800px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/Name_sprite.png', '0px', '0px']
-                },
-                {
-                    rect: ['0px', '-34px', '1317px', '394px', 'auto', 'auto'],
-                    id: 'Name_00072',
-                    opacity: 0.065040650406504,
-                    type: 'image',
-                    fill: ['rgba(0,0,0,0)', 'images/Name_0007.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Name_00072}": [
-                ["style", "top", '-34px'],
-                ["style", "opacity", '0.01'],
-                ["style", "left", '0px'],
-                ["subproperty", "filter.invert", '1']
-            ],
-            "${_Name_sprite}": [
-                ["style", "top", '-1177px'],
-                ["style", "opacity", '0.46'],
-                ["style", "left", '39px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '299px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '1317px']
-            ],
-            "${_Name_spriteCopy}": [
-                ["style", "top", '3px'],
-                ["style", "opacity", '0.47'],
-                ["style", "left", '39px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "name_opaque": 625,
-                "full_opacity": 1209,
-                "fade": 2000
-            },
-            timeline: [
-                { id: "eid168", tween: [ "style", "${_Name_spriteCopy}", "top", '3px', { fromValue: '3px'}], position: 0, duration: 0 },
-                { id: "eid169", tween: [ "style", "${_Name_spriteCopy}", "top", '-290px', { fromValue: '3px'}], position: 100, duration: 0 },
-                { id: "eid170", tween: [ "style", "${_Name_spriteCopy}", "top", '-588px', { fromValue: '-290px'}], position: 200, duration: 0 },
-                { id: "eid171", tween: [ "style", "${_Name_spriteCopy}", "top", '-891px', { fromValue: '-588px'}], position: 300, duration: 0 },
-                { id: "eid172", tween: [ "style", "${_Name_spriteCopy}", "top", '-1177px', { fromValue: '-891px'}], position: 400, duration: 0 },
-                { id: "eid173", tween: [ "style", "${_Name_spriteCopy}", "top", '-1476px', { fromValue: '-1177px'}], position: 500, duration: 0 },
-                { id: "eid174", tween: [ "style", "${_Name_spriteCopy}", "top", '3px', { fromValue: '-1476px'}], position: 625, duration: 0 },
-                { id: "eid175", tween: [ "style", "${_Name_spriteCopy}", "top", '-290px', { fromValue: '3px'}], position: 725, duration: 0 },
-                { id: "eid176", tween: [ "style", "${_Name_spriteCopy}", "top", '-588px', { fromValue: '-290px'}], position: 825, duration: 0 },
-                { id: "eid177", tween: [ "style", "${_Name_spriteCopy}", "top", '-891px', { fromValue: '-588px'}], position: 925, duration: 0 },
-                { id: "eid178", tween: [ "style", "${_Name_spriteCopy}", "top", '-1177px', { fromValue: '-891px'}], position: 1025, duration: 0 },
-                { id: "eid179", tween: [ "style", "${_Name_spriteCopy}", "top", '-1476px', { fromValue: '-1177px'}], position: 1125, duration: 0 },
-                { id: "eid180", tween: [ "style", "${_Name_spriteCopy}", "top", '3px', { fromValue: '-1476px'}], position: 1209, duration: 0 },
-                { id: "eid181", tween: [ "style", "${_Name_spriteCopy}", "top", '-290px', { fromValue: '3px'}], position: 1309, duration: 0 },
-                { id: "eid182", tween: [ "style", "${_Name_spriteCopy}", "top", '-588px', { fromValue: '-290px'}], position: 1409, duration: 0 },
-                { id: "eid183", tween: [ "style", "${_Name_spriteCopy}", "top", '-891px', { fromValue: '-588px'}], position: 1509, duration: 0 },
-                { id: "eid184", tween: [ "style", "${_Name_spriteCopy}", "top", '-1177px', { fromValue: '-891px'}], position: 1609, duration: 0 },
-                { id: "eid185", tween: [ "style", "${_Name_spriteCopy}", "top", '-1476px', { fromValue: '-1177px'}], position: 1709, duration: 0 },
-                { id: "eid188", tween: [ "style", "${_Name_sprite}", "top", '-1177px', { fromValue: '-1177px'}], position: 0, duration: 0 },
-                { id: "eid189", tween: [ "style", "${_Name_sprite}", "top", '-1476px', { fromValue: '-1177px'}], position: 100, duration: 0 },
-                { id: "eid6", tween: [ "style", "${_Name_sprite}", "top", '3px', { fromValue: '-1476px'}], position: 200, duration: 0 },
-                { id: "eid7", tween: [ "style", "${_Name_sprite}", "top", '-290px', { fromValue: '3px'}], position: 300, duration: 0 },
-                { id: "eid8", tween: [ "style", "${_Name_sprite}", "top", '-588px', { fromValue: '-285px'}], position: 400, duration: 0 },
-                { id: "eid9", tween: [ "style", "${_Name_sprite}", "top", '-891px', { fromValue: '-585px'}], position: 500, duration: 0 },
-                { id: "eid190", tween: [ "style", "${_Name_sprite}", "top", '-1177px', { fromValue: '-891px'}], position: 625, duration: 0 },
-                { id: "eid191", tween: [ "style", "${_Name_sprite}", "top", '-1476px', { fromValue: '-1177px'}], position: 725, duration: 0 },
-                { id: "eid192", tween: [ "style", "${_Name_sprite}", "top", '3px', { fromValue: '-1476px'}], position: 825, duration: 0 },
-                { id: "eid193", tween: [ "style", "${_Name_sprite}", "top", '-290px', { fromValue: '3px'}], position: 925, duration: 0 },
-                { id: "eid194", tween: [ "style", "${_Name_sprite}", "top", '-588px', { fromValue: '-290px'}], position: 1025, duration: 0 },
-                { id: "eid195", tween: [ "style", "${_Name_sprite}", "top", '-891px', { fromValue: '-588px'}], position: 1125, duration: 0 },
-                { id: "eid196", tween: [ "style", "${_Name_sprite}", "top", '3px', { fromValue: '-891px'}], position: 1209, duration: 0 },
-                { id: "eid197", tween: [ "style", "${_Name_sprite}", "top", '-1476px', { fromValue: '-1177px'}], position: 1309, duration: 0 },
-                { id: "eid198", tween: [ "style", "${_Name_sprite}", "top", '3px', { fromValue: '-1476px'}], position: 1409, duration: 0 },
-                { id: "eid199", tween: [ "style", "${_Name_sprite}", "top", '-290px', { fromValue: '3px'}], position: 1509, duration: 0 },
-                { id: "eid200", tween: [ "style", "${_Name_sprite}", "top", '-588px', { fromValue: '-290px'}], position: 1609, duration: 0 },
-                { id: "eid201", tween: [ "style", "${_Name_sprite}", "top", '-891px', { fromValue: '-588px'}], position: 1709, duration: 0 },
-                { id: "eid1142", tween: [ "subproperty", "${_Name_00072}", "filter.invert", '1', { fromValue: '1'}], position: 1509, duration: 0, easing: "easeOutQuad" },
-                { id: "eid216", tween: [ "style", "${_Name_sprite}", "opacity", '0.15', { fromValue: '0.46'}], position: 0, duration: 300, easing: "easeInOutQuad" },
-                { id: "eid217", tween: [ "style", "${_Name_sprite}", "opacity", '0.46', { fromValue: '0.15'}], position: 300, duration: 325, easing: "easeInOutQuad" },
-                { id: "eid130", tween: [ "style", "${_Name_sprite}", "opacity", '0.4', { fromValue: '0.46'}], position: 625, duration: 584, easing: "easeInOutQuad" },
-                { id: "eid1334", tween: [ "style", "${_Name_sprite}", "opacity", '0', { fromValue: '0.4'}], position: 2000, duration: 3000, easing: "easeInOutQuad" },
-                { id: "eid214", tween: [ "style", "${_Name_spriteCopy}", "opacity", '0.15', { fromValue: '0.47'}], position: 0, duration: 300, easing: "easeInOutQuad" },
-                { id: "eid215", tween: [ "style", "${_Name_spriteCopy}", "opacity", '0.47', { fromValue: '0.15'}], position: 300, duration: 325, easing: "easeInOutQuad" },
-                { id: "eid187", tween: [ "style", "${_Name_spriteCopy}", "opacity", '0.4', { fromValue: '0.47'}], position: 625, duration: 584, easing: "easeInOutQuad" },
-                { id: "eid1333", tween: [ "style", "${_Name_spriteCopy}", "opacity", '0', { fromValue: '0.4'}], position: 2000, duration: 3000, easing: "easeInOutQuad" },
-                { id: "eid54", tween: [ "style", "${_Name_00072}", "opacity", '0.01', { fromValue: '0.01'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid129", tween: [ "style", "${_Name_00072}", "opacity", '1', { fromValue: '0.01'}], position: 625, duration: 584, easing: "easeOutQuad" },
-                { id: "eid1332", tween: [ "style", "${_Name_00072}", "opacity", '0', { fromValue: '1'}], position: 2000, duration: 3000, easing: "easeInOutQuad" }            ]
-        }
-    }
-},
-"cloud_2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_cloud2',
-                    type: 'image',
-                    rect: ['0px', '0px', '500px', '1200px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_cloud.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_cloud2}": [
-                ["style", "left", '0px'],
-                ["style", "top", '-1000px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '200px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '500px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 600,
-            autoPlay: true,
-            timeline: [
-                { id: "eid879", tween: [ "style", "${_ss_cloud2}", "top", '-1000px', { fromValue: '-1000px'}], position: 33, duration: 0 },
-                { id: "eid880", tween: [ "style", "${_ss_cloud2}", "top", '0px', { fromValue: '-1000px'}], position: 133, duration: 0 },
-                { id: "eid17", tween: [ "style", "${_ss_cloud2}", "top", '-200px', { fromValue: '0px'}], position: 233, duration: 0 },
-                { id: "eid18", tween: [ "style", "${_ss_cloud2}", "top", '-400px', { fromValue: '-200px'}], position: 333, duration: 0 },
-                { id: "eid19", tween: [ "style", "${_ss_cloud2}", "top", '-600px', { fromValue: '-400px'}], position: 433, duration: 0 },
-                { id: "eid20", tween: [ "style", "${_ss_cloud2}", "top", '-800px', { fromValue: '-600px'}], position: 533, duration: 0 }            ]
-        }
-    }
-},
-"cloud_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_cloud2',
-                    type: 'image',
-                    rect: ['0px', '0px', '500px', '1200px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_cloud.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_cloud2}": [
-                ["style", "left", '0px'],
-                ["style", "top", '-800px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '200px'],
-                ["style", "width", '500px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 600,
-            autoPlay: true,
-            timeline: [
-                { id: "eid376", tween: [ "style", "${_ss_cloud2}", "top", '-800px', { fromValue: '-800px'}], position: 67, duration: 0 },
-                { id: "eid377", tween: [ "style", "${_ss_cloud2}", "top", '-1000px', { fromValue: '-800px'}], position: 167, duration: 0 },
-                { id: "eid16", tween: [ "style", "${_ss_cloud2}", "top", '0px', { fromValue: '-1000px'}], position: 267, duration: 0 },
-                { id: "eid17", tween: [ "style", "${_ss_cloud2}", "top", '-200px', { fromValue: '0px'}], position: 367, duration: 0 },
-                { id: "eid18", tween: [ "style", "${_ss_cloud2}", "top", '-400px', { fromValue: '-200px'}], position: 467, duration: 0 },
-                { id: "eid19", tween: [ "style", "${_ss_cloud2}", "top", '-600px', { fromValue: '-400px'}], position: 567, duration: 0 }            ]
-        }
-    }
-},
-"taube": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_taube_12',
-                    type: 'image',
-                    rect: ['0px', '0px', '2450px', '500px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_taube_1.png', '0px', '0px']
-                },
-                {
-                    type: 'audio',
-                    source: ['media/SFX_pigeon.mp3'],
-                    id: 'SFX_pigeon',
-                    rect: ['54', '40', '320px', '45px', 'auto', 'auto'],
-                    tag: 'audio'
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_taube_12}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '0px']
-            ],
-            "${_SFX_pigeon}": [
-                ["property", "volume", '0']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '500px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '350px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 1292,
-            autoPlay: true,
-            labels: {
-                "taube_fett": 292
-            },
-            timeline: [
-                { id: "eid66", tween: [ "style", "${_ss_taube_12}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid67", tween: [ "style", "${_ss_taube_12}", "left", '-350px', { fromValue: '0px'}], position: 83, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid68", tween: [ "style", "${_ss_taube_12}", "left", '-700px', { fromValue: '-350px'}], position: 167, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid69", tween: [ "style", "${_ss_taube_12}", "left", '-1050px', { fromValue: '-700px'}], position: 292, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid70", tween: [ "style", "${_ss_taube_12}", "left", '-1400px', { fromValue: '-1050px'}], position: 375, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid71", tween: [ "style", "${_ss_taube_12}", "left", '-1750px', { fromValue: '-1400px'}], position: 459, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid72", tween: [ "style", "${_ss_taube_12}", "left", '-2100px', { fromValue: '-1750px'}], position: 542, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid73", tween: [ "style", "${_ss_taube_12}", "left", '-1400px', { fromValue: '-2100px'}], position: 625, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid74", tween: [ "style", "${_ss_taube_12}", "left", '-1750px', { fromValue: '-1400px'}], position: 709, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid75", tween: [ "style", "${_ss_taube_12}", "left", '-2100px', { fromValue: '-1750px'}], position: 792, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid76", tween: [ "style", "${_ss_taube_12}", "left", '-1400px', { fromValue: '-2100px'}], position: 875, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid77", tween: [ "style", "${_ss_taube_12}", "left", '-1750px', { fromValue: '-1400px'}], position: 959, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid78", tween: [ "style", "${_ss_taube_12}", "left", '-2100px', { fromValue: '-1750px'}], position: 1042, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid79", tween: [ "style", "${_ss_taube_12}", "left", '-1400px', { fromValue: '-2100px'}], position: 1125, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid80", tween: [ "style", "${_ss_taube_12}", "left", '-1750px', { fromValue: '-1400px'}], position: 1209, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid81", tween: [ "style", "${_ss_taube_12}", "left", '-2100px', { fromValue: '-1750px'}], position: 1292, duration: 0, easing: "easeInOutQuad" }            ]
-        }
-    }
-},
-"cloud_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_cloud2',
-                    type: 'image',
-                    rect: ['0px', '0px', '500px', '1200px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_cloud.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_cloud2}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '200px'],
-                ["style", "width", '500px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 600,
-            autoPlay: true,
-            timeline: [
-                { id: "eid881", tween: [ "style", "${_ss_cloud2}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid882", tween: [ "style", "${_ss_cloud2}", "top", '-200px', { fromValue: '0px'}], position: 100, duration: 0 },
-                { id: "eid18", tween: [ "style", "${_ss_cloud2}", "top", '-400px', { fromValue: '-200px'}], position: 200, duration: 0 },
-                { id: "eid19", tween: [ "style", "${_ss_cloud2}", "top", '-600px', { fromValue: '-400px'}], position: 299, duration: 0 },
-                { id: "eid20", tween: [ "style", "${_ss_cloud2}", "top", '-800px', { fromValue: '-600px'}], position: 399, duration: 0 },
-                { id: "eid21", tween: [ "style", "${_ss_cloud2}", "top", '-1000px', { fromValue: '-800px'}], position: 499, duration: 0 }            ]
-        }
-    }
-},
-"cloud_cluster": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'cloud_3',
-                    type: 'rect',
-                    rect: ['272px', '12px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_22',
-                    type: 'rect',
-                    rect: ['574px', '84px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_12',
-                    type: 'rect',
-                    rect: ['30px', '38px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_3Copy',
-                    type: 'rect',
-                    rect: ['272px', '12px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_22Copy',
-                    type: 'rect',
-                    rect: ['142px', '102px', 'auto', 'auto', 'auto', 'auto'],
-                    transform: [[0, 0], [], [], ['-1']]
-                },
-                {
-                    id: 'cloud_12Copy',
-                    type: 'rect',
-                    rect: ['470px', '16px', 'auto', 'auto', 'auto', 'auto'],
-                    transform: [[0, 0], [], [], ['-1']]
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'cloud_12Copy',
-                symbolName: 'cloud_1',
-                autoPlay: {
+        };
 
-               }
-            },
-            {
-                id: 'cloud_22',
-                symbolName: 'cloud_2',
-                autoPlay: {
+    AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-               }
-            },
-            {
-                id: 'cloud_3Copy',
-                symbolName: 'cloud_3',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_12',
-                symbolName: 'cloud_1',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_3',
-                symbolName: 'cloud_3',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_22Copy',
-                symbolName: 'cloud_2',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_cloud_3}": [
-                ["style", "top", '0px'],
-                ["style", "left", '242px'],
-                ["transform", "scaleY", '1'],
-                ["transform", "scaleX", '1']
-            ],
-            "${_cloud_12}": [
-                ["style", "top", '38px'],
-                ["style", "left", '30px'],
-                ["transform", "scaleY", '1'],
-                ["transform", "scaleX", '1']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '302px'],
-                ["style", "width", '1104px']
-            ],
-            "${_cloud_12Copy}": [
-                ["style", "top", '16px'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '470px'],
-                ["transform", "scaleX", '-1']
-            ],
-            "${_cloud_3Copy}": [
-                ["style", "top", '100px'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '362px'],
-                ["transform", "scaleX", '-1']
-            ],
-            "${_cloud_22Copy}": [
-                ["style", "top", '102px'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '142px'],
-                ["transform", "scaleX", '-1']
-            ],
-            "${_cloud_22}": [
-                ["style", "top", '84px'],
-                ["style", "left", '574px'],
-                ["transform", "scaleY", '1'],
-                ["transform", "scaleX", '1']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 10000,
-            autoPlay: true,
-            labels: {
-                "start": 0
-            },
-            timeline: [
-                { id: "eid876", tween: [ "style", "${_cloud_3}", "left", '252px', { fromValue: '242px'}], position: 0, duration: 0 },
-                { id: "eid891", tween: [ "style", "${_cloud_3}", "left", '262px', { fromValue: '252px'}], position: 304, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2169", tween: [ "transform", "${_cloud_22Copy}", "scaleY", '1', { fromValue: '1'}], position: 22, duration: 0 },
-                { id: "eid2178", tween: [ "transform", "${_cloud_12Copy}", "scaleX", '-1.15', { fromValue: '-1'}], position: 0, duration: 2000 },
-                { id: "eid2184", tween: [ "transform", "${_cloud_12Copy}", "scaleX", '-0.9', { fromValue: '-1.15'}], position: 2000, duration: 2000 },
-                { id: "eid2186", tween: [ "transform", "${_cloud_12Copy}", "scaleX", '-1.15', { fromValue: '-0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2189", tween: [ "transform", "${_cloud_12Copy}", "scaleX", '-1', { fromValue: '-1.15'}], position: 7000, duration: 3000 },
-                { id: "eid2192", tween: [ "transform", "${_cloud_12}", "scaleX", '1.14999', { fromValue: '1'}], position: 0, duration: 2000 },
-                { id: "eid2193", tween: [ "transform", "${_cloud_12}", "scaleX", '0.9', { fromValue: '1.14999'}], position: 2000, duration: 2000 },
-                { id: "eid2194", tween: [ "transform", "${_cloud_12}", "scaleX", '1.14999', { fromValue: '0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2195", tween: [ "transform", "${_cloud_12}", "scaleX", '1', { fromValue: '1.14999'}], position: 7000, duration: 3000 },
-                { id: "eid2168", tween: [ "transform", "${_cloud_12Copy}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0 },
-                { id: "eid2179", tween: [ "transform", "${_cloud_3Copy}", "scaleX", '-1.15', { fromValue: '-1'}], position: 0, duration: 2000 },
-                { id: "eid2183", tween: [ "transform", "${_cloud_3Copy}", "scaleX", '-0.9', { fromValue: '-1.15'}], position: 2000, duration: 2022 },
-                { id: "eid2188", tween: [ "transform", "${_cloud_3Copy}", "scaleX", '-1.15', { fromValue: '-0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2191", tween: [ "transform", "${_cloud_3Copy}", "scaleX", '-1', { fromValue: '-1.15'}], position: 7000, duration: 3000 },
-                { id: "eid865", tween: [ "style", "${_cloud_3}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid890", tween: [ "style", "${_cloud_3}", "top", '10px', { fromValue: '0px'}], position: 304, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid875", tween: [ "style", "${_cloud_3Copy}", "left", '342px', { fromValue: '362px'}], position: 0, duration: 0 },
-                { id: "eid892", tween: [ "style", "${_cloud_3Copy}", "left", '332px', { fromValue: '342px'}], position: 304, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2200", tween: [ "transform", "${_cloud_3}", "scaleX", '1.14999', { fromValue: '1'}], position: 0, duration: 2000 },
-                { id: "eid2201", tween: [ "transform", "${_cloud_3}", "scaleX", '0.9', { fromValue: '1.14999'}], position: 2000, duration: 2000 },
-                { id: "eid2202", tween: [ "transform", "${_cloud_3}", "scaleX", '1.14999', { fromValue: '0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2203", tween: [ "transform", "${_cloud_3}", "scaleX", '1', { fromValue: '1.14999'}], position: 7000, duration: 3000 },
-                { id: "eid2167", tween: [ "transform", "${_cloud_3}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0 },
-                { id: "eid864", tween: [ "transform", "${_cloud_3Copy}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0 },
-                { id: "eid2177", tween: [ "transform", "${_cloud_22Copy}", "scaleX", '-1.15', { fromValue: '-1'}], position: 0, duration: 2000 },
-                { id: "eid2185", tween: [ "transform", "${_cloud_22Copy}", "scaleX", '-0.9', { fromValue: '-1.15'}], position: 2000, duration: 2000 },
-                { id: "eid2187", tween: [ "transform", "${_cloud_22Copy}", "scaleX", '-1.15', { fromValue: '-0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2190", tween: [ "transform", "${_cloud_22Copy}", "scaleX", '-1', { fromValue: '-1.15'}], position: 7000, duration: 3000 },
-                { id: "eid2196", tween: [ "transform", "${_cloud_22}", "scaleX", '1.14999', { fromValue: '1'}], position: 0, duration: 2000 },
-                { id: "eid2197", tween: [ "transform", "${_cloud_22}", "scaleX", '0.9', { fromValue: '1.14999'}], position: 2000, duration: 2000 },
-                { id: "eid2198", tween: [ "transform", "${_cloud_22}", "scaleX", '1.14999', { fromValue: '0.9'}], position: 4000, duration: 3000 },
-                { id: "eid2199", tween: [ "transform", "${_cloud_22}", "scaleX", '1', { fromValue: '1.14999'}], position: 7000, duration: 3000 },
-                { id: "eid862", tween: [ "style", "${_cloud_3Copy}", "top", '100px', { fromValue: '100px'}], position: 0, duration: 0 },
-                { id: "eid893", tween: [ "style", "${_cloud_3Copy}", "top", '91px', { fromValue: '100px'}], position: 304, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2171", tween: [ "transform", "${_cloud_22}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0 },
-                { id: "eid2170", tween: [ "transform", "${_cloud_12}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"Title_Intro": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'cloud_clusterCopy4',
-                    type: 'rect',
-                    autoOrient: false,
-                    rect: ['934px', '1214px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_clusterCopy2',
-                    type: 'rect',
-                    autoOrient: false,
-                    rect: ['-1113px', '900px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_cluster',
-                    type: 'rect',
-                    autoOrient: 'true',
-                    rect: ['2074px', '561px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_clusterCopy3',
-                    type: 'rect',
-                    autoOrient: false,
-                    rect: ['-884px', '186px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'cloud_clusterCopy',
-                    type: 'rect',
-                    autoOrient: false,
-                    rect: ['1732px', '-91px', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'cloud_clusterCopy4',
-                symbolName: 'cloud_cluster',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_clusterCopy2',
-                symbolName: 'cloud_cluster',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_clusterCopy',
-                symbolName: 'cloud_cluster',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_cluster',
-                symbolName: 'cloud_cluster',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'cloud_clusterCopy3',
-                symbolName: 'cloud_cluster',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_cloud_clusterCopy2}": [
-                ["transform", "scaleX", '1.18114'],
-                ["transform", "scaleY", '-1.1411'],
-                ["motion", "location", '-352.91926759883px 1051px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_cloud_clusterCopy3}": [
-                ["motion", "location", '618.09687666207px 336.78108722306px'],
-                ["transform", "scaleY", '-0.58423'],
-                ["transform", "scaleX", '0.58423']
-            ],
-            "${_cloud_clusterCopy4}": [
-                ["transform", "scaleX", '0.43478'],
-                ["transform", "scaleY", '0.43478'],
-                ["motion", "location", '1473.7442404852px 1364.6518269183px']
-            ],
-            "${_cloud_cluster}": [
-                ["style", "top", '267px'],
-                ["transform", "scaleY", '-0.86322'],
-                ["transform", "scaleX", '-0.86322'],
-                ["style", "left", '3458px'],
-                ["motion", "location", '1027.375px 711.75px']
-            ],
-            "${_cloud_clusterCopy}": [
-                ["style", "top", '267px'],
-                ["transform", "scaleY", '1.0317'],
-                ["transform", "scaleX", '1.0317'],
-                ["style", "left", '3276px'],
-                ["motion", "location", '2284.05px 60.25px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 20000,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid1112", tween: [ "transform", "${_cloud_clusterCopy4}", "scaleY", '0.43478', { fromValue: '0.43478'}], position: 0, duration: 0 },
-                { id: "eid1828", tween: [ "transform", "${_cloud_clusterCopy}", "scaleY", '1.0317', { fromValue: '1.0317'}], position: 0, duration: 0 },
-                { id: "eid1077", tween: [ "motion", "${_cloud_clusterCopy3}", [[618.1, 336.78, 2349.22, 0],[2383.63, 336.78, 0, 0]]], position: 0, duration: 13000 },
-                { id: "eid1080", tween: [ "motion", "${_cloud_clusterCopy3}", [[-331.12, 336.78, 0, 0],[618.1, 336.78, 0, 0]]], position: 13386, duration: 6614 },
-                { id: "eid1061", tween: [ "transform", "${_cloud_clusterCopy3}", "scaleX", '0.58423', { fromValue: '0.58423'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid1086", tween: [ "motion", "${_cloud_cluster}", [[1027.38, 711.75, -2397.37, 0],[-570.87, 711.75, 0, 0]]], position: 0, duration: 10000 },
-                { id: "eid1089", tween: [ "motion", "${_cloud_cluster}", [[2599.88, 711.75, 0, 0],[1027.38, 711.75, 0, 0]]], position: 10335, duration: 9665 },
-                { id: "eid1090", tween: [ "motion", "${_cloud_clusterCopy2}", [[-352.92, 1051, 2093.13, 0],[2765, 1051, 0, 0]]], position: 0, duration: 16341 },
-                { id: "eid1093", tween: [ "motion", "${_cloud_clusterCopy2}", [[-678.75, 1051, 0, 0],[-352.92, 1051, 0, 0]]], position: 17000, duration: 3000 },
-                { id: "eid1062", tween: [ "transform", "${_cloud_clusterCopy3}", "scaleY", '-0.58423', { fromValue: '-0.58423'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2165", tween: [ "transform", "${_cloud_clusterCopy}", "scaleX", '1.0317', { fromValue: '1.0317'}], position: 0, duration: 0 },
-                { id: "eid1115", tween: [ "motion", "${_cloud_clusterCopy}", [[2284.05, 60.25, 0, 0],[-645.75, 60.25, 0, 0]]], position: 0, duration: 17537 },
-                { id: "eid1121", tween: [ "motion", "${_cloud_clusterCopy}", [[2775.88, 24.25, 0, 0],[2279.13, 24.25, 0, 0]]], position: 18000, duration: 2000 },
-                { id: "eid1830", tween: [ "transform", "${_cloud_clusterCopy2}", "scaleX", '0.95', { fromValue: '1.18114'}], position: 0, duration: 0 },
-                { id: "eid1831", tween: [ "transform", "${_cloud_clusterCopy2}", "scaleY", '-0.95', { fromValue: '-1.1411'}], position: 0, duration: 0 },
-                { id: "eid1821", tween: [ "transform", "${_cloud_cluster}", "scaleY", '-0.86322', { fromValue: '-0.86322'}], position: 0, duration: 0 },
-                { id: "eid1095", tween: [ "motion", "${_cloud_clusterCopy4}", [[1473.74, 1364.65, -2265.5, 0],[-262.13, 1364.65, 0, 0]]], position: 0, duration: 13386 },
-                { id: "eid1098", tween: [ "motion", "${_cloud_clusterCopy4}", [[2288, 1364.65, 0, 0],[1473.74, 1364.65, 0, 0]]], position: 13629, duration: 6371 },
-                { id: "eid1820", tween: [ "transform", "${_cloud_cluster}", "scaleX", '-0.86322', { fromValue: '-0.86322'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"plasticbag": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_plasticbag',
-                    type: 'image',
-                    rect: ['0px', '0px', '1200px', '511px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_plasticbag.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_plasticbag}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "overflow", 'visible']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '511px'],
-                ["style", "width", '400px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 867,
-            autoPlay: true,
-            timeline: [
-                { id: "eid918", tween: [ "style", "${_ss_plasticbag}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid919", tween: [ "style", "${_ss_plasticbag}", "left", '-400px', { fromValue: '0px'}], position: 67, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid920", tween: [ "style", "${_ss_plasticbag}", "left", '-800px', { fromValue: '-400px'}], position: 333, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid921", tween: [ "style", "${_ss_plasticbag}", "left", '0px', { fromValue: '-800px'}], position: 400, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid922", tween: [ "style", "${_ss_plasticbag}", "left", '-400px', { fromValue: '0px'}], position: 600, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid941", tween: [ "style", "${_ss_plasticbag}", "left", '-800px', { fromValue: '800px'}], position: 667, duration: 33, easing: "easeInOutQuad" },
-                { id: "eid943", tween: [ "style", "${_ss_plasticbag}", "left", '-800px', { fromValue: '-800px'}], position: 733, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid925", tween: [ "style", "${_ss_plasticbag}", "left", '-800px', { fromValue: '-800px'}], position: 800, duration: 0, easing: "easeInOutQuad" }            ]
-        }
-    }
-},
-"H_still_leftright": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_still_leftright_500px',
-                    type: 'image',
-                    rect: ['0px', '5px', '1200px', '500px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_still_leftright_500px.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '500px'],
-                ["style", "width", '172px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_ss_still_leftright_500px}": [
-                ["style", "top", '5px'],
-                ["style", "left", '-1px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 15333,
-            autoPlay: true,
-            labels: {
-                "start": 0
-            },
-            timeline: [
-                { id: "eid947", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-173px', { fromValue: '-1px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid950", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-515px', { fromValue: '-348px'}], position: 467, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid952", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-859px', { fromValue: '-687px'}], position: 533, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid953", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-1028px', { fromValue: '-858px'}], position: 600, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2305", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-515px', { fromValue: '-1028px'}], position: 1647, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2306", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-348px', { fromValue: '-515px'}], position: 1712, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2307", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-173px', { fromValue: '-348px'}], position: 1779, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2384", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-515px', { fromValue: '-173px'}], position: 3867, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2385", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-859px', { fromValue: '-515px'}], position: 3933, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2386", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-1028px', { fromValue: '-859px'}], position: 4000, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2387", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-515px', { fromValue: '-1028px'}], position: 7567, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2388", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-348px', { fromValue: '-515px'}], position: 7632, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2389", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-173px', { fromValue: '-348px'}], position: 7699, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2390", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-515px', { fromValue: '-173px'}], position: 8867, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2391", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-859px', { fromValue: '-515px'}], position: 8933, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2392", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-1028px', { fromValue: '-859px'}], position: 9000, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2393", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-515px', { fromValue: '-1028px'}], position: 13000, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2394", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-348px', { fromValue: '-515px'}], position: 13065, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid2395", tween: [ "style", "${_ss_still_leftright_500px}", "left", '-173px', { fromValue: '-348px'}], position: 13132, duration: 0, easing: "easeInOutQuad" }            ]
-        }
-    }
-},
-"H_bag_appear": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_bag_appear_576px',
-                    type: 'image',
-                    rect: ['0px', '0px', '7140px', '1152px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_bag_appear_576px.png', '0px', '0px']
-                },
-                {
-                    type: 'rect',
-                    id: 'Rectangle2',
-                    stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                    rect: ['-2px', '2px', '516px', '584px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,1)']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Rectangle2}": [
-                ["style", "opacity", '0']
-            ],
-            "${_ss_bag_appear_576px}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '576px'],
-                ["style", "width", '510px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 1733,
-            autoPlay: false,
-            labels: {
-                "still": 1533
-            },
-            timeline: [
-                { id: "eid969", tween: [ "style", "${_ss_bag_appear_576px}", "top", '-576px', { fromValue: '0px'}], position: 933, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid954", tween: [ "style", "${_ss_bag_appear_576px}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid955", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-510px', { fromValue: '0px'}], position: 67, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid956", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-1020px', { fromValue: '-510px'}], position: 133, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid957", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-1530px', { fromValue: '-1020px'}], position: 200, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid958", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-2040px', { fromValue: '-1530px'}], position: 267, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid959", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-2550px', { fromValue: '2040px'}], position: 333, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid960", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-3060px', { fromValue: '-2550px'}], position: 400, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid961", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-3570px', { fromValue: '-3060px'}], position: 467, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid962", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-4080px', { fromValue: '-3570px'}], position: 533, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid963", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-4590px', { fromValue: '4080px'}], position: 600, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid964", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-5100px', { fromValue: '-4590px'}], position: 667, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid965", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-5610px', { fromValue: '-5100px'}], position: 733, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid966", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-6120px', { fromValue: '-5610px'}], position: 800, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid967", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-6630px', { fromValue: '-6120px'}], position: 867, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid970", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-6630px', { fromValue: '-6630px'}], position: 933, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid971", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-6120px', { fromValue: '-6630px'}], position: 1000, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid972", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-5610px', { fromValue: '-6120px'}], position: 1067, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid973", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-5100px', { fromValue: '-5610px'}], position: 1133, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid974", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-4590px', { fromValue: '-5100px'}], position: 1200, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid975", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-4080px', { fromValue: '-4590px'}], position: 1267, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid976", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-3580px', { fromValue: '-4080px'}], position: 1333, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid977", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-3070px', { fromValue: '-3570px'}], position: 1400, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid978", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-2560px', { fromValue: '-3055px'}], position: 1467, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid979", tween: [ "style", "${_ss_bag_appear_576px}", "left", '-2050px', { fromValue: '-2557px'}], position: 1533, duration: 0, easing: "easeInOutQuad" }            ]
-        }
-    }
-},
-"H_walk": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_H_walk3',
-                    type: 'image',
-                    rect: ['0px', '0px', '2880px', '1000px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_H_walk.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_H_walk3}": [
-                ["style", "left", '-3px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '500px'],
-                ["style", "width", '320px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 1133,
-            autoPlay: false,
-            labels: {
-                "turn": 0,
-                "loop": 267
-            },
-            timeline: [
-                { id: "eid1022", tween: [ "style", "${_ss_H_walk3}", "left", '-3px', { fromValue: '-3px'}], position: 0, duration: 0 },
-                { id: "eid1024", tween: [ "style", "${_ss_H_walk3}", "left", '-329px', { fromValue: '-3px'}], position: 67, duration: 0 },
-                { id: "eid1025", tween: [ "style", "${_ss_H_walk3}", "left", '-645px', { fromValue: '-326px'}], position: 133, duration: 0 },
-                { id: "eid1026", tween: [ "style", "${_ss_H_walk3}", "left", '-951px', { fromValue: '-638px'}], position: 200, duration: 0 },
-                { id: "eid1027", tween: [ "style", "${_ss_H_walk3}", "left", '-1266px', { fromValue: '-936px'}], position: 267, duration: 0 },
-                { id: "eid1028", tween: [ "style", "${_ss_H_walk3}", "left", '-1594px', { fromValue: '-1258px'}], position: 333, duration: 0 },
-                { id: "eid1029", tween: [ "style", "${_ss_H_walk3}", "left", '-1909px', { fromValue: '-1594px'}], position: 400, duration: 0 },
-                { id: "eid1030", tween: [ "style", "${_ss_H_walk3}", "left", '-2234px', { fromValue: '-1920px'}], position: 467, duration: 0 },
-                { id: "eid1031", tween: [ "style", "${_ss_H_walk3}", "left", '-2549px', { fromValue: '-2231px'}], position: 533, duration: 0 },
-                { id: "eid1037", tween: [ "style", "${_ss_H_walk3}", "left", '-2234px', { fromValue: '-2546px'}], position: 667, duration: 0 },
-                { id: "eid1038", tween: [ "style", "${_ss_H_walk3}", "left", '-1909px', { fromValue: '-2231px'}], position: 733, duration: 0 },
-                { id: "eid1039", tween: [ "style", "${_ss_H_walk3}", "left", '-1593px', { fromValue: '-1909px'}], position: 800, duration: 0 },
-                { id: "eid1040", tween: [ "style", "${_ss_H_walk3}", "left", '-1272px', { fromValue: '-1593px'}], position: 867, duration: 0 },
-                { id: "eid1041", tween: [ "style", "${_ss_H_walk3}", "left", '-951px', { fromValue: '-1266px'}], position: 933, duration: 0 },
-                { id: "eid1042", tween: [ "style", "${_ss_H_walk3}", "left", '-640px', { fromValue: '-951px'}], position: 1000, duration: 0 },
-                { id: "eid1043", tween: [ "style", "${_ss_H_walk3}", "left", '-308px', { fromValue: '-642px'}], position: 1067, duration: 0 },
-                { id: "eid1023", tween: [ "style", "${_ss_H_walk3}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid1036", tween: [ "style", "${_ss_H_walk3}", "top", '-500px', { fromValue: '0px'}], position: 600, duration: 0 }            ]
-        }
-    }
-},
-"bg_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'paper_bg_02',
-                    type: 'image',
-                    rect: ['0', '0', '2050px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/paper_bg_0.png', '0px', '0px']
-                },
-                {
-                    id: 'houses_bg_1',
-                    type: 'image',
-                    rect: ['201px', '110px', '1096px', '593px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/houses_bg_1.png', '0px', '0px']
-                },
-                {
-                    id: 'house_3',
-                    type: 'image',
-                    rect: ['362px', '504px', '402px', '507px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/house_3.png', '0px', '0px']
-                },
-                {
-                    id: 'house_1',
-                    type: 'image',
-                    rect: ['30px', '381px', '372px', '699px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/house_1.png', '0px', '0px']
-                },
-                {
-                    id: 'house_2',
-                    type: 'image',
-                    rect: ['1156px', '381px', '448px', '679px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/house_2.png', '0px', '0px']
-                },
-                {
-                    id: 'tree_1',
-                    type: 'image',
-                    rect: ['740px', '668px', '362px', '381px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/tree_1.png', '0px', '0px']
-                },
-                {
-                    id: 'bistro_0',
-                    type: 'image',
-                    rect: ['1586px', '720px', '492px', '355px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/bistro_0.png', '0px', '0px']
-                },
-                {
-                    id: 'BG_1',
-                    type: 'image',
-                    rect: ['160px', '150px', '2028px', '973px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/BG_1.png', '0px', '0px']
-                },
-                {
-                    id: 'BG_0',
-                    type: 'image',
-                    rect: ['0px', '973px', '4096px', '567px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/BG_0.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_houses_bg_1}": [
-                ["style", "left", '201px'],
-                ["style", "top", '110px']
-            ],
-            "${_tree_1}": [
-                ["style", "left", '740px'],
-                ["style", "top", '668px']
-            ],
-            "${_house_2}": [
-                ["style", "left", '1156px'],
-                ["style", "top", '381px']
-            ],
-            "${_BG_1}": [
-                ["style", "left", '160px'],
-                ["style", "top", '150px']
-            ],
-            "${_bistro_0}": [
-                ["style", "left", '1586px'],
-                ["style", "top", '720px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ],
-            "${_house_3}": [
-                ["style", "left", '362px'],
-                ["style", "top", '504px']
-            ],
-            "${_BG_0}": [
-                ["style", "left", '0px'],
-                ["style", "top", '973px']
-            ],
-            "${_house_1}": [
-                ["style", "left", '30px'],
-                ["style", "top", '381px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 0,
-            autoPlay: true,
-            timeline: [
-            ]
-        }
-    }
-},
-"text_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'text_01',
-                    type: 'image',
-                    rect: ['0px', '0px', '1536px', '72px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/text_01.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_text_01}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '80px'],
-                ["style", "width", '1518px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4600,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 822,
-                "fade_still": 1955,
-                "still_loop": 2222,
-                "opaque": 2822,
-                "opaque_loop": 3622,
-                "fade": 4022
-            },
-            timeline: [
-                { id: "eid2577", tween: [ "style", "${_text_01}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 822, easing: "easeInOutBounce" },
-                { id: "eid1346", tween: [ "style", "${_text_01}", "opacity", '0.21', { fromValue: '0.18'}], position: 822, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid1719", tween: [ "style", "${_text_01}", "opacity", '0.24', { fromValue: '0.21'}], position: 951, duration: 140, easing: "easeOutBounce" },
-                { id: "eid1721", tween: [ "style", "${_text_01}", "opacity", '0.19', { fromValue: '0.24'}], position: 1091, duration: 106, easing: "easeOutBounce" },
-                { id: "eid1722", tween: [ "style", "${_text_01}", "opacity", '0.16', { fromValue: '0.19'}], position: 1197, duration: 61, easing: "easeOutBounce" },
-                { id: "eid1349", tween: [ "style", "${_text_01}", "opacity", '0.21', { fromValue: '0.16'}], position: 1258, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid1723", tween: [ "style", "${_text_01}", "opacity", '0.23', { fromValue: '0.21'}], position: 1422, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid1724", tween: [ "style", "${_text_01}", "opacity", '0.25', { fromValue: '0.23'}], position: 1489, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid1351", tween: [ "style", "${_text_01}", "opacity", '0.22', { fromValue: '0.25'}], position: 1555, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid1352", tween: [ "style", "${_text_01}", "opacity", '0.18', { fromValue: '0.22'}], position: 1755, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid1354", tween: [ "style", "${_text_01}", "opacity", '0.146612', { fromValue: '0.18'}], position: 1955, duration: 96, easing: "easeInBounce" },
-                { id: "eid1355", tween: [ "style", "${_text_01}", "opacity", '0.5', { fromValue: '0.146612'}], position: 2051, duration: 171, easing: "easeOutBounce" },
-                { id: "eid1356", tween: [ "style", "${_text_01}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2222, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid1357", tween: [ "style", "${_text_01}", "opacity", '0.59', { fromValue: '0.550000'}], position: 2289, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid1358", tween: [ "style", "${_text_01}", "opacity", '0.4', { fromValue: '0.590000'}], position: 2323, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid1359", tween: [ "style", "${_text_01}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2393, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid1360", tween: [ "style", "${_text_01}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2448, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid1361", tween: [ "style", "${_text_01}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2489, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid1363", tween: [ "style", "${_text_01}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2527, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid1365", tween: [ "style", "${_text_01}", "opacity", '1', { fromValue: '0.500000'}], position: 2822, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid1368", tween: [ "style", "${_text_01}", "opacity", '1', { fromValue: '1'}], position: 3822, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1370", tween: [ "style", "${_text_01}", "opacity", '0', { fromValue: '0.5'}], position: 4022, duration: 578, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"text_2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'text_022',
-                    type: 'image',
-                    rect: ['0', '10px', '1115px', '71px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/text_02.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_text_022}": [
-                ["style", "top", '10px'],
-                ["style", "opacity", '0']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '80px'],
-                ["style", "width", '1120px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4200,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 482,
-                "fade_still": 1615,
-                "still_loop": 1882,
-                "opaque": 2482,
-                "opaque_loop": 3282,
-                "fade": 3682
-            },
-            timeline: [
-                { id: "eid2579", tween: [ "style", "${_text_022}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 482, easing: "easeInOutBounce" },
-                { id: "eid2396", tween: [ "style", "${_text_022}", "opacity", '0.21', { fromValue: '0.18'}], position: 482, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid2397", tween: [ "style", "${_text_022}", "opacity", '0.24', { fromValue: '0.21'}], position: 611, duration: 140, easing: "easeOutBounce" },
-                { id: "eid2398", tween: [ "style", "${_text_022}", "opacity", '0.19', { fromValue: '0.24'}], position: 751, duration: 106, easing: "easeOutBounce" },
-                { id: "eid2399", tween: [ "style", "${_text_022}", "opacity", '0.16', { fromValue: '0.19'}], position: 857, duration: 61, easing: "easeOutBounce" },
-                { id: "eid2400", tween: [ "style", "${_text_022}", "opacity", '0.21', { fromValue: '0.16'}], position: 918, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid2401", tween: [ "style", "${_text_022}", "opacity", '0.23', { fromValue: '0.21'}], position: 1082, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2402", tween: [ "style", "${_text_022}", "opacity", '0.25', { fromValue: '0.23'}], position: 1149, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid2403", tween: [ "style", "${_text_022}", "opacity", '0.22', { fromValue: '0.25'}], position: 1215, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid2404", tween: [ "style", "${_text_022}", "opacity", '0.18', { fromValue: '0.22'}], position: 1415, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2405", tween: [ "style", "${_text_022}", "opacity", '0.146612', { fromValue: '0.18'}], position: 1615, duration: 96, easing: "easeInBounce" },
-                { id: "eid2406", tween: [ "style", "${_text_022}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1711, duration: 171, easing: "easeOutBounce" },
-                { id: "eid2407", tween: [ "style", "${_text_022}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1882, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2408", tween: [ "style", "${_text_022}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1949, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid2409", tween: [ "style", "${_text_022}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1983, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid2410", tween: [ "style", "${_text_022}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2053, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid2411", tween: [ "style", "${_text_022}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2108, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid2412", tween: [ "style", "${_text_022}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2149, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid2413", tween: [ "style", "${_text_022}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2187, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid2414", tween: [ "style", "${_text_022}", "opacity", '1', { fromValue: '0.500000'}], position: 2482, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid2415", tween: [ "style", "${_text_022}", "opacity", '1', { fromValue: '1'}], position: 3482, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2586", tween: [ "style", "${_text_022}", "opacity", '0', { fromValue: '0.5'}], position: 3682, duration: 518, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"text_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'text_032',
-                    type: 'image',
-                    rect: ['0', '5px', '1092px', '79px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/text_03.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_text_032}": [
-                ["style", "top", '5px'],
-                ["style", "opacity", '0']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '80px'],
-                ["style", "width", '1090px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4133,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 452,
-                "fade_still": 1585,
-                "still_loop": 1852,
-                "opaque": 2452,
-                "opaque_loop": 3252,
-                "fade": 3652
-            },
-            timeline: [
-                { id: "eid2581", tween: [ "style", "${_text_032}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 452, easing: "easeInOutBounce" },
-                { id: "eid2480", tween: [ "style", "${_text_032}", "opacity", '0.21', { fromValue: '0.18'}], position: 452, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid2481", tween: [ "style", "${_text_032}", "opacity", '0.24', { fromValue: '0.21'}], position: 581, duration: 140, easing: "easeOutBounce" },
-                { id: "eid2482", tween: [ "style", "${_text_032}", "opacity", '0.19', { fromValue: '0.24'}], position: 721, duration: 106, easing: "easeOutBounce" },
-                { id: "eid2483", tween: [ "style", "${_text_032}", "opacity", '0.16', { fromValue: '0.19'}], position: 827, duration: 61, easing: "easeOutBounce" },
-                { id: "eid2484", tween: [ "style", "${_text_032}", "opacity", '0.21', { fromValue: '0.16'}], position: 888, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid2485", tween: [ "style", "${_text_032}", "opacity", '0.23', { fromValue: '0.21'}], position: 1052, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2486", tween: [ "style", "${_text_032}", "opacity", '0.25', { fromValue: '0.23'}], position: 1119, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid2487", tween: [ "style", "${_text_032}", "opacity", '0.22', { fromValue: '0.25'}], position: 1185, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid2488", tween: [ "style", "${_text_032}", "opacity", '0.18', { fromValue: '0.22'}], position: 1385, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2489", tween: [ "style", "${_text_032}", "opacity", '0.146612', { fromValue: '0.18'}], position: 1585, duration: 96, easing: "easeInBounce" },
-                { id: "eid2490", tween: [ "style", "${_text_032}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1681, duration: 171, easing: "easeOutBounce" },
-                { id: "eid2491", tween: [ "style", "${_text_032}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1852, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2492", tween: [ "style", "${_text_032}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1919, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid2493", tween: [ "style", "${_text_032}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1953, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid2494", tween: [ "style", "${_text_032}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2023, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid2495", tween: [ "style", "${_text_032}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2078, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid2496", tween: [ "style", "${_text_032}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2119, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid2497", tween: [ "style", "${_text_032}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2157, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid2498", tween: [ "style", "${_text_032}", "opacity", '1', { fromValue: '0.500000'}], position: 2452, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid2499", tween: [ "style", "${_text_032}", "opacity", '1', { fromValue: '1'}], position: 3452, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2587", tween: [ "style", "${_text_032}", "opacity", '0', { fromValue: '0.5'}], position: 3652, duration: 481, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"text_4": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'text_042',
-                    type: 'image',
-                    rect: ['0', '-2px', '718px', '81px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/text_04.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '80px'],
-                ["style", "width", '720px']
-            ],
-            "${_text_042}": [
-                ["style", "top", '-2px'],
-                ["style", "opacity", '0']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4445,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 467,
-                "fade_still": 1600,
-                "still_loop": 1867,
-                "opaque": 2467,
-                "opaque_loop": 3267,
-                "fade": 3667
-            },
-            timeline: [
-                { id: "eid2583", tween: [ "style", "${_text_042}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 467, easing: "easeInOutBounce" },
-                { id: "eid2459", tween: [ "style", "${_text_042}", "opacity", '0.21', { fromValue: '0.18'}], position: 467, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid2460", tween: [ "style", "${_text_042}", "opacity", '0.24', { fromValue: '0.21'}], position: 596, duration: 140, easing: "easeOutBounce" },
-                { id: "eid2461", tween: [ "style", "${_text_042}", "opacity", '0.19', { fromValue: '0.24'}], position: 736, duration: 106, easing: "easeOutBounce" },
-                { id: "eid2462", tween: [ "style", "${_text_042}", "opacity", '0.16', { fromValue: '0.19'}], position: 842, duration: 61, easing: "easeOutBounce" },
-                { id: "eid2463", tween: [ "style", "${_text_042}", "opacity", '0.21', { fromValue: '0.16'}], position: 903, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid2464", tween: [ "style", "${_text_042}", "opacity", '0.23', { fromValue: '0.21'}], position: 1067, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2465", tween: [ "style", "${_text_042}", "opacity", '0.25', { fromValue: '0.23'}], position: 1134, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid2466", tween: [ "style", "${_text_042}", "opacity", '0.22', { fromValue: '0.25'}], position: 1200, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid2467", tween: [ "style", "${_text_042}", "opacity", '0.18', { fromValue: '0.22'}], position: 1400, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2468", tween: [ "style", "${_text_042}", "opacity", '0.146612', { fromValue: '0.18'}], position: 1600, duration: 96, easing: "easeInBounce" },
-                { id: "eid2469", tween: [ "style", "${_text_042}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1696, duration: 171, easing: "easeOutBounce" },
-                { id: "eid2470", tween: [ "style", "${_text_042}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1867, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2471", tween: [ "style", "${_text_042}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1934, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid2472", tween: [ "style", "${_text_042}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1968, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid2473", tween: [ "style", "${_text_042}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2038, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid2474", tween: [ "style", "${_text_042}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2093, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid2475", tween: [ "style", "${_text_042}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2134, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid2476", tween: [ "style", "${_text_042}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2172, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid2477", tween: [ "style", "${_text_042}", "opacity", '1', { fromValue: '0.500000'}], position: 2467, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid2478", tween: [ "style", "${_text_042}", "opacity", '1', { fromValue: '1'}], position: 3467, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2588", tween: [ "style", "${_text_042}", "opacity", '0', { fromValue: '0.5'}], position: 3667, duration: 777, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"text_5": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'text_052',
-                    type: 'image',
-                    rect: ['0', '0', '1338px', '79px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/text_05.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '80px'],
-                ["style", "width", '1360px']
-            ],
-            "${_text_052}": [
-                ["style", "opacity", '0']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4105,
-            autoPlay: false,
-            labels: {
-                "fade_flimmer": 438,
-                "fade_still": 1571,
-                "still_loop": 1838,
-                "opaque": 2438,
-                "opaque_loop": 3238,
-                "fade": 3638
-            },
-            timeline: [
-                { id: "eid2585", tween: [ "style", "${_text_052}", "opacity", '0.18', { fromValue: '0'}], position: 0, duration: 438, easing: "easeInOutBounce" },
-                { id: "eid2501", tween: [ "style", "${_text_052}", "opacity", '0.21', { fromValue: '0.18'}], position: 438, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid2502", tween: [ "style", "${_text_052}", "opacity", '0.24', { fromValue: '0.21'}], position: 567, duration: 140, easing: "easeOutBounce" },
-                { id: "eid2503", tween: [ "style", "${_text_052}", "opacity", '0.19', { fromValue: '0.24'}], position: 707, duration: 106, easing: "easeOutBounce" },
-                { id: "eid2504", tween: [ "style", "${_text_052}", "opacity", '0.16', { fromValue: '0.19'}], position: 813, duration: 61, easing: "easeOutBounce" },
-                { id: "eid2505", tween: [ "style", "${_text_052}", "opacity", '0.21', { fromValue: '0.16'}], position: 874, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid2506", tween: [ "style", "${_text_052}", "opacity", '0.23', { fromValue: '0.21'}], position: 1038, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2507", tween: [ "style", "${_text_052}", "opacity", '0.25', { fromValue: '0.23'}], position: 1105, duration: 66, easing: "easeInOutBounce" },
-                { id: "eid2508", tween: [ "style", "${_text_052}", "opacity", '0.22', { fromValue: '0.25'}], position: 1171, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid2509", tween: [ "style", "${_text_052}", "opacity", '0.18', { fromValue: '0.22'}], position: 1371, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2510", tween: [ "style", "${_text_052}", "opacity", '0.146612', { fromValue: '0.18'}], position: 1571, duration: 96, easing: "easeInBounce" },
-                { id: "eid2511", tween: [ "style", "${_text_052}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1667, duration: 171, easing: "easeOutBounce" },
-                { id: "eid2512", tween: [ "style", "${_text_052}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1838, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2513", tween: [ "style", "${_text_052}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1905, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid2514", tween: [ "style", "${_text_052}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1939, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid2515", tween: [ "style", "${_text_052}", "opacity", '0.46', { fromValue: '0.400000'}], position: 2009, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid2516", tween: [ "style", "${_text_052}", "opacity", '0.5', { fromValue: '0.460000'}], position: 2064, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid2517", tween: [ "style", "${_text_052}", "opacity", '0.55', { fromValue: '0.500000'}], position: 2105, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid2518", tween: [ "style", "${_text_052}", "opacity", '0.5', { fromValue: '0.550000'}], position: 2143, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid2519", tween: [ "style", "${_text_052}", "opacity", '1', { fromValue: '0.500000'}], position: 2438, duration: 800, easing: "easeInOutBounce" },
-                { id: "eid2520", tween: [ "style", "${_text_052}", "opacity", '1', { fromValue: '1'}], position: 3438, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2521", tween: [ "style", "${_text_052}", "opacity", '0', { fromValue: '0.5'}], position: 3638, duration: 467, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"dust_icon": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'dust_iconCopy',
-                    type: 'image',
-                    rect: ['50px', '0px', '1242px', '193px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/dust_icon.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_dust_iconCopy}": [
-                ["style", "top", '0px'],
-                ["style", "left", '50px'],
-                ["transform", "scaleY", '1']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '193px'],
-                ["style", "width", '179px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 537,
-            autoPlay: true,
-            timeline: [
-                { id: "eid1543", tween: [ "transform", "${_dust_iconCopy}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1536", tween: [ "style", "${_dust_iconCopy}", "left", '50px', { fromValue: '50px'}], position: 0, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1537", tween: [ "style", "${_dust_iconCopy}", "left", '-111px', { fromValue: '50px'}], position: 83, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1538", tween: [ "style", "${_dust_iconCopy}", "left", '-283px', { fromValue: '-111px'}], position: 167, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1539", tween: [ "style", "${_dust_iconCopy}", "left", '-481px', { fromValue: '-283px'}], position: 250, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1540", tween: [ "style", "${_dust_iconCopy}", "left", '-670px', { fromValue: '-481px'}], position: 333, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1541", tween: [ "style", "${_dust_iconCopy}", "left", '-876px', { fromValue: '-670px'}], position: 417, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1542", tween: [ "style", "${_dust_iconCopy}", "left", '-1055px', { fromValue: '-876px'}], position: 500, duration: 0, easing: "easeInOutCubic" }            ]
-        }
-    }
-},
-"dust_button": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'dust_icon2',
-                    type: 'rect',
-                    rect: ['-88px', '-391px', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'dust_icon2',
-                symbolName: 'dust_icon',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '179px'],
-                ["style", "width", '193px']
-            ],
-            "${_dust_icon2}": [
-                ["style", "top", '-7px'],
-                ["style", "opacity", '0.06'],
-                ["style", "left", '7px'],
-                ["transform", "rotateZ", '90deg']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 8409,
-            autoPlay: true,
-            labels: {
-                "fade_flimmer": 0,
-                "fade_still": 1133,
-                "still_loop": 1400,
-                "opaque": 2000,
-                "opaque_loop": 2400,
-                "fade": 2800
-            },
-            timeline: [
-                { id: "eid1591", tween: [ "style", "${_dust_icon2}", "opacity", '0.01', { fromValue: '0.06'}], position: 0, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid1592", tween: [ "style", "${_dust_icon2}", "opacity", '0.05', { fromValue: '0.01'}], position: 129, duration: 140, easing: "easeInBounce" },
-                { id: "eid1593", tween: [ "style", "${_dust_icon2}", "opacity", '0.03', { fromValue: '0.05'}], position: 269, duration: 167, easing: "easeOutBounce" },
-                { id: "eid1594", tween: [ "style", "${_dust_icon2}", "opacity", '0.04', { fromValue: '0.03'}], position: 436, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid1595", tween: [ "style", "${_dust_icon2}", "opacity", '0.04', { fromValue: '0.04'}], position: 630, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1596", tween: [ "style", "${_dust_icon2}", "opacity", '0.06', { fromValue: '0.040000'}], position: 733, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid1597", tween: [ "style", "${_dust_icon2}", "opacity", '0.1', { fromValue: '0.060000'}], position: 933, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid1598", tween: [ "style", "${_dust_icon2}", "opacity", '0.146612', { fromValue: '0.100000'}], position: 1133, duration: 96, easing: "easeInBounce" },
-                { id: "eid1599", tween: [ "style", "${_dust_icon2}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1229, duration: 171, easing: "easeOutBounce" },
-                { id: "eid1600", tween: [ "style", "${_dust_icon2}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1400, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid1601", tween: [ "style", "${_dust_icon2}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1467, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid1602", tween: [ "style", "${_dust_icon2}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1501, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid1603", tween: [ "style", "${_dust_icon2}", "opacity", '0.46', { fromValue: '0.400000'}], position: 1571, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid1604", tween: [ "style", "${_dust_icon2}", "opacity", '0.5', { fromValue: '0.460000'}], position: 1626, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid1605", tween: [ "style", "${_dust_icon2}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1667, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid1606", tween: [ "style", "${_dust_icon2}", "opacity", '0.5', { fromValue: '0.550000'}], position: 1705, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid1607", tween: [ "style", "${_dust_icon2}", "opacity", '1', { fromValue: '0.500000'}], position: 2000, duration: 400, easing: "easeInOutBounce" },
-                { id: "eid1608", tween: [ "style", "${_dust_icon2}", "opacity", '1', { fromValue: '1'}], position: 2600, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid1609", tween: [ "style", "${_dust_icon2}", "opacity", '0', { fromValue: '0.5'}], position: 2800, duration: 467, easing: "easeInOutBounce" },
-                { id: "eid1551", tween: [ "style", "${_dust_icon2}", "left", '7px', { fromValue: '7px'}], position: 8409, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1549", tween: [ "transform", "${_dust_icon2}", "rotateZ", '90deg', { fromValue: '90deg'}], position: 0, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid1550", tween: [ "style", "${_dust_icon2}", "top", '-7px', { fromValue: '-7px'}], position: 8409, duration: 0, easing: "easeInOutCubic" }            ]
-        }
-    }
-},
-"C_Esser": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_esser',
-                    type: 'image',
-                    rect: ['0px', '0px', '840px', '480px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_esser.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_esser}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.75'],
-                ["style", "left", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '480px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '200px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 267,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid1798", tween: [ "style", "${_ss_esser}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid1799", tween: [ "style", "${_ss_esser}", "left", '-210px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid1800", tween: [ "style", "${_ss_esser}", "left", '-420px', { fromValue: '-210px'}], position: 133, duration: 0 },
-                { id: "eid1801", tween: [ "style", "${_ss_esser}", "left", '-630px', { fromValue: '-420px'}], position: 200, duration: 0 },
-                { id: "eid2033", tween: [ "style", "${_ss_esser}", "opacity", '0.75', { fromValue: '0.75'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"C_Pisser": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    type: 'image',
-                    id: 'ss_pisser',
-                    opacity: 0.8,
-                    rect: ['0px', '0px', '690px', '452px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_pisser.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_pisser}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.8'],
-                ["style", "left", '0px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '452px'],
-                ["style", "width", '230px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid1901", tween: [ "style", "${_ss_pisser}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid1902", tween: [ "style", "${_ss_pisser}", "left", '-230px', { fromValue: '0px'}], position: 67, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid1903", tween: [ "style", "${_ss_pisser}", "left", '-458px', { fromValue: '-230px'}], position: 133, duration: 0, easing: "easeInOutQuad" }            ]
-        }
-    }
-},
-"A_cripmate": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 's_cripmate2',
-                    type: 'image',
-                    rect: ['0px', '0px', '1163px', '1200px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/disposable/s_cripmate.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_s_cripmate2}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.9'],
-                ["style", "left", '0px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '410px'],
-                ["style", "width", '1163px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid2038", tween: [ "style", "${_s_cripmate2}", "opacity", '0.9', { fromValue: '0.9'}], position: 0, duration: 0 },
-                { id: "eid1954", tween: [ "style", "${_s_cripmate2}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid1957", tween: [ "style", "${_s_cripmate2}", "top", '-400px', { fromValue: '0px'}], position: 67, duration: 0, easing: "easeInOutQuad" },
-                { id: "eid1958", tween: [ "style", "${_s_cripmate2}", "top", '-800px', { fromValue: '-400px'}], position: 133, duration: 0, easing: "easeInOutQuad" }            ]
-        }
-    }
-},
-"A_trash_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_trash_1',
-                    type: 'image',
-                    rect: ['0px', '0px', '705px', '900px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/disposable/ss_trash_1.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '300px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '705px']
-            ],
-            "${_ss_trash_1}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.9'],
-                ["style", "left", '0px'],
-                ["style", "clip", [0,700.5224609375,900,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid2303", tween: [ "style", "${_ss_trash_1}", "clip", [0,700.5224609375,900,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,700.5224609375,900,0]}], position: 0, duration: 0 },
-                { id: "eid2035", tween: [ "style", "${_ss_trash_1}", "opacity", '0.9', { fromValue: '0.9'}], position: 0, duration: 0 },
-                { id: "eid1987", tween: [ "style", "${_ss_trash_1}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid1988", tween: [ "style", "${_ss_trash_1}", "top", '-300px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid1989", tween: [ "style", "${_ss_trash_1}", "top", '-600px', { fromValue: '-300px'}], position: 133, duration: 0 }            ]
-        }
-    }
-},
-"A_paperball": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_paperball',
-                    type: 'image',
-                    rect: ['0px', '0px', '440px', '900px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/disposable/ss_paperball.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '300px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '440px']
-            ],
-            "${_ss_paperball}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.9'],
-                ["style", "left", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid2019", tween: [ "style", "${_ss_paperball}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid2020", tween: [ "style", "${_ss_paperball}", "top", '-300px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid2021", tween: [ "style", "${_ss_paperball}", "top", '-600px', { fromValue: '-300px'}], position: 133, duration: 0 },
-                { id: "eid2036", tween: [ "style", "${_ss_paperball}", "opacity", '0.9', { fromValue: '0.9'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"preloader": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    rect: ['0px', '0px', '2055px', '1536px', 'auto', 'auto'],
-                    id: 'RectangleCopy',
-                    stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                    type: 'rect',
-                    fill: ['rgba(0,0,0,1.00)']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_RectangleCopy}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '1'],
-                ["style", "left", '0px'],
-                ["color", "background-color", 'rgba(0,0,0,1.00)']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2055px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 0,
-            autoPlay: true,
-            timeline: [
-            ]
-        }
-    }
-},
-"B_taube2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    type: 'image',
-                    id: 'ss_taube_2',
-                    opacity: 0.9,
-                    rect: ['0px', '0px', '500px', '2971px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/disposable/ss_taube_2.png', '0px', '0px']
-                },
-                {
-                    type: 'audio',
-                    source: ['media/SFX_pigeon.mp3'],
-                    id: 'SFX_pigeon',
-                    rect: ['54', '40', '320px', '45px', 'auto', 'auto'],
-                    tag: 'audio'
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_taube_2}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.9'],
-                ["style", "left", '0px']
-            ],
-            "${_SFX_pigeon}": [
-                ["property", "volume", '0']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '430px'],
-                ["style", "width", '500px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 1867,
-            autoPlay: true,
-            labels: {
-                "loop": 0,
-                "touch": 533
-            },
-            timeline: [
-                { id: "eid2051", tween: [ "style", "${_ss_taube_2}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid2052", tween: [ "style", "${_ss_taube_2}", "top", '-423px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid2053", tween: [ "style", "${_ss_taube_2}", "top", '-846px', { fromValue: '-423px'}], position: 133, duration: 0 },
-                { id: "eid2121", tween: [ "style", "${_ss_taube_2}", "top", '-1274px', { fromValue: '-846px'}], position: 533, duration: 0 },
-                { id: "eid2124", tween: [ "style", "${_ss_taube_2}", "top", '-1696px', { fromValue: '-1274px'}], position: 600, duration: 0 },
-                { id: "eid2123", tween: [ "style", "${_ss_taube_2}", "top", '-2121px', { fromValue: '-1696px'}], position: 667, duration: 0 },
-                { id: "eid2122", tween: [ "style", "${_ss_taube_2}", "top", '-2545px', { fromValue: '-2121px'}], position: 733, duration: 0 },
-                { id: "eid2150", tween: [ "style", "${_ss_taube_2}", "top", '-1696px', { fromValue: '-2545px'}], position: 800, duration: 0 },
-                { id: "eid2151", tween: [ "style", "${_ss_taube_2}", "top", '-2121px', { fromValue: '-1696px'}], position: 867, duration: 0 },
-                { id: "eid2152", tween: [ "style", "${_ss_taube_2}", "top", '-2545px', { fromValue: '-2121px'}], position: 933, duration: 0 },
-                { id: "eid2153", tween: [ "style", "${_ss_taube_2}", "top", '-1696px', { fromValue: '-2545px'}], position: 1000, duration: 0 },
-                { id: "eid2154", tween: [ "style", "${_ss_taube_2}", "top", '-2121px', { fromValue: '-1696px'}], position: 1067, duration: 0 },
-                { id: "eid2155", tween: [ "style", "${_ss_taube_2}", "top", '-2545px', { fromValue: '-2121px'}], position: 1133, duration: 0 },
-                { id: "eid2156", tween: [ "style", "${_ss_taube_2}", "top", '-1696px', { fromValue: '-2545px'}], position: 1200, duration: 0 },
-                { id: "eid2157", tween: [ "style", "${_ss_taube_2}", "top", '-2121px', { fromValue: '-1696px'}], position: 1267, duration: 0 },
-                { id: "eid2158", tween: [ "style", "${_ss_taube_2}", "top", '-2545px', { fromValue: '-2121px'}], position: 1333, duration: 0 },
-                { id: "eid2159", tween: [ "style", "${_ss_taube_2}", "top", '-1696px', { fromValue: '-2545px'}], position: 1400, duration: 0 },
-                { id: "eid2160", tween: [ "style", "${_ss_taube_2}", "top", '-2121px', { fromValue: '-1696px'}], position: 1467, duration: 0 },
-                { id: "eid2161", tween: [ "style", "${_ss_taube_2}", "top", '-2545px', { fromValue: '-2121px'}], position: 1533, duration: 0 },
-                { id: "eid2162", tween: [ "style", "${_ss_taube_2}", "top", '-1696px', { fromValue: '-2545px'}], position: 1600, duration: 0 },
-                { id: "eid2163", tween: [ "style", "${_ss_taube_2}", "top", '-2121px', { fromValue: '-1696px'}], position: 1667, duration: 0 },
-                { id: "eid2164", tween: [ "style", "${_ss_taube_2}", "top", '-2545px', { fromValue: '-2121px'}], position: 1733, duration: 0 },
-                { id: "eid2137", tween: [ "style", "${_ss_taube_2}", "top", '-1274px', { fromValue: '-2545px'}], position: 1800, duration: 0 }            ]
-        }
-    }
-},
-"SFX_wind": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    autoplay: 'autoplay',
-                    rect: ['0px', '0px', '320px', '45px', 'auto', 'auto'],
-                    source: ['media/SFX_windLoop.mp3'],
-                    id: 'SFX_windLoop',
-                    loop: 'loop',
-                    type: 'audio',
-                    tag: 'audio'
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_SFX_windLoop}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["property", "volume", '0.50000028571429']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '0px'],
-                ["style", "width", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 40255,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid2239", tween: [ "property", "${_SFX_windLoop}", "volume", '0.50000028571429', { fromValue: '0.50000028571429'}], position: 0, duration: 0 },
-                { id: "eid2214", trigger: [ function executeMediaFunction(e, data) { this._executeMediaAction(e, data); }, ['play', '${_SFX_windLoop}', [] ], ""], position: 0 }            ]
-        }
-    }
-},
-"A_trash_2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_trash_2',
-                    type: 'image',
-                    rect: ['0px', '0px', '342px', '900px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/disposable/ss_trash_2.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '300px'],
-                ["style", "width", '342px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_ss_trash_2}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.9'],
-                ["style", "left", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid2254", tween: [ "style", "${_ss_trash_2}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid2255", tween: [ "style", "${_ss_trash_2}", "top", '-300px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid2256", tween: [ "style", "${_ss_trash_2}", "top", '-600px', { fromValue: '-300px'}], position: 133, duration: 0 },
-                { id: "eid2260", tween: [ "style", "${_ss_trash_2}", "opacity", '0.9', { fromValue: '0.9'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"A_trash_3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_trash_3',
-                    type: 'image',
-                    rect: ['0px', '0px', '333px', '900px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/disposable/ss_trash_3.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '300px'],
-                ["style", "width", '333px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_ss_trash_3}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.9'],
-                ["style", "left", '0px'],
-                ["style", "clip", [0,330.0146484375,900,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid2257", tween: [ "style", "${_ss_trash_3}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid2258", tween: [ "style", "${_ss_trash_3}", "top", '-300px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid2259", tween: [ "style", "${_ss_trash_3}", "top", '-600px', { fromValue: '-300px'}], position: 133, duration: 0 },
-                { id: "eid2261", tween: [ "style", "${_ss_trash_3}", "opacity", '0.9', { fromValue: '0.9'}], position: 0, duration: 0 },
-                { id: "eid2304", tween: [ "style", "${_ss_trash_3}", "clip", [0,330.0146484375,900,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,330.0146484375,900,0]}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"dust_button_invert": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'dust_icon_invert3',
-                    type: 'rect',
-                    rect: ['0', '0', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'dust_icon_invert3',
-                symbolName: 'dust_icon_invert',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_dust_icon_invert3}": [
-                ["style", "top", '-7px'],
-                ["transform", "rotateZ", '90deg'],
-                ["subproperty", "filter.invert", '0'],
-                ["style", "opacity", '0.06'],
-                ["style", "left", '7px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '179px'],
-                ["style", "width", '193px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 8409,
-            autoPlay: true,
-            labels: {
-                "fade_flimmer": 0,
-                "fade_still": 1133,
-                "still_loop": 1400,
-                "opaque": 2000,
-                "opaque_loop": 2400,
-                "fade": 2800
-            },
-            timeline: [
-                { id: "eid2354", tween: [ "style", "${_dust_icon_invert3}", "top", '-7px', { fromValue: '-7px'}], position: 8409, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid2376", tween: [ "style", "${_dust_icon_invert3}", "left", '7px', { fromValue: '7px'}], position: 8409, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid2355", tween: [ "transform", "${_dust_icon_invert3}", "rotateZ", '90deg', { fromValue: '90deg'}], position: 0, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid2357", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.01', { fromValue: '0.06'}], position: 0, duration: 129, easing: "easeInOutBounce" },
-                { id: "eid2358", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.05', { fromValue: '0.01'}], position: 129, duration: 140, easing: "easeInBounce" },
-                { id: "eid2359", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.03', { fromValue: '0.05'}], position: 269, duration: 167, easing: "easeOutBounce" },
-                { id: "eid2360", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.04', { fromValue: '0.03'}], position: 436, duration: 164, easing: "easeInOutBounce" },
-                { id: "eid2361", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.04', { fromValue: '0.04'}], position: 630, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2362", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.06', { fromValue: '0.040000'}], position: 733, duration: 200, easing: "easeInOutBounce" },
-                { id: "eid2363", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.1', { fromValue: '0.060000'}], position: 933, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2364", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.146612', { fromValue: '0.100000'}], position: 1133, duration: 96, easing: "easeInBounce" },
-                { id: "eid2365", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.5', { fromValue: '0.146612'}], position: 1229, duration: 171, easing: "easeOutBounce" },
-                { id: "eid2366", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1400, duration: 67, easing: "easeInOutBounce" },
-                { id: "eid2367", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.59', { fromValue: '0.550000'}], position: 1467, duration: 34, easing: "easeInOutBounce" },
-                { id: "eid2368", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.4', { fromValue: '0.590000'}], position: 1501, duration: 70, easing: "easeInOutBounce" },
-                { id: "eid2369", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.46', { fromValue: '0.400000'}], position: 1571, duration: 55, easing: "easeInOutBounce" },
-                { id: "eid2370", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.5', { fromValue: '0.460000'}], position: 1626, duration: 41, easing: "easeInOutBounce" },
-                { id: "eid2371", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.55', { fromValue: '0.500000'}], position: 1667, duration: 38, easing: "easeInOutBounce" },
-                { id: "eid2372", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0.5', { fromValue: '0.550000'}], position: 1705, duration: 64, easing: "easeInOutBounce" },
-                { id: "eid2373", tween: [ "style", "${_dust_icon_invert3}", "opacity", '1', { fromValue: '0.500000'}], position: 2000, duration: 400, easing: "easeInOutBounce" },
-                { id: "eid2374", tween: [ "style", "${_dust_icon_invert3}", "opacity", '1', { fromValue: '1'}], position: 2600, duration: 0, easing: "easeInOutBounce" },
-                { id: "eid2375", tween: [ "style", "${_dust_icon_invert3}", "opacity", '0', { fromValue: '0.5'}], position: 2800, duration: 467, easing: "easeInOutBounce" },
-                { id: "eid2377", tween: [ "subproperty", "${_dust_icon_invert3}", "filter.invert", '0', { fromValue: '0'}], position: 0, duration: 0, easing: "easeInOutBounce" }            ]
-        }
-    }
-},
-"dust_icon_invert": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'dust_icon_invert2',
-                    type: 'image',
-                    rect: ['0', '-1', '1242px', '193px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/dust_icon_invert.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_dust_icon_invert2}": [
-                ["style", "left", '50px'],
-                ["transform", "scaleY", '1']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '193px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '179px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 537,
-            autoPlay: true,
-            timeline: [
-                { id: "eid2353", tween: [ "transform", "${_dust_icon_invert2}", "scaleY", '1', { fromValue: '1'}], position: 0, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid2346", tween: [ "style", "${_dust_icon_invert2}", "left", '50px', { fromValue: '50px'}], position: 0, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid2347", tween: [ "style", "${_dust_icon_invert2}", "left", '-111px', { fromValue: '50px'}], position: 83, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid2348", tween: [ "style", "${_dust_icon_invert2}", "left", '-283px', { fromValue: '-111px'}], position: 167, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid2349", tween: [ "style", "${_dust_icon_invert2}", "left", '-481px', { fromValue: '-283px'}], position: 250, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid2350", tween: [ "style", "${_dust_icon_invert2}", "left", '-670px', { fromValue: '-481px'}], position: 333, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid2351", tween: [ "style", "${_dust_icon_invert2}", "left", '-876px', { fromValue: '-670px'}], position: 417, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid2352", tween: [ "style", "${_dust_icon_invert2}", "left", '-1055px', { fromValue: '-876px'}], position: 500, duration: 0, easing: "easeInOutCubic" }            ]
-        }
-    }
-},
-"A_cigPile": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'A_cig2',
-                    type: 'rect',
-                    rect: ['493px', '-33px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'A_cig1',
-                    type: 'rect',
-                    rect: ['-385px', '-681px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'A_cig4',
-                    type: 'rect',
-                    rect: ['85px', '-63px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'A_cig3',
-                    type: 'rect',
-                    rect: ['617px', '-158px', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'A_cig4',
-                symbolName: 'A_cig4',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'A_cig3',
-                symbolName: 'A_cig3',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'A_cig2',
-                symbolName: 'A_cig2',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'A_cig1',
-                symbolName: 'A_cig1',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_A_cig2}": [
-                ["style", "top", '44px'],
-                ["transform", "scaleY", '0.81759'],
-                ["transform", "rotateZ", '-1deg'],
-                ["transform", "scaleX", '0.81759'],
-                ["style", "opacity", '0.8'],
-                ["style", "left", '-46px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '374px'],
-                ["style", "width", '538px']
-            ],
-            "${_A_cig3}": [
-                ["style", "top", '164px'],
-                ["transform", "scaleY", '0.61538'],
-                ["transform", "scaleX", '-0.61539'],
-                ["style", "opacity", '0.8'],
-                ["style", "left", '42px']
-            ],
-            "${_A_cig4}": [
-                ["style", "top", '-24px'],
-                ["transform", "scaleY", '0.87855'],
-                ["transform", "scaleX", '0.87855'],
-                ["style", "opacity", '0.8'],
-                ["style", "left", '17px']
-            ],
-            "${_A_cig1}": [
-                ["style", "top", '99px'],
-                ["transform", "scaleY", '0.60545'],
-                ["transform", "scaleX", '0.60545'],
-                ["style", "opacity", '0.8'],
-                ["style", "left", '97px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            timeline: [
-                { id: "eid184", tween: [ "style", "${_A_cig3}", "left", '42px', { fromValue: '42px'}], position: 0, duration: 0 },
-                { id: "eid205", tween: [ "style", "${_A_cig1}", "opacity", '0.8', { fromValue: '0.8'}], position: 0, duration: 0 },
-                { id: "eid173", tween: [ "transform", "${_A_cig2}", "scaleY", '0.81759', { fromValue: '0.81759'}], position: 0, duration: 0 },
-                { id: "eid175", tween: [ "style", "${_A_cig2}", "top", '44px', { fromValue: '44px'}], position: 0, duration: 0 },
-                { id: "eid176", tween: [ "transform", "${_A_cig2}", "rotateZ", '-1deg', { fromValue: '-1deg'}], position: 0, duration: 0 },
-                { id: "eid174", tween: [ "style", "${_A_cig2}", "left", '-46px', { fromValue: '-46px'}], position: 0, duration: 0 },
-                { id: "eid164", tween: [ "transform", "${_A_cig1}", "scaleY", '0.60545', { fromValue: '0.60545'}], position: 0, duration: 0 },
-                { id: "eid168", tween: [ "style", "${_A_cig1}", "top", '99px', { fromValue: '99px'}], position: 0, duration: 0 },
-                { id: "eid204", tween: [ "style", "${_A_cig4}", "opacity", '0.8', { fromValue: '0.8'}], position: 0, duration: 0 },
-                { id: "eid172", tween: [ "transform", "${_A_cig2}", "scaleX", '0.81759', { fromValue: '0.81759'}], position: 0, duration: 0 },
-                { id: "eid183", tween: [ "transform", "${_A_cig3}", "scaleY", '0.61538', { fromValue: '0.61538'}], position: 0, duration: 0 },
-                { id: "eid203", tween: [ "style", "${_A_cig3}", "opacity", '0.8', { fromValue: '0.8'}], position: 0, duration: 0 },
-                { id: "eid202", tween: [ "style", "${_A_cig2}", "opacity", '0.8', { fromValue: '0.8'}], position: 0, duration: 0 },
-                { id: "eid185", tween: [ "style", "${_A_cig3}", "top", '164px', { fromValue: '164px'}], position: 0, duration: 0 },
-                { id: "eid193", tween: [ "transform", "${_A_cig4}", "scaleY", '0.87855', { fromValue: '0.87855'}], position: 0, duration: 0 },
-                { id: "eid163", tween: [ "transform", "${_A_cig1}", "scaleX", '0.60545', { fromValue: '0.60545'}], position: 0, duration: 0 },
-                { id: "eid182", tween: [ "transform", "${_A_cig3}", "scaleX", '-0.61539', { fromValue: '-0.61539'}], position: 0, duration: 0 },
-                { id: "eid195", tween: [ "style", "${_A_cig4}", "top", '-24px', { fromValue: '-24px'}], position: 0, duration: 0 },
-                { id: "eid167", tween: [ "style", "${_A_cig1}", "left", '97px', { fromValue: '97px'}], position: 0, duration: 0 },
-                { id: "eid192", tween: [ "transform", "${_A_cig4}", "scaleX", '0.87855', { fromValue: '0.87855'}], position: 0, duration: 0 },
-                { id: "eid194", tween: [ "style", "${_A_cig4}", "left", '17px', { fromValue: '17px'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"A_cig3": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_cig3',
-                    type: 'image',
-                    rect: ['0px', '0px', '590px', '780px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_cig3.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_cig3}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["style", "clip", [0,576,780,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '260px'],
-                ["style", "width", '590px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid177", tween: [ "style", "${_ss_cig3}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid178", tween: [ "style", "${_ss_cig3}", "top", '-260px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid179", tween: [ "style", "${_ss_cig3}", "top", '-520px', { fromValue: '-260px'}], position: 133, duration: 0 },
-                { id: "eid181", tween: [ "style", "${_ss_cig3}", "clip", [0,576,780,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,576,780,0]}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"A_tv": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'A_tv',
-                    type: 'image',
-                    rect: ['0px', '0px', '1800px', '600px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/A_tv.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_A_tv}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.9'],
-                ["style", "left", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '600px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '600px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid239", tween: [ "style", "${_A_tv}", "opacity", '0.9', { fromValue: '0.9'}], position: 133, duration: 0 },
-                { id: "eid236", tween: [ "style", "${_A_tv}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid237", tween: [ "style", "${_A_tv}", "left", '-600px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid238", tween: [ "style", "${_A_tv}", "left", '-1200px', { fromValue: '-600px'}], position: 133, duration: 0 }            ]
-        }
-    }
-},
-"A_cig1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_cig1',
-                    type: 'image',
-                    rect: ['0px', '0px', '550px', '750px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_cig1.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_cig1}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '250px'],
-                ["style", "width", '550px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid158", tween: [ "style", "${_ss_cig1}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid159", tween: [ "style", "${_ss_cig1}", "top", '-250px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid160", tween: [ "style", "${_ss_cig1}", "top", '-500px', { fromValue: '-250px'}], position: 133, duration: 0 }            ]
-        }
-    }
-},
-"A_cig4": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_cig4',
-                    type: 'image',
-                    rect: ['0px', '0px', '900px', '387px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_cig4.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_ss_cig4}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '387px'],
-                ["style", "width", '300px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid186", tween: [ "style", "${_ss_cig4}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid187", tween: [ "style", "${_ss_cig4}", "left", '-300px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid188", tween: [ "style", "${_ss_cig4}", "left", '-600px', { fromValue: '-300px'}], position: 133, duration: 0 }            ]
-        }
-    }
-},
-"A_teddy": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'A_teddy',
-                    type: 'image',
-                    rect: ['0px', '0px', '447px', '1200px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/A_teddy.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_A_teddy}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.9'],
-                ["style", "left", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '400px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '447px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid226", tween: [ "style", "${_A_teddy}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid228", tween: [ "style", "${_A_teddy}", "top", '-400px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid227", tween: [ "style", "${_A_teddy}", "top", '-800px', { fromValue: '-400px'}], position: 133, duration: 0 },
-                { id: "eid229", tween: [ "style", "${_A_teddy}", "opacity", '0.9', { fromValue: '0.9'}], position: 200, duration: 0 }            ]
-        }
-    }
-},
-"A_cig2": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'ss_cig2',
-                    type: 'image',
-                    rect: ['0px', '0px', '529px', '780px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ss_cig2.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '260px'],
-                ["style", "width", '529px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_ss_cig2}": [
-                ["style", "left", '0px'],
-                ["style", "top", '-6px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid169", tween: [ "style", "${_ss_cig2}", "top", '-6px', { fromValue: '-6px'}], position: 0, duration: 0 },
-                { id: "eid170", tween: [ "style", "${_ss_cig2}", "top", '-258px', { fromValue: '-6px'}], position: 67, duration: 0 },
-                { id: "eid171", tween: [ "style", "${_ss_cig2}", "top", '-518px', { fromValue: '-260px'}], position: 133, duration: 0 }            ]
-        }
-    }
-},
-"A_shoes": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'A_shoes',
-                    type: 'image',
-                    rect: ['0px', '0px', '525px', '1260px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/A_shoes.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '420px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '525px']
-            ],
-            "${_A_shoes}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.9'],
-                ["style", "left", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 200,
-            autoPlay: true,
-            labels: {
-                "loop": 0
-            },
-            timeline: [
-                { id: "eid216", tween: [ "style", "${_A_shoes}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid218", tween: [ "style", "${_A_shoes}", "top", '-420px', { fromValue: '0px'}], position: 67, duration: 0 },
-                { id: "eid219", tween: [ "style", "${_A_shoes}", "top", '-840px', { fromValue: '-420px'}], position: 133, duration: 0 }            ]
-        }
-    }
-}
-};
-
-
-Edge.registerCompositionDefn(compId, symbols, fonts, resources, opts);
-
-/**
- * Adobe Edge DOM Ready Event Handler
- */
-$(window).ready(function() {
-     Edge.launchComposition(compId);
-});
-})(jQuery, AdobeEdge, "EDGE-372280890");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("INTRO_edgeActions.js");
+})("EDGE-372280890");
