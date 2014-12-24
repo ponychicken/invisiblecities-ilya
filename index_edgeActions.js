@@ -1,28 +1,22 @@
 /***********************
-* Adobe Edge Animate Composition Actions
-*
-* Edit this file with caution, being careful to preserve 
-* function signatures and comments starting with 'Edge' to maintain the 
-* ability to interact with these actions from within Adobe Edge Animate
-*
-***********************/
-(function($, Edge, compId){
-var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonly used Edge classes
+ * Adobe Edge Animate Composition Actions
+ *
+ * Edit this file with caution, being careful to preserve
+ * function signatures and comments starting with 'Edge' to maintain the
+ * ability to interact with these actions from within Adobe Edge Animate
+ *
+ ***********************/
+(function($, Edge, compId) {
+   var Composition = Edge.Composition,
+      Symbol = Edge.Symbol; // aliases for commonly used Edge classes
 
    //Edge symbol: 'stage'
    (function(symbolName) {
-      
-      
-      
 
-      
-
-      
-
-            Symbol.bindElementAction(compId, symbolName, "${H_still_leftright}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${H_still_leftright}", "click", function(sym, e) {
          // Hide an Element.
          sym.$("H_still_leftright").hide();
-         
+
          // Use this to target events and elements inside a symbol.
          // For example:
          // var mySymbolObject = sym.getSymbol("Symbol2");
@@ -31,18 +25,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          var mySymbolObject = sym.getSymbol("H_bag_appear");
          sym.$("H_bag_appear").show();
          mySymbolObject.play();
-         
 
       });
-         //Edge binding end
-
-
+      //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${H_bag_appear}", "click", function(sym, e) {
          // insert code for mouse click here
          // Hide an Element.
          sym.$("H_bag_appear").hide();
-         
+
          // Use this to target events and elements inside a symbol.
          // For example:
          // var mySymbolObject = sym.getSymbol("Symbol2");
@@ -51,10 +42,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          var mySymbolObject = sym.getSymbol("H_walk");
          sym.$("H_walk").show();
          mySymbolObject.play();
-         
+
          sym.play("city_out");
-         
-         
 
       });
       //Edge binding end
@@ -72,13 +61,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      
-
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 13409, function(sym, e) {
          // Show an Element.
          sym.$("text_1").show();
-         
-         
+
          // Use this to target events and elements inside a symbol.
          // For example:
          // var mySymbolObject = sym.getSymbol("Symbol2");
@@ -86,7 +72,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // mySymbolObject.$("myElement").hide(); will hide "myElement" inside of Symbol2.
          var mySymbolObject = sym.getSymbol("text_1");
          mySymbolObject.play(0);
-         
 
       });
       //Edge binding end
@@ -95,11 +80,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // Play this symbol from "opaque"
          var mySymbolObject = sym.getSymbol("text_1");
          mySymbolObject.play("opaque");
-         
-         
+
          // Show an Element.
          sym.$("text_2").show();
-         
+
          // Use this to target events and elements inside a symbol.
          // For example:
          // var mySymbolObject = sym.getSymbol("Symbol2");
@@ -115,15 +99,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // Play this symbol from "opaque"
          var mySymbolObject = sym.getSymbol("text_2");
          mySymbolObject.play("opaque");
-         
+
          // fades text_1
          var mySymbolObject = sym.getSymbol("text_1");
          mySymbolObject.play("fade_flimmer");
-         
-         
+
          // Show an Element.
          sym.$("text_3").show();
-         
+
          // enter text_3
          var mySymbolObject = sym.getSymbol("text_3");
          mySymbolObject.play(0);
@@ -135,19 +118,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // Play this symbol from "opaque"
          var mySymbolObject = sym.getSymbol("text_3");
          mySymbolObject.play("opaque");
-         
+
          // fades text_1 out
          var mySymbolObject = sym.getSymbol("text_1");
          mySymbolObject.play("fade");
-         
+
          // fades text_2
          var mySymbolObject = sym.getSymbol("text_2");
          mySymbolObject.play("fade_flimmer");
-         
-         
+
          // Show an Element.
          sym.$("text_4").show();
-         
+
          // enter text_4
          var mySymbolObject = sym.getSymbol("text_4");
          mySymbolObject.play(0);
@@ -159,26 +141,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // Play this symbol from "opaque"
          var mySymbolObject = sym.getSymbol("text_4");
          mySymbolObject.play("opaque");
-         
-         
+
          // fades text_2 out
          var mySymbolObject = sym.getSymbol("text_2");
          mySymbolObject.play("fade");
-         
-         
-         
+
          // fades text_3
          var mySymbolObject = sym.getSymbol("text_3");
          mySymbolObject.play("fade_flimmer");
-         
-         
+
          // Show an Element.
          sym.$("text_5").show();
-         
+
          // enter text_5
          var mySymbolObject = sym.getSymbol("text_5");
          mySymbolObject.play(0);
-         
 
       });
       //Edge binding end
@@ -187,19 +164,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // Play this symbol from "opaque"
          var mySymbolObject = sym.getSymbol("text_5");
          mySymbolObject.play("opaque");
-         
+
          // fades text_3 out
          var mySymbolObject = sym.getSymbol("text_3");
          mySymbolObject.play("fade");
-         
-         
-         
+
          // fades text_4
          var mySymbolObject = sym.getSymbol("text_4");
          mySymbolObject.play("fade_flimmer");
-         
-         
-         
+
          // Show an Element.
          sym.$("dust_button3").show();
          // fade in button
@@ -215,8 +188,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      
-
       Symbol.bindElementAction(compId, symbolName, "${dust_button3}", "click", function(sym, e) {
          sym.play("city_start");
 
@@ -228,8 +199,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       });
       //Edge binding end
-
-      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 44000, function(sym, e) {
          // Use this to target events and elements inside a symbol.
@@ -243,12 +212,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      
-
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 17521, function(sym, e) {
          // Hide an Element.
          sym.$("dust_button3").hide();
-         
+
          // Play the audio track.
          sym.$("SFX_bassDrop")[0].play();
 
@@ -258,7 +225,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
          // Play the audio track.
          sym.$("SFX_wind")[0].play();
-         
 
       });
       //Edge binding end
@@ -275,27 +241,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      
-
-      
-
-      
-
       Symbol.bindElementAction(compId, symbolName, "${dust_icon_invert4}", "click", function(sym, e) {
          sym.play("start");
-         
+
          sym.$("SFX_windLoop2")[0].play();
-         
-         
-         
 
       });
       //Edge binding end
 
-      
-
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 5000, function(sym, e) {
-         theodora =sym.getSymbol('Theodora');
+         theodora = sym.getSymbol('Theodora');
          theodora.play('name_opaque');
 
       });
@@ -309,7 +264,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindElementAction(compId, symbolName, "${Theodora}", "click", function(sym, e) {
          sym.play("text_in");
-         
 
       });
       //Edge binding end
@@ -323,17 +277,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'stage'
 
    //=========================================================
-   
+
    //Edge symbol: 'Theodora'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 600, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
          sym.play(0);
-         
 
       });
       //Edge binding end
@@ -352,30 +305,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
       Symbol.bindElementAction(compId, symbolName, "${Name_00072}", "mouseover", function(sym, e) {
          sym.play("name_opaque");
-         
-         
 
       });
       //Edge binding end
@@ -384,10 +315,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'Theodora'
 
    //=========================================================
-   
+
    //Edge symbol: 'cloud'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 600, function(sym, e) {
          // insert code here// Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -406,10 +337,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'cloud_2'
 
    //=========================================================
-   
+
    //Edge symbol: 'cloud_1'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.play();
 
@@ -428,10 +359,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'cloud_1'
 
    //=========================================================
-   
+
    //Edge symbol: 'taube'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.play();
 
@@ -456,7 +387,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
          sym.play("taube_fett");
-         
+
          // Play the audio track.
          sym.$("my_audio_element")[0].play(6);
 
@@ -467,10 +398,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'taube'
 
    //=========================================================
-   
+
    //Edge symbol: 'cloud_3'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.play();
 
@@ -489,10 +420,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'cloud_3'
 
    //=========================================================
-   
+
    //Edge symbol: 'cloud_cluster'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 9981, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -505,11 +436,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'cloud_cluster'
 
    //=========================================================
-   
+
    //Edge symbol: 'Title_Intro'
-   (function(symbolName) {   
-   
-      
+   (function(symbolName) {
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 20000, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
@@ -529,10 +458,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'Title_Intro'
 
    //=========================================================
-   
+
    //Edge symbol: 'plasticbag'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 867, function(sym, e) {
          sym.play(0);
 
@@ -549,10 +478,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'plasticbag'
 
    //=========================================================
-   
+
    //Edge symbol: 'H_still_leftright'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 15333, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -571,10 +500,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'H_still_leftright'
 
    //=========================================================
-   
+
    //Edge symbol: 'H_bag_appear'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1733, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -593,10 +522,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'H_bag_appear'
 
    //=========================================================
-   
+
    //Edge symbol: 'H_walk'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1133, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -609,18 +538,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'H_walk'
 
    //=========================================================
-   
+
    //Edge symbol: 'bg_1'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
    })("bg_1");
    //Edge symbol end:'bg_1'
 
    //=========================================================
-   
+
    //Edge symbol: 'text_01'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1889, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -661,21 +590,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'text_1'
 
    //=========================================================
-   
+
    //Edge symbol: 'text_1'
-   (function(symbolName) {   
-   
-      
-
-      
-
-      
-
-      
-
-      
-
-      
+   (function(symbolName) {
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1549, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
@@ -712,15 +629,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'text_2'
 
    //=========================================================
-   
+
    //Edge symbol: 'text_1'
-   (function(symbolName) {   
-   
-      
-
-      
-
-      
+   (function(symbolName) {
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1519, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
@@ -773,10 +684,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'text_3'
 
    //=========================================================
-   
+
    //Edge symbol: 'text_1'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1534, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -792,8 +703,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       });
       //Edge binding end
-
-      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1534, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
@@ -830,15 +739,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'text_4'
 
    //=========================================================
-   
+
    //Edge symbol: 'text_1'
-   (function(symbolName) {   
-   
-      
-
-      
-
-      
+   (function(symbolName) {
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1505, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
@@ -868,10 +771,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'text_5'
 
    //=========================================================
-   
+
    //Edge symbol: 'dust_icon'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 537, function(sym, e) {
          sym.playReverse();
 
@@ -888,10 +791,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'dust_icon'
 
    //=========================================================
-   
+
    //Edge symbol: 'dust_button'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1067, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -920,10 +823,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'dust_button'
 
    //=========================================================
-   
+
    //Edge symbol: 'C_Esser'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 267, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -936,10 +839,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'C_Esser'
 
    //=========================================================
-   
+
    //Edge symbol: 'C_Pisser'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -952,10 +855,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'C_Pisser'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_cripmate'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -968,10 +871,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_cripmate'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_trash_1'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -984,10 +887,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_trash_1'
 
    //=========================================================
-   
+
    //Edge symbol: 'C_paperball'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -1000,26 +903,26 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_paperball'
 
    //=========================================================
-   
+
    //Edge symbol: 'preloader'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
    })("preloader");
    //Edge symbol end:'preloader'
 
    //=========================================================
-   
+
    //Edge symbol: 'Preloader'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
    })("Preloader");
    //Edge symbol end:'Preloader'
 
    //=========================================================
-   
+
    //Edge symbol: 'B_taube2'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          sym.play("loop");
 
@@ -1046,10 +949,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
          sym.play("touch");
-         
+
          // Play the audio track.
          sym.$("SFX_pigeon")[0].play(6);
-         
 
       });
       //Edge binding end
@@ -1058,10 +960,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'B_taube2'
 
    //=========================================================
-   
+
    //Edge symbol: 'SFX_wind'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.play();
 
@@ -1080,10 +982,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'SFX_wind'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_trash_2'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -1096,10 +998,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_trash_2'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_trash_3'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -1112,17 +1014,17 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_trash_3'
 
    //=========================================================
-   
+
    //Edge symbol: 'dust_button_1'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1067, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
          sym.play("fade_flimmer");
 
       });
-         //Edge binding end
+      //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1769, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
@@ -1130,7 +1032,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.play("still_loop");
 
       });
-         //Edge binding end
+      //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2600, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
@@ -1138,46 +1040,46 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.play("opaque_loop");
 
       });
-         //Edge binding end
+      //Edge binding end
 
-      })("dust_button_invert");
+   })("dust_button_invert");
    //Edge symbol end:'dust_button_invert'
 
    //=========================================================
-   
+
    //Edge symbol: 'dust_icon_1'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.play();
 
       });
-         //Edge binding end
+      //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 537, function(sym, e) {
          sym.playReverse();
 
       });
-         //Edge binding end
+      //Edge binding end
 
-      })("dust_icon_invert");
+   })("dust_icon_invert");
    //Edge symbol end:'dust_icon_invert'
 
    //=========================================================
 
    //=========================================================
-   
+
    //Edge symbol: 'A_cigPile'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
    })("A_cigPile");
    //Edge symbol end:'A_cigPile'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_cig3'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -1190,10 +1092,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_cig3'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_cig4'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -1206,10 +1108,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_cig4'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_tv'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -1222,10 +1124,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_tv'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_shoes'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -1238,10 +1140,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_shoes'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_teddy'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -1254,10 +1156,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_teddy'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_cig2'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
@@ -1270,10 +1172,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'A_cig2'
 
    //=========================================================
-   
+
    //Edge symbol: 'A_cig1'
-   (function(symbolName) {   
-   
+   (function(symbolName) {
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 200, function(sym, e) {
          // Play the timeline at a label or specific time. For example:
          // sym.play(500); or sym.play("myLabel");
