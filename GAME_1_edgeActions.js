@@ -26,7 +26,7 @@
          counter = 0;
 
          yepnope({
-            nope: ['js/touch-dnd.js'],
+            nope: ['js/jquery-ui-1.10.4.custom.min.js', 'js/jquery.ui.touch-punch.min.js'],
             complete: init
          });
 
