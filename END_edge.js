@@ -91,6 +91,13 @@
                             transform: [[],[],[],['0.775','0.775']]
                         },
                         {
+                            id: 'Rectangle3',
+                            type: 'rect',
+                            rect: ['1252px', '654px', '443px', '356px', 'auto', 'auto'],
+                            fill: ["rgba(192,192,192,0.00)"],
+                            stroke: [0,"rgb(0, 0, 0)","none"]
+                        },
+                        {
                             id: 'text_1',
                             symbolName: 'text_1',
                             display: 'block',
@@ -323,14 +330,14 @@
                             '1.10416'
                         ],
                         [
-                            "eid261",
-                            "top",
-                            13000,
-                            2976,
-                            "easeInOutQuad",
+                            "eid273",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
                             "${house_2}",
-                            '1302px',
-                            '1731px'
+                            'block',
+                            'none'
                         ],
                         [
                             "eid237",
@@ -403,24 +410,14 @@
                             '0.84796'
                         ],
                         [
-                            "eid335",
-                            "volume",
-                            10100,
-                            900,
-                            "easeInOutQuad",
-                            "${SFX_rumble}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid334",
-                            "volume",
-                            27032,
-                            2764,
-                            "easeInOutQuad",
-                            "${SFX_rumble}",
-                            '1',
-                            '0'
+                            "eid232",
+                            "scaleY",
+                            6825,
+                            0,
+                            "easeInOutBounce",
+                            "${text_5}",
+                            '0.78173',
+                            '0.78173'
                         ],
                         [
                             "eid222",
@@ -803,12 +800,12 @@
                             '0.6'
                         ],
                         [
-                            "eid273",
+                            "eid268",
                             "display",
                             15976,
                             0,
                             "easeInOutBounce",
-                            "${house_2}",
+                            "${text_4}",
                             'block',
                             'none'
                         ],
@@ -833,64 +830,44 @@
                             'none'
                         ],
                         [
-                            "eid268",
-                            "display",
-                            15976,
-                            0,
-                            "easeInOutBounce",
-                            "${text_4}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid220",
-                            "scaleY",
+                            "eid248",
+                            "top",
                             6825,
                             0,
                             "easeInOutBounce",
-                            "${text_2}",
-                            '0.94336',
-                            '0.94336'
+                            "${text_5}",
+                            '908px',
+                            '908px'
                         ],
                         [
-                            "eid1",
-                            "display",
-                            2160,
+                            "eid210",
+                            "top",
+                            6825,
                             0,
-                            "linear",
-                            "${Rectangle}",
-                            'block',
-                            'none'
+                            "easeInOutBounce",
+                            "${text_1}",
+                            '132px',
+                            '132px'
                         ],
                         [
-                            "eid2",
-                            "display",
-                            10200,
+                            "eid228",
+                            "left",
+                            6825,
                             0,
-                            "linear",
-                            "${Rectangle}",
-                            'none',
-                            'block'
+                            "easeInOutBounce",
+                            "${text_6}",
+                            '97px',
+                            '97px'
                         ],
                         [
-                            "eid285",
-                            "opacity",
-                            18000,
-                            1500,
+                            "eid261",
+                            "top",
+                            13000,
+                            2976,
                             "easeInOutQuad",
-                            "${Titel_Italo}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid296",
-                            "opacity",
-                            25000,
-                            1500,
-                            "easeInOutQuad",
-                            "${Titel_Italo}",
-                            '1',
-                            '0'
+                            "${house_2}",
+                            '1302px',
+                            '1731px'
                         ],
                         [
                             "eid3",
@@ -913,34 +890,34 @@
                             '1'
                         ],
                         [
-                            "eid269",
+                            "eid1",
                             "display",
-                            15976,
+                            2160,
                             0,
-                            "easeInOutBounce",
-                            "${text_3}",
+                            "linear",
+                            "${Rectangle}",
                             'block',
                             'none'
                         ],
                         [
-                            "eid228",
-                            "left",
+                            "eid2",
+                            "display",
+                            10200,
+                            0,
+                            "linear",
+                            "${Rectangle}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid220",
+                            "scaleY",
                             6825,
                             0,
                             "easeInOutBounce",
-                            "${text_6}",
-                            '97px',
-                            '97px'
-                        ],
-                        [
-                            "eid306",
-                            "left",
-                            28000,
-                            0,
-                            "easeInOutBounce",
-                            "${Titel_Ilya}",
-                            '694px',
-                            '694px'
+                            "${text_2}",
+                            '0.94336',
+                            '0.94336'
                         ],
                         [
                             "eid260",
@@ -953,14 +930,24 @@
                             '1500px'
                         ],
                         [
-                            "eid232",
-                            "scaleY",
-                            6825,
-                            0,
-                            "easeInOutBounce",
-                            "${text_5}",
-                            '0.78173',
-                            '0.78173'
+                            "eid285",
+                            "opacity",
+                            18000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_Italo}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid296",
+                            "opacity",
+                            25000,
+                            1500,
+                            "easeInOutQuad",
+                            "${Titel_Italo}",
+                            '1',
+                            '0'
                         ],
                         [
                             "eid313",
@@ -971,6 +958,16 @@
                             "${Titel_betreut}",
                             '704px',
                             '704px'
+                        ],
+                        [
+                            "eid277",
+                            "display",
+                            15976,
+                            0,
+                            "easeInOutBounce",
+                            "${houses_bg_1}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid308",
@@ -993,14 +990,14 @@
                             '0'
                         ],
                         [
-                            "eid277",
-                            "display",
-                            15976,
+                            "eid306",
+                            "left",
+                            28000,
                             0,
                             "easeInOutBounce",
-                            "${houses_bg_1}",
-                            'block',
-                            'none'
+                            "${Titel_Ilya}",
+                            '694px',
+                            '694px'
                         ],
                         [
                             "eid227",
@@ -1013,6 +1010,26 @@
                             '0.94336'
                         ],
                         [
+                            "eid335",
+                            "volume",
+                            10100,
+                            900,
+                            "easeInOutQuad",
+                            "${SFX_rumble}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid334",
+                            "volume",
+                            27032,
+                            2764,
+                            "easeInOutQuad",
+                            "${SFX_rumble}",
+                            '1',
+                            '0'
+                        ],
+                        [
                             "eid247",
                             "top",
                             6825,
@@ -1023,24 +1040,14 @@
                             '784px'
                         ],
                         [
-                            "eid248",
-                            "top",
-                            6825,
+                            "eid282",
+                            "display",
+                            18000,
                             0,
                             "easeInOutBounce",
-                            "${text_5}",
-                            '908px',
-                            '908px'
-                        ],
-                        [
-                            "eid210",
-                            "top",
-                            6825,
-                            0,
-                            "easeInOutBounce",
-                            "${text_1}",
-                            '132px',
-                            '132px'
+                            "${Titel_betreut}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid246",
@@ -1053,14 +1060,14 @@
                             '989px'
                         ],
                         [
-                            "eid282",
+                            "eid269",
                             "display",
-                            18000,
+                            15976,
                             0,
                             "easeInOutBounce",
-                            "${Titel_betreut}",
-                            'none',
-                            'block'
+                            "${text_3}",
+                            'block',
+                            'none'
                         ],
                             [ "eid21", "trigger", 0, function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['stop', '${H_End}', [] ] ],
                             [ "eid22", "trigger", 2000, function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['stop', '${H_crack}', [] ] ],
@@ -2370,13 +2377,13 @@
                 content: {
                     dom: [
                         {
-                            rect: [7, -7, 179, 193, 'auto', 'auto'],
-                            opacity: '0.06',
+                            transform: [[0, 0, 0], ['90', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            symbolName: 'dust_icon',
                             overflow: 'hidden',
                             id: 'dust_icon2',
-                            symbolName: 'dust_icon',
+                            opacity: '0.06',
                             type: 'rect',
-                            transform: [[0, 0, 0], ['90', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']]
+                            rect: [7, -7, 179, 193, 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -3288,44 +3295,44 @@
                 content: {
                     dom: [
                         {
+                            type: 'rect',
                             rect: ['934px', '1214px', 1104, 302, 'auto', 'auto'],
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.43478', '0.43478', 1], ['50%', '50%']],
                             id: 'cloud_clusterCopy4',
                             symbolName: 'cloud_cluster',
                             autoOrient: false,
-                            type: 'rect'
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.43478', '0.43478', 1], ['50%', '50%']]
                         },
                         {
+                            type: 'rect',
                             rect: ['-1113px', '900px', 1104, 302, 'auto', 'auto'],
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['1.18114', '-1.1411', 1], ['50%', '50%']],
                             id: 'cloud_clusterCopy2',
                             symbolName: 'cloud_cluster',
                             autoOrient: false,
-                            type: 'rect'
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['1.18114', '-1.1411', 1], ['50%', '50%']]
                         },
                         {
+                            type: 'rect',
                             rect: [3458, 267, 1104, 302, 'auto', 'auto'],
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-0.86322', '-0.86322', 1], ['50%', '50%']],
                             id: 'cloud_cluster',
                             symbolName: 'cloud_cluster',
                             autoOrient: 'true',
-                            type: 'rect'
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['-0.86322', '-0.86322', 1], ['50%', '50%']]
                         },
                         {
+                            type: 'rect',
                             rect: ['-884px', '186px', 1104, 302, 'auto', 'auto'],
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.58423', '-0.58423', 1], ['50%', '50%']],
                             id: 'cloud_clusterCopy3',
                             symbolName: 'cloud_cluster',
                             autoOrient: false,
-                            type: 'rect'
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.58423', '-0.58423', 1], ['50%', '50%']]
                         },
                         {
+                            type: 'rect',
                             rect: [3276, 267, 1104, 302, 'auto', 'auto'],
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['1.0317', '1.0317', 1], ['50%', '50%']],
                             id: 'cloud_clusterCopy',
                             symbolName: 'cloud_cluster',
                             autoOrient: false,
-                            type: 'rect'
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['1.0317', '1.0317', 1], ['50%', '50%']]
                         }
                     ],
                     style: {
@@ -3343,14 +3350,14 @@
                     },
                     data: [
                         [
-                            "eid1061",
+                            "eid1830",
                             "scaleX",
                             0,
                             0,
-                            "easeInOutQuad",
-                            "${cloud_clusterCopy3}",
-                            '0.58423',
-                            '0.58423'
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            '1.18114',
+                            '0.95'
                         ],
                         [
                             "eid1821",
@@ -3361,6 +3368,36 @@
                             "${cloud_cluster}",
                             '-0.86322',
                             '-0.86322'
+                        ],
+                        [
+                            "eid1112",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy4}",
+                            '0.43478',
+                            '0.43478'
+                        ],
+                        [
+                            "eid1061",
+                            "scaleX",
+                            0,
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_clusterCopy3}",
+                            '0.58423',
+                            '0.58423'
+                        ],
+                        [
+                            "eid1831",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            '-1.1411',
+                            '-0.95'
                         ],
                         [
                             "eid1095",
@@ -3381,34 +3418,40 @@
                             [[2288, 1364.65, 0, 0, 0, 0,0],[1473.74, 1364.65, 0, 0, 0, 0,814.26]]
                         ],
                         [
-                            "eid1112",
-                            "scaleY",
+                            "eid1077",
+                            "location",
                             0,
-                            0,
+                            13000,
                             "linear",
-                            "${cloud_clusterCopy4}",
-                            '0.43478',
-                            '0.43478'
+                            "${cloud_clusterCopy3}",
+                            [[618.1, 336.78, 2349.22, 0, 0, 0,0],[2383.63, 336.78, 0, 0, 0, 0,1765.53]]
                         ],
                         [
-                            "eid1830",
-                            "scaleX",
+                            "eid1080",
+                            "location",
+                            13386,
+                            6614,
+                            "linear",
+                            "${cloud_clusterCopy3}",
+                            [[-331.12, 336.78, 0, 0, 0, 0,0],[618.1, 336.78, 0, 0, 0, 0,949.22]]
+                        ],
+                        [
+                            "eid1090",
+                            "location",
                             0,
-                            0,
+                            16341,
                             "linear",
                             "${cloud_clusterCopy2}",
-                            '1.18114',
-                            '0.95'
+                            [[-352.92, 1051, 2093.13, 0, 0, 0,0],[2765, 1051, 0, 0, 0, 0,3117.92]]
                         ],
                         [
-                            "eid1062",
-                            "scaleY",
-                            0,
-                            0,
-                            "easeInOutQuad",
-                            "${cloud_clusterCopy3}",
-                            '-0.58423',
-                            '-0.58423'
+                            "eid1093",
+                            "location",
+                            17000,
+                            3000,
+                            "linear",
+                            "${cloud_clusterCopy2}",
+                            [[-678.75, 1051, 0, 0, 0, 0,0],[-352.92, 1051, 0, 0, 0, 0,325.83]]
                         ],
                         [
                             "eid1115",
@@ -3439,34 +3482,6 @@
                             '-0.86322'
                         ],
                         [
-                            "eid1077",
-                            "location",
-                            0,
-                            13000,
-                            "linear",
-                            "${cloud_clusterCopy3}",
-                            [[618.1, 336.78, 2349.22, 0, 0, 0,0],[2383.63, 336.78, 0, 0, 0, 0,1765.53]]
-                        ],
-                        [
-                            "eid1080",
-                            "location",
-                            13386,
-                            6614,
-                            "linear",
-                            "${cloud_clusterCopy3}",
-                            [[-331.12, 336.78, 0, 0, 0, 0,0],[618.1, 336.78, 0, 0, 0, 0,949.22]]
-                        ],
-                        [
-                            "eid1831",
-                            "scaleY",
-                            0,
-                            0,
-                            "linear",
-                            "${cloud_clusterCopy2}",
-                            '-1.1411',
-                            '-0.95'
-                        ],
-                        [
                             "eid1086",
                             "location",
                             0,
@@ -3495,22 +3510,14 @@
                             '1.0317'
                         ],
                         [
-                            "eid1090",
-                            "location",
+                            "eid1062",
+                            "scaleY",
                             0,
-                            16341,
-                            "linear",
-                            "${cloud_clusterCopy2}",
-                            [[-352.92, 1051, 2093.13, 0, 0, 0,0],[2765, 1051, 0, 0, 0, 0,3117.92]]
-                        ],
-                        [
-                            "eid1093",
-                            "location",
-                            17000,
-                            3000,
-                            "linear",
-                            "${cloud_clusterCopy2}",
-                            [[-678.75, 1051, 0, 0, 0, 0,0],[-352.92, 1051, 0, 0, 0, 0,325.83]]
+                            0,
+                            "easeInOutQuad",
+                            "${cloud_clusterCopy3}",
+                            '-0.58423',
+                            '-0.58423'
                         ],
                         [
                             "eid2165",
@@ -3664,13 +3671,43 @@
                             '262px'
                         ],
                         [
-                            "eid2169",
-                            "scaleY",
-                            22,
+                            "eid2192",
+                            "scaleX",
                             0,
+                            2000,
                             "linear",
-                            "${cloud_22Copy}",
+                            "${cloud_12}",
                             '1',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2193",
+                            "scaleX",
+                            2000,
+                            2000,
+                            "linear",
+                            "${cloud_12}",
+                            '1.14999',
+                            '0.9'
+                        ],
+                        [
+                            "eid2194",
+                            "scaleX",
+                            4000,
+                            3000,
+                            "linear",
+                            "${cloud_12}",
+                            '0.9',
+                            '1.14999'
+                        ],
+                        [
+                            "eid2195",
+                            "scaleX",
+                            7000,
+                            3000,
+                            "linear",
+                            "${cloud_12}",
+                            '1.14999',
                             '1'
                         ],
                         [
@@ -3714,12 +3751,12 @@
                             '1'
                         ],
                         [
-                            "eid2167",
+                            "eid2171",
                             "scaleY",
                             0,
                             0,
                             "linear",
-                            "${cloud_3}",
+                            "${cloud_22}",
                             '1',
                             '1'
                         ],
@@ -3814,56 +3851,6 @@
                             '1'
                         ],
                         [
-                            "eid2192",
-                            "scaleX",
-                            0,
-                            2000,
-                            "linear",
-                            "${cloud_12}",
-                            '1',
-                            '1.14999'
-                        ],
-                        [
-                            "eid2193",
-                            "scaleX",
-                            2000,
-                            2000,
-                            "linear",
-                            "${cloud_12}",
-                            '1.14999',
-                            '0.9'
-                        ],
-                        [
-                            "eid2194",
-                            "scaleX",
-                            4000,
-                            3000,
-                            "linear",
-                            "${cloud_12}",
-                            '0.9',
-                            '1.14999'
-                        ],
-                        [
-                            "eid2195",
-                            "scaleX",
-                            7000,
-                            3000,
-                            "linear",
-                            "${cloud_12}",
-                            '1.14999',
-                            '1'
-                        ],
-                        [
-                            "eid2171",
-                            "scaleY",
-                            0,
-                            0,
-                            "linear",
-                            "${cloud_22}",
-                            '1',
-                            '1'
-                        ],
-                        [
                             "eid2196",
                             "scaleX",
                             0,
@@ -3942,6 +3929,26 @@
                             "${cloud_12Copy}",
                             '-1.15',
                             '-1'
+                        ],
+                        [
+                            "eid2169",
+                            "scaleY",
+                            22,
+                            0,
+                            "linear",
+                            "${cloud_22Copy}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid2167",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${cloud_3}",
+                            '1',
+                            '1'
                         ],
                         [
                             "eid865",

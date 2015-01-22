@@ -123,7 +123,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.play('button');
          
          
-         
+         CRACKENABLED = true;
 
       });
       //Edge binding end
@@ -137,7 +137,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 40500, function(sym, e) {
-         window.open('INTRO.html','_self');
+         window.open('index.html','_self');
 
       });
       //Edge binding end
@@ -145,6 +145,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${H_crack}", "click", function(sym, e) {
          sym.play('crack');
          
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Rectangle3}", "click", function(sym, e) {
+         if (CRACKENABLED) {
+         	sym.getSymbol("H_crack").getSymbolElement().click();
+         }
 
       });
       //Edge binding end
@@ -205,7 +213,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4167, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -256,7 +264,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4200, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -311,7 +319,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4167, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
          //Edge binding end
@@ -372,7 +380,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4733, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -401,7 +409,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4600, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -538,7 +546,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4167, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
             //Edge binding end
