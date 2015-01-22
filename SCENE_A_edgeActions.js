@@ -154,7 +154,7 @@
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4167, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -177,7 +177,7 @@
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4600, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -228,7 +228,7 @@
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4200, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -283,7 +283,7 @@
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4133, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -396,7 +396,7 @@
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4167, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -451,7 +451,7 @@
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4133, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -490,7 +490,7 @@
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4200, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -525,7 +525,7 @@
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 4600, function(sym, e) {
          // Hide an Element.
-         sym.hide();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
